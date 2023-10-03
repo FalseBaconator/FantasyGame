@@ -48,17 +48,22 @@ public class PartyMember : MonoBehaviour
         combatManager = FindObjectOfType<CombatManager>();
         HP = MaxHP;
         HPField.text = HP.ToString() + "/" + MaxHP.ToString();
+        //combatManager.partyMembers.Add(this);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(currentCooldown > 0)
+        if (combatManager.playing)
         {
-            currentCooldown -= Time.deltaTime;
-        }else if(attack1Button.IsActive() == false)
-        {
-            AwakenButtons();
+            if (currentCooldown > 0)
+            {
+                currentCooldown -= Time.deltaTime;
+            }
+            else if (attack1Button.IsActive() == false)
+            {
+                AwakenButtons();
+            }
         }
     }
 
@@ -118,6 +123,18 @@ public class PartyMember : MonoBehaviour
         {
             combatManager.attackTarget = gameObject;
         }
+    }
+
+    public void TakeDMG(float dmg)
+    {
+        HP -= dmg;
+        if(HP <= 0)
+        {
+            HP = 0;
+            combatManager.Lose();
+        }
+
+        HPField.text = HP.ToString() + "/" + MaxHP.ToString();
     }
 
 }

@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     public float MaxHP;
     public TextMeshProUGUI HPField;
 
+    public float dmg;
+
     public float cooldownLength;
     public float currentCooldown;
 
@@ -26,7 +28,14 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (combatManager.playing && HP > 0)
+        {
+            currentCooldown += Time.deltaTime;
+            if (currentCooldown >= cooldownLength)
+            {
+                Attack();
+            }
+        }
     }
 
     /*private void OnMouseDrag()
@@ -36,6 +45,18 @@ public class Enemy : MonoBehaviour
             combatManager.attacker.GetComponent<PartyMember>().Attack(gameObject);
         }
     }*/
+
+    public void Attack()
+    {
+        PartyMember target;
+        do {
+            target = combatManager.partyMembers[Random.Range(0, combatManager.partyMembers.Count)];
+        } while (target.HP <= 0);
+
+        target.TakeDMG(dmg);
+
+        currentCooldown = 0;
+    }
 
     public void BecomeTarget()
     {
