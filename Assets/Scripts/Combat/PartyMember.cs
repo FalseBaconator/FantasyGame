@@ -54,7 +54,7 @@ public class PartyMember : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (combatManager.playing)
+        if (combatManager.playing && HP > 0)
         {
             if (currentCooldown > 0)
             {
@@ -88,10 +88,26 @@ public class PartyMember : MonoBehaviour
         switch(attackInt)
         {
             case 1:
-                combatManager.attackTargetType = attack1Target;
+                if (attack1IsShield)
+                {
+                    combatManager.shields += (int)attack1Strength;
+                    shutDownButtons();
+                }
+                else
+                {
+                    combatManager.attackTargetType = attack1Target;
+                }
                 break;
             case 2:
-                combatManager.attackTargetType = attack2Target;
+                if (attack2IsShield)
+                {
+                    combatManager.shields += (int)attack2Strength;
+                    shutDownButtons();
+                }
+                else
+                {
+                    combatManager.attackTargetType = attack2Target;
+                }
                 break;
         }
     }
@@ -106,12 +122,25 @@ public class PartyMember : MonoBehaviour
                 if(attack1Target == Target.enemies)
                 {
                     target.GetComponent<Enemy>().TakeDMG(attack1Strength);
+                }else if(attack1Target == Target.party)
+                {
+                    if (attack1IsHeal)
+                    {
+                        target.GetComponent<PartyMember>().Heal(attack1Strength);
+                    }
                 }
                 break;
             case 2:
                 if (attack2Target == Target.enemies)
                 {
                     target.GetComponent<Enemy>().TakeDMG(attack2Strength);
+                }
+                else if (attack2Target == Target.party)
+                {
+                    if (attack2IsHeal)
+                    {
+                        target.GetComponent<PartyMember>().Heal(attack2Strength);
+                    }
                 }
                 break;
         }
@@ -125,13 +154,21 @@ public class PartyMember : MonoBehaviour
         }
     }
 
+    public void Heal(float heal)
+    {
+        HP += heal;
+        if (HP > MaxHP) HP = MaxHP;
+        HPField.text = HP.ToString() + "/" + MaxHP.ToString();
+    }
+
     public void TakeDMG(float dmg)
     {
         HP -= dmg;
         if(HP <= 0)
         {
             HP = 0;
-            combatManager.Lose();
+            combatManager.partyMembers.Remove(this);
+            shutDownButtons();
         }
 
         HPField.text = HP.ToString() + "/" + MaxHP.ToString();

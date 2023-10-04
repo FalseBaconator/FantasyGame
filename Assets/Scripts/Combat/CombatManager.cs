@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class CombatManager : MonoBehaviour
@@ -13,9 +14,13 @@ public class CombatManager : MonoBehaviour
     public List<Enemy> enemies = new List<Enemy>();
     public List<PartyMember> partyMembers = new List<PartyMember>();
 
+    public GameObject combatCanvas;
     public GameObject LoseMessage;
     public GameObject WinMessage;
     public bool playing = true;
+
+    public int shields;
+    public TextMeshProUGUI shieldText;
 
     private void Start()
     {
@@ -28,6 +33,8 @@ public class CombatManager : MonoBehaviour
 
     private void Update()
     {
+        shieldText.text = "Shields: " + shields;
+
         if(attackTarget != null && attacker != null)
         {
             attacker.GetComponent<PartyMember>().Attack(attackTarget);
@@ -40,10 +47,16 @@ public class CombatManager : MonoBehaviour
         {
             Win();
         }
+
+        if(partyMembers.Count == 0)
+        {
+            Lose();
+        }
     }
 
     public void Win()
     {
+        combatCanvas.SetActive(false);
         WinMessage.SetActive(true);
         foreach(PartyMember p in partyMembers)
         {
@@ -54,6 +67,7 @@ public class CombatManager : MonoBehaviour
 
     public void Lose()
     {
+        combatCanvas.SetActive(false);
         LoseMessage.SetActive(true);
         foreach (PartyMember p in partyMembers)
         {
