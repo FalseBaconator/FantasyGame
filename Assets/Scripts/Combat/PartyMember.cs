@@ -90,6 +90,7 @@ public class PartyMember : MonoBehaviour
             case 1:
                 if (attack1IsShield)
                 {
+                    combatManager.ClearActions();
                     combatManager.shields += (int)attack1Strength;
                     shutDownButtons();
                 }
@@ -101,6 +102,7 @@ public class PartyMember : MonoBehaviour
             case 2:
                 if (attack2IsShield)
                 {
+                    combatManager.ClearActions();
                     combatManager.shields += (int)attack2Strength;
                     shutDownButtons();
                 }

@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     public float dmg;
 
     public float cooldownLength;
+    public float cooldownOffset;
     public float currentCooldown;
 
     private CombatManager combatManager;
@@ -21,6 +22,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentCooldown = cooldownOffset;
         combatManager = FindObjectOfType<CombatManager>();
         HP = MaxHP;
         HPField.text = HP.ToString() + "/" + MaxHP.ToString();

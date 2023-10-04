@@ -20,6 +20,7 @@ public class CombatManager : MonoBehaviour
     public bool playing = true;
 
     public int shields;
+    public GameObject shieldSprite;
     public TextMeshProUGUI shieldText;
 
     private void Start()
@@ -33,7 +34,15 @@ public class CombatManager : MonoBehaviour
 
     private void Update()
     {
-        shieldText.text = "Shields: " + shields;
+        if(shields > 0)
+        {
+            if(shieldSprite.activeSelf == false)
+                shieldSprite.SetActive(true);
+            shieldText.text = "Shields: " + shields;
+        }else if(shieldSprite.activeSelf == true)
+        {
+            shieldSprite.SetActive(false);
+        }
 
         if(attackTarget != null && attacker != null)
         {
@@ -52,6 +61,12 @@ public class CombatManager : MonoBehaviour
         {
             Lose();
         }
+    }
+
+    public void ClearActions()
+    {
+        attacker = null;
+        attackSelected = false;
     }
 
     public void Win()
