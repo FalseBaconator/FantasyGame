@@ -19,6 +19,10 @@ public class Enemy : MonoBehaviour
 
     public GameObject[] objectsToHide;
 
+    public GameObject atkDisplay;
+    public GameObject dmgDisplay;
+    public GameObject healDisplay;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +56,7 @@ public class Enemy : MonoBehaviour
 
     public void Attack()
     {
+        atkDisplay.GetComponent<DMGDisplay>().activate();
         if (combatManager.shields > 0)
         {
             combatManager.shields--;
@@ -80,6 +85,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDMG(float dmg)
     {
+        dmgDisplay.GetComponent<DMGDisplay>().activate();
         HP -= dmg;
         if(HP <= 0)
         {

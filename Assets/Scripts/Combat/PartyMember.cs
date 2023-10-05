@@ -31,6 +31,10 @@ public class PartyMember : MonoBehaviour
 
     private int SelectedAttack;
 
+    public GameObject atkDisplay;
+    public GameObject dmgDisplay;
+    public GameObject healDisplay;
+
     public enum Target
     {
         enemies,
@@ -117,6 +121,7 @@ public class PartyMember : MonoBehaviour
     public void Attack(GameObject target)
     {
         shutDownButtons();
+        atkDisplay.GetComponent<DMGDisplay>().activate();
         //combatManager.attackSelected = false;
         switch (SelectedAttack)
         {
@@ -124,6 +129,16 @@ public class PartyMember : MonoBehaviour
                 if(attack1Target == Target.enemies)
                 {
                     target.GetComponent<Enemy>().TakeDMG(attack1Strength);
+                    if (attack1SplashDMG > 0)
+                    {
+                        foreach (Enemy enemy in combatManager.enemies)
+                        {
+                            if (enemy != target)
+                            {
+                                enemy.TakeDMG(attack1SplashDMG);
+                            }
+                        }
+                    }
                 }else if(attack1Target == Target.party)
                 {
                     if (attack1IsHeal)
@@ -136,6 +151,16 @@ public class PartyMember : MonoBehaviour
                 if (attack2Target == Target.enemies)
                 {
                     target.GetComponent<Enemy>().TakeDMG(attack2Strength);
+                    if (attack2SplashDMG > 0)
+                    {
+                        foreach (Enemy enemy in combatManager.enemies)
+                        {
+                            if (enemy != target)
+                            {
+                                enemy.TakeDMG(attack2SplashDMG);
+                            }
+                        }
+                    }
                 }
                 else if (attack2Target == Target.party)
                 {
@@ -158,6 +183,7 @@ public class PartyMember : MonoBehaviour
 
     public void Heal(float heal)
     {
+        healDisplay.GetComponent<DMGDisplay>().activate();
         HP += heal;
         if (HP > MaxHP) HP = MaxHP;
         HPField.text = HP.ToString() + "/" + MaxHP.ToString();
@@ -165,10 +191,12 @@ public class PartyMember : MonoBehaviour
 
     public void TakeDMG(float dmg)
     {
+        dmgDisplay.GetComponent<DMGDisplay>().activate();
         HP -= dmg;
         if(HP <= 0)
         {
             HP = 0;
+            if (combatManager.attacker == this) combatManager.ClearActions();
             combatManager.partyMembers.Remove(this);
             shutDownButtons();
         }
