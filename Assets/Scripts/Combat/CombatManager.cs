@@ -23,8 +23,11 @@ public class CombatManager : MonoBehaviour
     public GameObject shieldSprite;
     public TextMeshProUGUI shieldText;
 
+    public GameManager gameManager;
+
     private void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
         /*Debug.Log("A");
         enemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None).ToList<Enemy>();
         Debug.Log("B");
@@ -71,24 +74,35 @@ public class CombatManager : MonoBehaviour
 
     public void Win()
     {
-        combatCanvas.SetActive(false);
+        foreach (PartyMember p in partyMembers)
+        {
+            p.shutDownButtons();
+        }
+        gameManager.Win();
+        /*combatCanvas.SetActive(false);
         WinMessage.SetActive(true);
         foreach(PartyMember p in partyMembers)
         {
             p.shutDownButtons();
         }
-        playing = false;
+        playing = false;*/
     }
 
     public void Lose()
     {
+        foreach (PartyMember p in partyMembers)
+        {
+            p.shutDownButtons();
+        }
+        gameManager.Lose();
+        /*
         combatCanvas.SetActive(false);
         LoseMessage.SetActive(true);
         foreach (PartyMember p in partyMembers)
         {
             p.shutDownButtons();
         }
-        playing = false;
+        playing = false;*/
     }
 
 }
