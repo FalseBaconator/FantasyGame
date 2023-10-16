@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,6 +17,10 @@ public class GameManager : MonoBehaviour
 
     public int currentSaveIndex;
 
+    public int XP;
+
+    public TextMeshProUGUI XPText;
+
     public enum GameState { MainMenu, Saves, Options, Upgrades, Map, Combat, Pause, Lose, Win };
     private GameState _gState = GameState.MainMenu;
     private GameState prevState;
@@ -27,7 +32,6 @@ public class GameManager : MonoBehaviour
             switch (value)
             {
                 case GameState.MainMenu:
-                    Debug.Log("4");
                     Time.timeScale = 1;
                     uiManager.OpenMainMenu();
                     SaveGame(currentSaveIndex);
@@ -88,6 +92,7 @@ public class GameManager : MonoBehaviour
             case GameState.Options:
                 break;
             case GameState.Upgrades:
+                XPText.text = "XP: " + XP;
                 break;
             case GameState.Map:
                 break;
@@ -134,32 +139,24 @@ public class GameManager : MonoBehaviour
 
     public void GoToMenu()
     {
-        Debug.Log("1");
         SceneManager.LoadScene(mainMenuScene);
-        Debug.Log("2");
         SceneManager.sceneLoaded += SwitchScreenSceneTransition;
-        //gameState = GameState.MainMenu;
-        Debug.Log("3");
     }
 
     public void GoToUpgrades()
     {
         SceneManager.LoadScene(upgradesScene);
         SceneManager.sceneLoaded += SwitchScreenSceneTransition;
-        //gameState = GameState.Upgrades;
     }
 
     public void GoToCombat(int scenarioIndex)
     {
         SceneManager.LoadScene(gamePlayScene);
         SceneManager.sceneLoaded += SwitchScreenSceneTransition;
-        //gameState = GameState.Combat;
     }
 
     public void StartNewDungeon()   //Should have more code to make CombatManager make the dungeon
     {
-        //SceneManager.LoadScene(gamePlayScene);
-        Debug.Log("A");
         gameState = GameState.Map;
     }
 

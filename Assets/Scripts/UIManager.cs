@@ -17,7 +17,6 @@ public class UIManager : MonoBehaviour
 
     public void OpenMainMenu()
     {
-        Debug.Log("5");
         MainMenu.SetActive(true);
         SavesScreen.SetActive(false);
         UpgradeScreen.SetActive(false);
