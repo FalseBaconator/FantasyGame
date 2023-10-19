@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public int gamePlayScene;
 
     public UIManager uiManager;
+    public CombatManager combatManager;
 
     private bool newGame;
 
@@ -56,6 +57,7 @@ public class GameManager : MonoBehaviour
                 case GameState.Combat:
                     Time.timeScale = 1;
                     uiManager.OpenCombat();
+                    combatManager.StartCombat();
                     break;
                 case GameState.Pause:
                     Time.timeScale = 0;

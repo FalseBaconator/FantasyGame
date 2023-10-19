@@ -14,10 +14,13 @@ public class CombatManager : MonoBehaviour
     public List<Enemy> enemies = new List<Enemy>();
     public List<PartyMember> partyMembers = new List<PartyMember>();
 
+    public List<GameObject> enemyPrefabs;
+    public GameObject oneEnemyParent;
+    public GameObject twoEnemyParent;
+    public GameObject threeEnemyParent;
+
     public GameObject combatCanvas;
-    public GameObject LoseMessage;
-    public GameObject WinMessage;
-    public bool playing = true;
+    public bool playing = false;
 
     public int shields;
     public GameObject shieldSprite;
@@ -25,14 +28,37 @@ public class CombatManager : MonoBehaviour
 
     public GameManager gameManager;
 
-    private void Start()
+    public void StartCombat()
     {
-        gameManager = FindObjectOfType<GameManager>();
-        /*Debug.Log("A");
-        enemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None).ToList<Enemy>();
-        Debug.Log("B");
-        partyMembers = FindObjectsByType<PartyMember>(FindObjectsSortMode.None).ToList<PartyMember>();
-        Debug.Log("C");*/
+        foreach(PartyMember partyMember in partyMembers)
+        {
+            partyMember.StartCombat();
+        }
+
+        System.Random rand = new System.Random();
+        int enemyAmount = rand.Next(3);
+        GameObject parent;
+        switch (enemyAmount)
+        {
+            default:
+            case 0:
+                parent = oneEnemyParent; break;
+            case 1:
+                parent = twoEnemyParent; break;
+            case 2:
+                parent = threeEnemyParent; break;
+        }
+        for (int i = 0; i <= enemyAmount; i++)
+        {
+            Instantiate(enemyPrefabs[rand.Next(enemyPrefabs.Count)], parent.transform.GetChild(i));
+        }
+
+        playing = true;
+    }
+
+    public void LeaveCombat()
+    {
+        playing = false;
     }
 
     private void Update()
@@ -55,12 +81,12 @@ public class CombatManager : MonoBehaviour
             attacker = null;
         }
 
-        if(enemies.Count == 0)
+        if(enemies.Count == 0 && playing)
         {
             Win();
         }
 
-        if(partyMembers.Count == 0)
+        if(partyMembers.Count == 0 && playing)
         {
             Lose();
         }
@@ -74,35 +100,22 @@ public class CombatManager : MonoBehaviour
 
     public void Win()
     {
+        LeaveCombat();
         foreach (PartyMember p in partyMembers)
         {
             p.shutDownButtons();
         }
         gameManager.Win();
-        /*combatCanvas.SetActive(false);
-        WinMessage.SetActive(true);
-        foreach(PartyMember p in partyMembers)
-        {
-            p.shutDownButtons();
-        }
-        playing = false;*/
     }
 
     public void Lose()
     {
+        LeaveCombat();
         foreach (PartyMember p in partyMembers)
         {
             p.shutDownButtons();
         }
         gameManager.Lose();
-        /*
-        combatCanvas.SetActive(false);
-        LoseMessage.SetActive(true);
-        foreach (PartyMember p in partyMembers)
-        {
-            p.shutDownButtons();
-        }
-        playing = false;*/
     }
 
 }

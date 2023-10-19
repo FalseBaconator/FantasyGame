@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using JetBrains.Annotations;
 
 public class PartyMember : MonoBehaviour
 {
     public float HP;
     public float MaxHP;
     public TextMeshProUGUI HPField;
+
+    public enum Character { Cleric, Warrior, Mage }
+    public Character character;
+
+    public UpgradeManager uManager;
 
     public float cooldownLength;
     public float currentCooldown;
@@ -44,12 +48,35 @@ public class PartyMember : MonoBehaviour
     public Target attack1Target;
     public Target attack2Target;
 
-    private CombatManager combatManager;
+    public CombatManager combatManager;
 
-    // Start is called before the first frame update
-    void Start()
+    public void StartCombat()
     {
-        combatManager = FindObjectOfType<CombatManager>();
+        //combatManager = FindObjectOfType<CombatManager>();
+        switch (character)
+        {
+            case Character.Cleric:
+                attack1Strength = uManager.healerHeal;
+                attack1IsHeal = true;
+                attack1Target = Target.party;
+                attack2Strength = uManager.healerAttack;
+                cooldownLength = uManager.healerCooldown;
+                MaxHP = uManager.healerHP;
+                break;
+            case Character.Warrior:
+                attack1Strength = uManager.warriorShield;
+                attack1IsShield = true;
+                attack2Strength = uManager.warriorAttack;
+                cooldownLength = uManager.warriorCooldown;
+                MaxHP = uManager.warriorHP;
+                break;
+            case Character.Mage:
+                attack1Strength = uManager.mageFire;
+                attack2Strength = uManager.mageIce;
+                cooldownLength = uManager.mageCooldown;
+                MaxHP = uManager.mageHP;
+                break;
+        }
         HP = MaxHP;
         HPField.text = HP.ToString() + "/" + MaxHP.ToString();
         //combatManager.partyMembers.Add(this);
@@ -183,6 +210,10 @@ public class PartyMember : MonoBehaviour
 
     public void Heal(float heal)
     {
+        if(HP <= 0)
+        {
+            combatManager.partyMembers.Add(this);
+        }
         healDisplay.GetComponent<DMGDisplay>().activate();
         HP += heal;
         if (HP > MaxHP) HP = MaxHP;

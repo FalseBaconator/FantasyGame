@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -31,6 +32,8 @@ public class Enemy : MonoBehaviour
         HP = MaxHP;
         HPField.text = HP.ToString() + "/" + MaxHP.ToString();
         combatManager.enemies.Add(this);
+        Button button = GetComponent<Button>();
+        button.onClick.AddListener(BecomeTarget);
     }
 
     // Update is called once per frame

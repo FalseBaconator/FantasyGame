@@ -9,20 +9,20 @@ public class UpgradeManager : MonoBehaviour
     public TextMeshProUGUI description;
     public GameObject leaveUpgradesButton;
 
-    public int healerHP;
-    public float healerCooldown;
-    public int healerAttack;
-    public int healerHeal;
+    public int healerHP = 10;
+    public float healerCooldown = 2;
+    public int healerAttack = 1;
+    public int healerHeal = 5;
 
-    public int warriorHP;
-    public float warriorCooldown;
-    public int warriorShield;
-    public int warriorAttack;
+    public int warriorHP = 10;
+    public float warriorCooldown = 2;
+    public int warriorShield = 3;
+    public int warriorAttack = 2;
 
-    public int mageHP;
-    public float mageCooldown;
-    public int mageFire;
-    public int mageIce;
+    public int mageHP = 7;
+    public float mageCooldown = 2;
+    public int mageFire = 3;
+    public int mageIce = 3;
 
 
     // Start is called before the first frame update
