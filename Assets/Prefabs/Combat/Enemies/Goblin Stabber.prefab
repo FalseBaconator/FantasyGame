@@ -294,6 +294,7 @@ MonoBehaviour:
   atkDisplay: {fileID: 6519656801070838956}
   dmgDisplay: {fileID: 7894555655926038235}
   healDisplay: {fileID: 4743051966812863620}
+  alive: 1
 --- !u!1 &8851588848503753051
 GameObject:
   m_ObjectHideFlags: 0

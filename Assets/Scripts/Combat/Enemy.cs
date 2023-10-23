@@ -24,14 +24,17 @@ public class Enemy : MonoBehaviour
     public GameObject dmgDisplay;
     public GameObject healDisplay;
 
+    public bool alive;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         currentCooldown = cooldownOffset;
         combatManager = FindObjectOfType<CombatManager>();
         HP = MaxHP;
         HPField.text = HP.ToString() + "/" + MaxHP.ToString();
-        combatManager.enemies.Add(this);
+        alive = true;
+        //combatManager.enemies.Add(this);
         Button button = GetComponent<Button>();
         button.onClick.AddListener(BecomeTarget);
     }
@@ -100,12 +103,14 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
-        combatManager.enemies.Remove(this);
+        alive = false;
+        //combatManager.enemies.Remove(this);
         foreach (GameObject obj in objectsToHide)
         {
             obj.SetActive(false);
         }
-        GameObject.Destroy(gameObject);
+        //gameObject.SetActive(false);
+        //GameObject.Destroy(gameObject);
     }
 
 }

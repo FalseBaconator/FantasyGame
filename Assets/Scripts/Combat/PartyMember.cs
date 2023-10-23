@@ -50,9 +50,10 @@ public class PartyMember : MonoBehaviour
 
     public CombatManager combatManager;
 
-    public void StartCombat()
+    public bool alive;
+
+    public void NewAttempt()
     {
-        //combatManager = FindObjectOfType<CombatManager>();
         switch (character)
         {
             case Character.Cleric:
@@ -79,7 +80,12 @@ public class PartyMember : MonoBehaviour
         }
         HP = MaxHP;
         HPField.text = HP.ToString() + "/" + MaxHP.ToString();
-        //combatManager.partyMembers.Add(this);
+        //StartCombat();
+    }
+
+    public void StartCombat()
+    {
+        currentCooldown = 0;
     }
 
     // Update is called once per frame
@@ -87,6 +93,7 @@ public class PartyMember : MonoBehaviour
     {
         if (combatManager.playing && HP > 0)
         {
+            alive = true;
             if (currentCooldown > 0)
             {
                 currentCooldown -= Time.deltaTime;
@@ -226,6 +233,7 @@ public class PartyMember : MonoBehaviour
         HP -= dmg;
         if(HP <= 0)
         {
+            alive = false;
             HP = 0;
             if (combatManager.attacker == this) combatManager.ClearActions();
             combatManager.partyMembers.Remove(this);

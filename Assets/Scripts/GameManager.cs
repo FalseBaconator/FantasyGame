@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI XPText;
 
+    public MapGenerator mapGenerator;
+
     public enum GameState { MainMenu, Saves, Options, Upgrades, Map, Combat, Pause, Lose, Win };
     private GameState _gState = GameState.MainMenu;
     private GameState prevState;
@@ -57,7 +59,7 @@ public class GameManager : MonoBehaviour
                 case GameState.Combat:
                     Time.timeScale = 1;
                     uiManager.OpenCombat();
-                    combatManager.StartCombat();
+                    //combatManager.StartCombat();
                     break;
                 case GameState.Pause:
                     Time.timeScale = 0;
@@ -151,7 +153,7 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded += SwitchScreenSceneTransition;
     }
 
-    public void GoToCombat(int scenarioIndex)
+    public void GoToCombat()
     {
         SceneManager.LoadScene(gamePlayScene);
         SceneManager.sceneLoaded += SwitchScreenSceneTransition;
@@ -160,11 +162,13 @@ public class GameManager : MonoBehaviour
     public void StartNewDungeon()   //Should have more code to make CombatManager make the dungeon
     {
         gameState = GameState.Map;
+        mapGenerator.NewAttempt();
     }
 
     public void GoToMap()
     {
         gameState = GameState.Map;
+        mapGenerator.GenerateNextEncounter();
     }
 
     public void goToOptions()
