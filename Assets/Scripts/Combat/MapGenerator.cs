@@ -81,12 +81,10 @@ public class MapGenerator : MonoBehaviour
         switch (encounterIndex)
         {
             case 1:
-                Debug.Log("A");
                 combatManager.StartCombat(encounter1.ToArray());
                 gameManager.GoToCombat();
                 break;
             case 2:
-                Debug.Log("B");
                 combatManager.StartCombat(encounter2.ToArray());
                 gameManager.GoToCombat();
                 break;

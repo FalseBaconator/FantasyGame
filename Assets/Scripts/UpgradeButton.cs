@@ -10,7 +10,7 @@ public class UpgradeButton : MonoBehaviour
     public UpgradeManager uManager;
     public Button button;
 
-    public int stage = 0;
+    public int stage;
     public int maxStage;
     public int[] costs;
     public float[] worths;
@@ -101,6 +101,7 @@ public class UpgradeButton : MonoBehaviour
                 break;
         }
         stage++;
+        uManager.upgradeStages[uManager.upgradeButtons.IndexOf(this)]++;
         MouseOver();
     }
 

@@ -20,7 +20,7 @@ public class CombatManager : MonoBehaviour
     public GameObject threeEnemyParent;
 
     public GameObject combatCanvas;
-    public bool playing = false;
+    public bool playing;
 
     public int shields;
     public GameObject shieldSprite;
@@ -42,11 +42,11 @@ public class CombatManager : MonoBehaviour
     public void StartCombat(GameObject[] enemiesInEncounter)
     {
         shields = 0;
-        playing = false;
-        /*foreach(Enemy enemy in enemies)
+        playing = true;
+        foreach (Enemy enemy in enemies)
         {
             Destroy(enemy.gameObject);
-        }*/
+        }
         enemies.Clear();
         foreach(PartyMember partyMember in partyMembers)
         {
@@ -70,9 +70,8 @@ public class CombatManager : MonoBehaviour
         {
             //Instantiate(enemyPrefabs[rand.Next(enemyPrefabs.Count)], parent.transform.GetChild(i));
             enemies.Add(Instantiate(enemiesInEncounter[i], parent.transform.GetChild(i)).GetComponent<Enemy>());
+            enemies[i].cooldownOffset = i;
         }
-
-        playing = true;
     }
 
     public void StartPartyMembers()

@@ -13,22 +13,61 @@ public class UpgradeManager : MonoBehaviour
     public float healerCooldown = 2;
     public int healerAttack = 1;
     public int healerHeal = 5;
+    public int defaultHealerHP;
+    public float defaultHealerCooldown;
+    public int defaultHealerAttack;
+    public int defaultHealerHeal;
 
     public int warriorHP = 10;
     public float warriorCooldown = 2;
     public int warriorShield = 3;
     public int warriorAttack = 2;
+    public int defaultWarriorHP;
+    public float defaultWarriorCooldown;
+    public int defaultWarriorShield;
+    public int defaultWarriorAttack;
 
     public int mageHP = 7;
     public float mageCooldown = 2;
     public int mageFire = 3;
     public int mageIce = 3;
+    public int defaultMageHP;
+    public float defaultMageCooldown;
+    public int defaultMageFire;
+    public int defaultMageIce;
 
+    public List<UpgradeButton> upgradeButtons;
+    public List<int> upgradeStages = new List<int>();
 
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+
+    public void returnToDefault()
+    {
+        healerHP = defaultHealerHP;
+        healerCooldown = defaultHealerCooldown;
+        healerAttack = defaultHealerAttack;
+        healerHeal = defaultHealerHeal;
+
+        warriorHP = defaultWarriorHP;
+        warriorCooldown = defaultWarriorCooldown;
+        warriorShield = defaultWarriorShield;
+        warriorAttack = defaultWarriorAttack;
+
+        mageHP = defaultMageHP;
+        mageCooldown = defaultMageCooldown;
+        mageFire = defaultMageFire;
+        mageIce = defaultMageIce;
+
+        for (int i = 0; i < upgradeButtons.Count; i++)
+        {
+            upgradeButtons[i].stage = 0;
+            upgradeStages[i] = 0;
+        }
+
     }
 
     public void ShowDesc(string message)
@@ -105,5 +144,31 @@ public class UpgradeManager : MonoBehaviour
     {
         mageIce = amount;
     }
+
+    public void ReceiveData(int hHP, float hCooldown, int hAttack, int hHeal, int wHP, float wCooldown, int wShield, int wAttack, int mHP, float mCooldown, int mFire, int mIce, int[] stages)
+    {
+        healerHP = hHP;
+        healerCooldown = hCooldown;
+        healerAttack = hAttack;
+        healerHeal = hHeal;
+
+        warriorHP = wHP;
+        warriorCooldown = wCooldown;
+        warriorShield = wShield;
+        warriorAttack = wAttack;
+
+        mageHP = mHP;
+        mageCooldown = mCooldown;
+        mageFire = mFire;
+        mageIce = mIce;
+
+        for (int i = 0; i < upgradeButtons.Count; i++)
+        {
+            upgradeButtons[i].stage = stages[i];
+            upgradeStages[i] = stages[i];
+        }
+
+    }
+
 
 }

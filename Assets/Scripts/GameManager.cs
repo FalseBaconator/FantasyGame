@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -13,12 +16,15 @@ public class GameManager : MonoBehaviour
 
     public UIManager uiManager;
     public CombatManager combatManager;
+    public UpgradeManager upgradeManager;
 
     private bool newGame;
 
     public int currentSaveIndex;
 
     public int XP;
+    public enum Dungeon { GoblinCavern, };
+    public Dungeon currentDungeon;
 
     public TextMeshProUGUI XPText;
 
@@ -37,20 +43,20 @@ public class GameManager : MonoBehaviour
                 case GameState.MainMenu:
                     Time.timeScale = 1;
                     uiManager.OpenMainMenu();
-                    SaveGame(currentSaveIndex);
+                    //SaveGame();
                     break;
                 case GameState.Saves:
                     Time.timeScale = 1;
                     uiManager.OpenSavesScreen();
                     break;
                 case GameState.Options:
-                    Time.timeScale = 0;
+                    Time.timeScale = 1;
                     uiManager.OpenOptions();
                     break;
                 case GameState.Upgrades:
                     Time.timeScale = 1;
                     uiManager.OpenUpgrades();
-                    SaveGame(currentSaveIndex);
+                    SaveGame();
                     break;
                 case GameState.Map:
                     Time.timeScale = 1;
@@ -66,11 +72,11 @@ public class GameManager : MonoBehaviour
                     uiManager.OpenPauseScreen();
                     break;
                 case GameState.Lose:
-                    Time.timeScale = 0;
+                    Time.timeScale = 1;
                     uiManager.OpenLose();
                     break;
                 case GameState.Win:
-                    Time.timeScale = 0;
+                    Time.timeScale = 1;
                     uiManager.OpenWin();
                     break;
             }
@@ -207,11 +213,72 @@ public class GameManager : MonoBehaviour
         currentSaveIndex = saveIndex;
         if (newGame)
         {
-
+            XP = 100;
+            currentDungeon = Dungeon.GoblinCavern;
+            upgradeManager.returnToDefault();
         }
         else
         {
-
+            switch (currentSaveIndex)
+            {
+                case 1:
+                    if(File.Exists(Application.persistentDataPath + "/Save1.dat"))
+                    {
+                        BinaryFormatter bf = new BinaryFormatter();
+                        FileStream file = File.Open(Application.persistentDataPath + "/Save1.dat", FileMode.Open);
+                        SaveData data = (SaveData)bf.Deserialize(file);
+                        foreach (int stage in data.stages)
+                        {
+                            Debug.Log(stage);
+                        }
+                        file.Close();
+                        data.GetDataFromFile(this, upgradeManager);
+                    }
+                    else
+                    {
+                        newGame = true;
+                        LoadSave(saveIndex);
+                    }
+                    break;
+                case 2:
+                    if (File.Exists(Application.persistentDataPath + "/Save2.dat"))
+                    {
+                        BinaryFormatter bf = new BinaryFormatter();
+                        FileStream file = File.Open(Application.persistentDataPath + "/Save2.dat", FileMode.Open);
+                        SaveData data = (SaveData)bf.Deserialize(file);
+                        foreach (int stage in data.stages)
+                        {
+                            Debug.Log(stage);
+                        }
+                        file.Close();
+                        data.GetDataFromFile(this, upgradeManager);
+                    }
+                    else
+                    {
+                        newGame = true;
+                        LoadSave(saveIndex);
+                    }
+                    break;
+                case 3:
+                    if (File.Exists(Application.persistentDataPath + "/Save3.dat"))
+                    {
+                        BinaryFormatter bf = new BinaryFormatter();
+                        FileStream file = File.Open(Application.persistentDataPath + "/Save3.dat", FileMode.Open);
+                        SaveData data = (SaveData)bf.Deserialize(file);
+                        foreach(int stage in data.stages)
+                        {
+                            Debug.Log(stage);
+                        }
+                        file.Close();
+                        data.GetDataFromFile(this, upgradeManager);
+                    }
+                    else
+                    {
+                        newGame = true;
+                        LoadSave(saveIndex);
+                    }
+                    break;
+            }
         }
         GoToUpgrades();
     }
@@ -221,9 +288,31 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void SaveGame(int saveFile = -1)
+    public void SaveGame()
     {
-
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file;
+        switch (currentSaveIndex)
+        {
+            default:
+            case 1:
+                file = File.Create(Application.persistentDataPath + "/Save1.dat");
+                break;
+            case 2:
+                file = File.Create(Application.persistentDataPath + "/Save2.dat");
+                break;
+            case 3:
+                file = File.Create(Application.persistentDataPath + "/Save3.dat");
+                break;
+        }
+        SaveData data = new SaveData();
+        data.GetDataFromGame(this, upgradeManager);
+        bf.Serialize(file, data);
+        file.Close();
+        foreach (int stage in data.stages)
+        {
+            Debug.Log(stage);
+        }
     }
 
 }

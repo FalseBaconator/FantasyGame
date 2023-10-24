@@ -1650,8 +1650,10 @@ MonoBehaviour:
   gamePlayScene: 2
   uiManager: {fileID: 7882744052753444899}
   combatManager: {fileID: 3048024244643183280}
+  upgradeManager: {fileID: 1951100091836613892}
   currentSaveIndex: 0
   XP: 100
+  currentDungeon: 0
   XPText: {fileID: 5226960396530245259}
   mapGenerator: {fileID: 2717811930810827539}
 --- !u!114 &3530607086315755573
@@ -6303,6 +6305,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3048024244643183280}
+        m_TargetAssemblyTypeName: CombatManager, Assembly-CSharp
+        m_MethodName: LeaveBoss
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3672895246615456672
 GameObject:
   m_ObjectHideFlags: 0
@@ -6589,7 +6603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6707518722689929536
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9547,7 +9561,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4317965708037964768
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10475,6 +10489,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3048024244643183280}
+        m_TargetAssemblyTypeName: CombatManager, Assembly-CSharp
+        m_MethodName: LeaveCombat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6102623276478444173
 GameObject:
   m_ObjectHideFlags: 0
@@ -10660,14 +10686,26 @@ MonoBehaviour:
   healerCooldown: 2
   healerAttack: 1
   healerHeal: 3
+  defaultHealerHP: 10
+  defaultHealerCooldown: 2
+  defaultHealerAttack: 1
+  defaultHealerHeal: 3
   warriorHP: 10
   warriorCooldown: 2
   warriorShield: 3
   warriorAttack: 2
+  defaultWarriorHP: 10
+  defaultWarriorCooldown: 2
+  defaultWarriorShield: 1
+  defaultWarriorAttack: 3
   mageHP: 5
   mageCooldown: 2
   mageFire: 3
   mageIce: 3
+  defaultMageHP: 5
+  defaultMageCooldown: 2
+  defaultMageFire: 3
+  defaultMageIce: 3
 --- !u!1 &6398551605784614423
 GameObject:
   m_ObjectHideFlags: 0
@@ -15971,7 +16009,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Go to menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
