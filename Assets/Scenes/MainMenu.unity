@@ -364,6 +364,10 @@ PrefabInstance:
       value: LeaveBoss
       objectReference: {fileID: 0}
     - target: {fileID: 1951100091836613892, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: upgradeStages.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1951100091836613892, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: upgradeButtons.Array.size
       value: 12
       objectReference: {fileID: 0}

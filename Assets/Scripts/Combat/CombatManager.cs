@@ -74,6 +74,11 @@ public class CombatManager : MonoBehaviour
         }
     }
 
+    public void GainXP(int xp)
+    {
+        gameManager.XP += xp;
+    }
+
     public void StartPartyMembers()
     {
         foreach (PartyMember member in partyMembers)

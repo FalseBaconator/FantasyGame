@@ -284,6 +284,7 @@ MonoBehaviour:
   HP: 10
   MaxHP: 10
   HPField: {fileID: 5856502632613534910}
+  XP: 10
   dmg: 2
   cooldownLength: 5
   cooldownOffset: 0

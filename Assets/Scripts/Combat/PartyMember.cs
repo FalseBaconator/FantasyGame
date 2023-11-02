@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEditor.Rendering;
+//using UnityEditor.Rendering;
 
 public class PartyMember : MonoBehaviour
 {
@@ -80,6 +80,7 @@ public class PartyMember : MonoBehaviour
                 break;
         }
         HP = MaxHP;
+        alive = true;
         HPField.text = HP.ToString() + "/" + MaxHP.ToString();
         //StartCombat();
     }

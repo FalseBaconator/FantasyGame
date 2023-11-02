@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public float HP;
     public float MaxHP;
     public TextMeshProUGUI HPField;
+    public int XP;
 
     public float dmg;
 
@@ -105,6 +106,7 @@ public class Enemy : MonoBehaviour
     {
         alive = false;
         //combatManager.enemies.Remove(this);
+        combatManager.GainXP(XP);
         foreach (GameObject obj in objectsToHide)
         {
             obj.SetActive(false);
