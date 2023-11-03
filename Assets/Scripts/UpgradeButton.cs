@@ -18,11 +18,16 @@ public class UpgradeButton : MonoBehaviour
 
     public int upgradeIndex;
 
+    public Sprite open;
+    public Sprite close;
+    Image img;
+
     private void Start()
     {
         gManager = FindFirstObjectByType<GameManager>();
         uManager = FindFirstObjectByType<UpgradeManager>();
         button = GetComponent<Button>();
+        img = GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -33,15 +38,18 @@ public class UpgradeButton : MonoBehaviour
             if (gManager.XP < costs[stage])
             {
                 button.interactable = false;
+                img.sprite = close;
             }
             else
             {
                 button.interactable = true;
+                img.sprite = open;
             }
         }
         else
         {
             button.interactable = false;
+            img.sprite = close;
         }
     }
 
