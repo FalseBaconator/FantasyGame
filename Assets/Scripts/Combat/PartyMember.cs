@@ -18,6 +18,7 @@ public class PartyMember : MonoBehaviour
 
     public float cooldownLength;
     public float currentCooldown;
+    float cooldownFifth;
 
     public float attack1Strength;
     public float attack2Strength;
@@ -39,6 +40,8 @@ public class PartyMember : MonoBehaviour
     public GameObject atkDisplay;
     public GameObject dmgDisplay;
     public GameObject healDisplay;
+
+    public Image timer;
 
     public enum Target
     {
@@ -82,12 +85,14 @@ public class PartyMember : MonoBehaviour
         HP = MaxHP;
         alive = true;
         HPField.text = HP.ToString() + "/" + MaxHP.ToString();
-        //StartCombat();
+        cooldownFifth = cooldownLength / 5;
+        StartCombat();
     }
 
     public void StartCombat()
     {
         currentCooldown = 0;
+        AwakenButtons();
     }
 
     // Update is called once per frame
@@ -99,6 +104,25 @@ public class PartyMember : MonoBehaviour
             if (currentCooldown > 0)
             {
                 currentCooldown -= Time.deltaTime;
+                if(currentCooldown > cooldownLength - cooldownFifth)
+                {
+                    timer.sprite = combatManager.Timers[0];
+                }else if(currentCooldown > cooldownLength - (cooldownFifth * 2))
+                {
+                    timer.sprite = combatManager.Timers[1];
+                }
+                else if (currentCooldown > cooldownLength - (cooldownFifth * 3))
+                {
+                    timer.sprite = combatManager.Timers[2];
+                }
+                else if (currentCooldown > cooldownLength - (cooldownFifth * 4))
+                {
+                    timer.sprite = combatManager.Timers[3];
+                }
+                else
+                {
+                    timer.sprite = combatManager.Timers[4];
+                }
             }
             else if (attack1Button.IsActive() == false)
             {
@@ -111,12 +135,15 @@ public class PartyMember : MonoBehaviour
     {
         attack1Button.gameObject.SetActive(true);
         attack2Button.gameObject.SetActive(true);
+        timer.gameObject.SetActive(false);
     }
 
     public void shutDownButtons()
     {
         attack1Button.gameObject.SetActive(false);
         attack2Button.gameObject.SetActive(false);
+        timer.gameObject.SetActive(true);
+        timer.sprite = combatManager.Timers[0];
         currentCooldown = cooldownLength;
     }
 
@@ -219,10 +246,6 @@ public class PartyMember : MonoBehaviour
 
     public void Heal(float heal)
     {
-        if(HP <= 0)
-        {
-            combatManager.partyMembers.Add(this);
-        }
         healDisplay.GetComponent<DMGDisplay>().activate();
         HP += heal;
         if (HP > MaxHP) HP = MaxHP;
@@ -238,7 +261,7 @@ public class PartyMember : MonoBehaviour
             alive = false;
             HP = 0;
             if (combatManager.attacker == this) combatManager.ClearActions();
-            combatManager.partyMembers.Remove(this);
+            //combatManager.partyMembers.Remove(this);
             shutDownButtons();
         }
 

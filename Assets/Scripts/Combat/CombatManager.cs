@@ -29,6 +29,8 @@ public class CombatManager : MonoBehaviour
     public GameManager gameManager;
     public bool IsInBoss;
 
+    public Sprite[] Timers;
+
     public void EnterBoss()
     {
         IsInBoss = true;
@@ -99,7 +101,7 @@ public class CombatManager : MonoBehaviour
         {
             if(shieldSprite.activeSelf == false)
                 shieldSprite.SetActive(true);
-            shieldText.text = "Shields: " + shields;
+            shieldText.text = shields.ToString();
         }else if(shieldSprite.activeSelf == true)
         {
             shieldSprite.SetActive(false);
