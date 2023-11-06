@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -46,19 +47,31 @@ public class MapGenerator : MonoBehaviour
         {
             encounter1 = new List<GameObject>();
             enemiesInEncounter1 = rand.Next(1, 4);
+            int encounter1Danger = 0;
             for (int i = 0; i < enemiesInEncounter1; i++)
             {
                 encounter1.Add(maps[currentMap].enemyTypes[rand.Next(maps[currentMap].enemyTypes.Length)]);
             }
-            encounter1Text.text = "You hear " + enemiesInEncounter1.ToString() + " enemies";
+            foreach (GameObject enemy in encounter1)
+            {
+                encounter1Danger += enemy.GetComponent<Enemy>().dangerScore;
+            }
+            //encounter1Text.text = "You hear " + enemiesInEncounter1.ToString() + " enemies";
+            encounter1Text.text = "Danger Score: " + encounter1Danger.ToString();
 
             encounter2 = new List<GameObject>();
             enemiesInEncounter2 = rand.Next(1, 4);
+            int encounter2Danger = 0;
             for (int i = 0; i < enemiesInEncounter2; i++)
             {
                 encounter2.Add(maps[currentMap].enemyTypes[rand.Next(maps[currentMap].enemyTypes.Length)]);
             }
-            encounter2Text.text = "You hear " + enemiesInEncounter2.ToString() + " enemies";
+            foreach (GameObject enemy in encounter2)
+            {
+                encounter2Danger += enemy.GetComponent<Enemy>().dangerScore;
+            }
+            //encounter2Text.text = "You hear " + enemiesInEncounter2.ToString() + " enemies";
+            encounter2Text.text = "Danger Score: " + encounter2Danger.ToString();
 
             foreach (GameObject button in encounterButtons)
             {

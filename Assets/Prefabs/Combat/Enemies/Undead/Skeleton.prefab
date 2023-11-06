@@ -374,6 +374,7 @@ MonoBehaviour:
   ice: {fileID: 5615747517111778588}
   iceTimer: 0
   alive: 1
+  dangerScore: 3
 --- !u!1 &8851588848503753051
 GameObject:
   m_ObjectHideFlags: 0

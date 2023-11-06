@@ -30,6 +30,8 @@ public class Enemy : MonoBehaviour
 
     public bool alive;
 
+    public int dangerScore;
+
     // Start is called before the first frame update
     void Awake()
     {
