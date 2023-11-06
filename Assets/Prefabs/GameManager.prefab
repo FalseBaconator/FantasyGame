@@ -4215,9 +4215,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1250937433236177471}
-  - {fileID: 7012862049672437519}
   - {fileID: 160399210916957613}
   - {fileID: 7364078061700482647}
+  - {fileID: 7012862049672437519}
   - {fileID: 2594986152440097369}
   m_Father: {fileID: 8346625344657845469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8190,6 +8190,12 @@ MonoBehaviour:
   dmgDisplay: {fileID: 4718744759102945867}
   healDisplay: {fileID: 4359299955935471375}
   timer: {fileID: 7596755824083094394}
+  sprite: {fileID: 0}
+  idle: {fileID: 0}
+  windUp: {fileID: 0}
+  attack1Sprite: {fileID: 0}
+  attack2Sprite: {fileID: 0}
+  dead: {fileID: 0}
   attack1Target: 0
   attack2Target: 0
   combatManager: {fileID: 3048024244643183280}
@@ -12318,9 +12324,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4161709905480053873}
-  - {fileID: 8181896553702453932}
   - {fileID: 3734259191647104833}
   - {fileID: 5979234095063436161}
+  - {fileID: 8181896553702453932}
   - {fileID: 5053884047490083569}
   m_Father: {fileID: 8346625344657845469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13906,9 +13912,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5939806803783147520}
-  - {fileID: 2447357186163169082}
   - {fileID: 7142748066208012546}
   - {fileID: 3907853340993717622}
+  - {fileID: 2447357186163169082}
   - {fileID: 5670090260246945796}
   m_Father: {fileID: 8346625344657845469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15029,6 +15035,12 @@ MonoBehaviour:
   dmgDisplay: {fileID: 1446297604705393247}
   healDisplay: {fileID: 5686998156673166100}
   timer: {fileID: 5212441546535533878}
+  sprite: {fileID: 0}
+  idle: {fileID: 0}
+  windUp: {fileID: 0}
+  attack1Sprite: {fileID: 0}
+  attack2Sprite: {fileID: 0}
+  dead: {fileID: 0}
   attack1Target: 0
   attack2Target: 0
   combatManager: {fileID: 3048024244643183280}
@@ -15769,6 +15781,12 @@ MonoBehaviour:
   dmgDisplay: {fileID: 5301395162835597580}
   healDisplay: {fileID: 4146219066316855760}
   timer: {fileID: 1055003972402068674}
+  sprite: {fileID: 0}
+  idle: {fileID: 0}
+  windUp: {fileID: 0}
+  attack1Sprite: {fileID: 0}
+  attack2Sprite: {fileID: 0}
+  dead: {fileID: 0}
   attack1Target: 0
   attack2Target: 0
   combatManager: {fileID: 3048024244643183280}

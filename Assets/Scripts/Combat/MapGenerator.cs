@@ -29,11 +29,14 @@ public class MapGenerator : MonoBehaviour
     {
         roomIndex = 0;
         combatManager.StartPartyMembers();
+        Debug.Log("A");
         GenerateNextEncounter();
     }
     
     public void GenerateNextEncounter()
     {
+        Debug.Log("B");
+        //combatManager.playing = true;
         roomIndex++;
         if (roomIndex < maxRoomCount)
         {
@@ -81,20 +84,20 @@ public class MapGenerator : MonoBehaviour
         switch (encounterIndex)
         {
             case 1:
-                combatManager.StartCombat(encounter1.ToArray());
                 gameManager.GoToCombat();
+                combatManager.StartCombat(encounter1.ToArray());
                 break;
             case 2:
-                combatManager.StartCombat(encounter2.ToArray());
                 gameManager.GoToCombat();
+                combatManager.StartCombat(encounter2.ToArray());
                 break;
         }
     }
 
     public void StartBossEncounter()
     {
-        combatManager.StartCombat(new GameObject[] { boss });
         gameManager.GoToCombat();
+        combatManager.StartCombat(new GameObject[] { boss });
     }
 
 }

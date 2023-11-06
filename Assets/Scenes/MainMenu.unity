@@ -167,6 +167,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fafa61033ec7dc24e886427b8460ffcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &924096466 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2863248855748063199, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+  m_PrefabInstance: {fileID: 8959830326056079577}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &973342284 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6055068196759459845, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
@@ -200,6 +211,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fafa61033ec7dc24e886427b8460ffcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1162868024 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 523042585104672606, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+  m_PrefabInstance: {fileID: 8959830326056079577}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1169361450 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3039180022449742, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
@@ -231,6 +253,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fafa61033ec7dc24e886427b8460ffcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1393793937 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7890039734466247571, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+  m_PrefabInstance: {fileID: 8959830326056079577}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1766794008 stripped
@@ -424,9 +457,33 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2680483966034658328, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: dead
+      value: 
+      objectReference: {fileID: 21300000, guid: 020ef0e628972c843a58cbbe2e570fed, type: 3}
+    - target: {fileID: 2680483966034658328, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: idle
+      value: 
+      objectReference: {fileID: 21300000, guid: f36f30b056383d44a9f847accfb74ad5, type: 3}
+    - target: {fileID: 2680483966034658328, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: MaxHP
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2680483966034658328, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 1162868024}
+    - target: {fileID: 2680483966034658328, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: windUp
+      value: 
+      objectReference: {fileID: 21300000, guid: fb2ca7c5bf267224b85c0c27ea577b9e, type: 3}
+    - target: {fileID: 2680483966034658328, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: attack1Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d5bd515f9f665a24994f6b1fb6bef32b, type: 3}
+    - target: {fileID: 2680483966034658328, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: attack2Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 339f14307979d7d428052cf9c60e947e, type: 3}
     - target: {fileID: 2680483966034658328, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: cooldownLength
       value: 2
@@ -482,6 +539,58 @@ PrefabInstance:
     - target: {fileID: 7602897417279107666, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_SizeDelta.y
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262205066894445854, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: dead
+      value: 
+      objectReference: {fileID: 21300000, guid: 91d1653f156ec3b4c86f046cd68b6bcf, type: 3}
+    - target: {fileID: 8262205066894445854, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: idle
+      value: 
+      objectReference: {fileID: 21300000, guid: d0b0fc45c170843498e82ab20b67ef4f, type: 3}
+    - target: {fileID: 8262205066894445854, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 1393793937}
+    - target: {fileID: 8262205066894445854, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: windUp
+      value: 
+      objectReference: {fileID: 21300000, guid: 62a4dbb5407c26b41b7923e5c42ec09a, type: 3}
+    - target: {fileID: 8262205066894445854, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: attack1Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 67a2270387d0873488c0f4401c01d860, type: 3}
+    - target: {fileID: 8262205066894445854, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: attack2Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f983e9a96120664a84b838f5848939b, type: 3}
+    - target: {fileID: 9092216153350063270, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: dead
+      value: 
+      objectReference: {fileID: 21300000, guid: ff38dae9a426ecf4d890d2e88b6f6e17, type: 3}
+    - target: {fileID: 9092216153350063270, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: idle
+      value: 
+      objectReference: {fileID: 21300000, guid: bbc4171908f783445b7bc6d2e6c90f27, type: 3}
+    - target: {fileID: 9092216153350063270, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 924096466}
+    - target: {fileID: 9092216153350063270, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: windUp
+      value: 
+      objectReference: {fileID: 21300000, guid: 2cb95f2b228d8dd4b857e6065bbc395c, type: 3}
+    - target: {fileID: 9092216153350063270, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: attack1Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: afc635e4b2d577c41902ccfe266c7b77, type: 3}
+    - target: {fileID: 9092216153350063270, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: attack2Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: afc635e4b2d577c41902ccfe266c7b77, type: 3}
+    - target: {fileID: 9120847898522619200, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
                 case GameState.Combat:
                     Time.timeScale = 1;
                     uiManager.OpenCombat();
-                    //combatManager.StartCombat();
+                    combatManager.playing = true;
                     break;
                 case GameState.Pause:
                     Time.timeScale = 0;
@@ -167,6 +167,7 @@ public class GameManager : MonoBehaviour
 
     public void StartNewDungeon()   //Should have more code to make CombatManager make the dungeon
     {
+        SaveGame();
         gameState = GameState.Map;
         mapGenerator.NewAttempt();
     }
@@ -311,7 +312,7 @@ public class GameManager : MonoBehaviour
         file.Close();
         foreach (int stage in data.stages)
         {
-            Debug.Log(stage);
+            //Debug.Log(stage);
         }
     }
 

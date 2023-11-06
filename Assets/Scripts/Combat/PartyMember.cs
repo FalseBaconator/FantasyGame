@@ -43,6 +43,20 @@ public class PartyMember : MonoBehaviour
 
     public Image timer;
 
+    public Image sprite;
+    public Sprite idle;
+    public Sprite windUp;
+    public Sprite attack1Sprite;
+    public Sprite attack2Sprite;
+    public Sprite dead;
+
+    float attackingTimer = 1;
+    float currentAttackTime = 0;
+    bool windingUp = false;
+    float windUpTime = 0.1f;
+    float currentWindUpTime = 0;
+    int latestAttack;
+
     public enum Target
     {
         enemies,
@@ -92,15 +106,48 @@ public class PartyMember : MonoBehaviour
     public void StartCombat()
     {
         currentCooldown = 0;
+        currentAttackTime = 0;
+        currentWindUpTime = 0;
+        sprite.sprite = idle;
         AwakenButtons();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (combatManager.playing && HP > 0)
+        if (/*combatManager.playing &&*/ HP > 0)
         {
             alive = true;
+
+            if (windingUp)
+            {
+                if (currentWindUpTime > 0)
+                {
+                    currentWindUpTime -= Time.deltaTime;
+                }
+                else
+                {
+                    windingUp = false;
+                    currentAttackTime = attackingTimer;
+                    switch (latestAttack)
+                    {
+                        case 1:
+                            sprite.sprite = attack1Sprite; break;
+                        case 2:
+                            sprite.sprite = attack2Sprite; break;
+                    }
+                }
+            }
+            else if (currentAttackTime > 0)
+            {
+                currentAttackTime -= Time.deltaTime;
+            }
+            else if (sprite.sprite != idle)
+            {
+                sprite.sprite = idle;
+            }
+
+
             if (currentCooldown > 0)
             {
                 currentCooldown -= Time.deltaTime;
@@ -128,6 +175,10 @@ public class PartyMember : MonoBehaviour
             {
                 AwakenButtons();
             }
+        }
+        else
+        {
+            timer.gameObject.SetActive(false);
         }
     }
 
@@ -158,7 +209,9 @@ public class PartyMember : MonoBehaviour
                 if (attack1IsShield)
                 {
                     combatManager.ClearActions();
-                    combatManager.shields += (int)attack1Strength;
+                    combatManager.shields = (int)attack1Strength;
+                    currentAttackTime = attackingTimer;
+                    sprite.sprite = attack1Sprite;
                     shutDownButtons();
                 }
                 else
@@ -170,7 +223,9 @@ public class PartyMember : MonoBehaviour
                 if (attack2IsShield)
                 {
                     combatManager.ClearActions();
-                    combatManager.shields += (int)attack2Strength;
+                    combatManager.shields = (int)attack2Strength;
+                    currentAttackTime = attackingTimer;
+                    sprite.sprite= attack2Sprite;
                     shutDownButtons();
                 }
                 else
@@ -186,9 +241,13 @@ public class PartyMember : MonoBehaviour
         shutDownButtons();
         atkDisplay.GetComponent<DMGDisplay>().activate();
         //combatManager.attackSelected = false;
+        sprite.sprite = windUp;
+        currentWindUpTime = windUpTime;
+        windingUp = true;
         switch (SelectedAttack)
         {
             case 1:
+                latestAttack = 1;
                 if(attack1Target == Target.enemies)
                 {
                     target.GetComponent<Enemy>().TakeDMG(attack1Strength);
@@ -211,6 +270,7 @@ public class PartyMember : MonoBehaviour
                 }
                 break;
             case 2:
+                latestAttack = 2;
                 if (attack2Target == Target.enemies)
                 {
                     target.GetComponent<Enemy>().TakeDMG(attack2Strength);
@@ -258,6 +318,7 @@ public class PartyMember : MonoBehaviour
         HP -= dmg;
         if(HP <= 0)
         {
+            sprite.sprite = dead;
             alive = false;
             HP = 0;
             if (combatManager.attacker == this) combatManager.ClearActions();

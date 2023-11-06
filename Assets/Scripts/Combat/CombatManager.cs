@@ -44,7 +44,6 @@ public class CombatManager : MonoBehaviour
     public void StartCombat(GameObject[] enemiesInEncounter)
     {
         shields = 0;
-        playing = true;
         foreach (Enemy enemy in enemies)
         {
             Destroy(enemy.gameObject);
@@ -74,6 +73,7 @@ public class CombatManager : MonoBehaviour
             enemies.Add(Instantiate(enemiesInEncounter[i], parent.transform.GetChild(i)).GetComponent<Enemy>());
             enemies[i].cooldownOffset = i;
         }
+        //playing = true;
     }
 
     public void GainXP(int xp)
@@ -97,6 +97,9 @@ public class CombatManager : MonoBehaviour
 
     private void Update()
     {
+
+        Debug.Log(playing);
+
         if(shields > 0)
         {
             if(shieldSprite.activeSelf == false)
