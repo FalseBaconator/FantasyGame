@@ -26,6 +26,9 @@ public class PartyMember : MonoBehaviour
     public float attack1SplashDMG;
     public float attack2SplashDMG;
 
+    public float attack1FreezeTime;
+    public float attack2FreezeTime;
+
     public bool attack1IsShield;
     public bool attack2IsShield;
 
@@ -91,7 +94,9 @@ public class PartyMember : MonoBehaviour
                 break;
             case Character.Mage:
                 attack1Strength = uManager.mageFire;
+                attack1SplashDMG = uManager.mageSplash;
                 attack2Strength = uManager.mageIce;
+                attack2FreezeTime = uManager.mageCool;
                 cooldownLength = uManager.mageCooldown;
                 MaxHP = uManager.mageHP;
                 break;
@@ -261,6 +266,10 @@ public class PartyMember : MonoBehaviour
                             }
                         }
                     }
+                    if(attack1FreezeTime > 0)
+                    {
+                        target.GetComponent<Enemy>().Freeze(attack1FreezeTime);
+                    }
                 }else if(attack1Target == Target.party)
                 {
                     if (attack1IsHeal)
@@ -283,6 +292,10 @@ public class PartyMember : MonoBehaviour
                                 enemy.TakeDMG(attack2SplashDMG);
                             }
                         }
+                    }
+                    if (attack2FreezeTime > 0)
+                    {
+                        target.GetComponent<Enemy>().Freeze(attack2FreezeTime);
                     }
                 }
                 else if (attack2Target == Target.party)

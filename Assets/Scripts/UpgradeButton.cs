@@ -14,6 +14,7 @@ public class UpgradeButton : MonoBehaviour
     public int maxStage;
     public int[] costs;
     public float[] worths;
+    public float[] secondaryWorths;
     [TextArea] public string[] descriptions;
 
     public int upgradeIndex;
@@ -102,10 +103,10 @@ public class UpgradeButton : MonoBehaviour
                 uManager.UpgradeCooldown(2, worths[stage]);
                 break;
             case 10: //Mage Fire
-                uManager.UpgradeFire((int)worths[stage]);
+                uManager.UpgradeFire((int)worths[stage], (int)secondaryWorths[stage]);
                 break;
             case 11: //Mage Ice
-                uManager.UpgradeIce((int)worths[stage]);
+                uManager.UpgradeIce((int)worths[stage], secondaryWorths[stage]);
                 break;
         }
         stage++;

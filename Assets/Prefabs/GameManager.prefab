@@ -159,6 +159,7 @@ MonoBehaviour:
   - 25
   - 35
   - 50
+  secondaryWorths: []
   descriptions:
   - 'Health: 0/5
 
@@ -557,6 +558,7 @@ MonoBehaviour:
   - 25
   - 35
   - 50
+  secondaryWorths: []
   descriptions:
   - 'Health: 0/5
 
@@ -1163,6 +1165,7 @@ MonoBehaviour:
   - 7
   - 10
   - 15
+  secondaryWorths: []
   descriptions:
   - 'Attack: 0/5
 
@@ -2110,7 +2113,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: H
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2667,7 +2670,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: C
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3948,25 +3951,37 @@ MonoBehaviour:
   - 15
   - 17
   - 20
+  secondaryWorths:
+  - 1
+  - 1.5
+  - 2
+  - 2.5
+  - 5
   descriptions:
   - 'Ice: 0/5
 
-    Increases the Mage''s Ice damage to 5.'
+    Increases the Mage''s Ice damage to 5. Freezes opponent for a
+    second'
   - 'Ice: 1/5
 
-    Increases the Mage''s Ice damage to 10.'
+    Increases the Mage''s Ice damage to 10. Freezes opponent for 1.5
+    seconds'
   - 'Ice: 2/5
 
-    Increases the Mage''s Ice damage to 15.'
+    Increases the Mage''s Ice damage to 15. Freezes opponent for 2
+    seconds'
   - 'Ice: 3/5
 
-    Increases the Mage''s Ice damage to 17.'
+    Increases the Mage''s Ice damage to 17. Freezes opponent for 2.5
+    seconds.'
   - 'Ice: 4/5
 
-    Increases the Mage''s Ice damage to 20.'
+    Increases the Mage''s Ice damage to 20. Freezes opponent for 5
+    seconds.'
   - 'Ice: 5/5 (MAX)
 
-    The Mage''s Ice damage is 20.'
+    The Mage''s Ice damage is 20. Opponent gets frozen for 5
+    seconds.'
   upgradeIndex: 11
   open: {fileID: 21300000, guid: 21757dd657e8c274eacbd69e110e8aff, type: 3}
   close: {fileID: 21300000, guid: cb8b6ca6dd488094ca05d717fd85b6a2, type: 3}
@@ -4116,7 +4131,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4650,25 +4665,36 @@ MonoBehaviour:
   - 15
   - 17
   - 20
+  secondaryWorths:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
   descriptions:
   - 'Fire: 0/5
 
-    Increases the Mage''s Fire damage to 5.'
+    Increases the Mage''s Fire damage to 5. Makes other enemies take
+    1 damage.'
   - 'Fire: 1/5
 
-    Increases the Mage''s Fire damage to 10.'
+    Increases the Mage''s Fire damage to 10. Makes other enemies
+    take 2 damage.'
   - 'Fire: 2/5
 
-    Increases the Mage''s Fire damage to 15.'
+    Increases the Mage''s Fire damage to 15. Makes other enemies
+    take 3 damage.'
   - 'Fire: 3/5
 
-    Increases the Mage''s Fire damage to 17.'
+    Increases the Mage''s Fire damage to 17. Makes other enemies
+    take 4 damage.'
   - 'Fire: 4/5
 
-    Increases the Mage''s Fire damage to 20.'
+    Increases the Mage''s Fire damage to 20. Makes other enemies
+    take 5 damage.'
   - 'Fire: 5/5 (MAX)
 
-    The Mage''s Fire damage is 20.'
+    The Mage''s Fire damage is 20. Other enemies take 5 damage.'
   upgradeIndex: 10
   open: {fileID: 21300000, guid: a48a2bd11db3b464cb8b6e0ca0014058, type: 3}
   close: {fileID: 21300000, guid: 0406453f2bf59e74d8da4e36b596da23, type: 3}
@@ -4782,9 +4808,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'S
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4993,7 +5017,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: H
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5394,7 +5418,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: C
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5756,6 +5780,7 @@ MonoBehaviour:
   - 1.25
   - 1
   - 0.5
+  secondaryWorths: []
   descriptions:
   - 'Cooldown: 0/5
 
@@ -6021,7 +6046,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: F
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8457,6 +8482,8 @@ MonoBehaviour:
   attack2Strength: 0
   attack1SplashDMG: 0
   attack2SplashDMG: 0
+  attack1FreezeTime: 0
+  attack2FreezeTime: 0
   attack1IsShield: 0
   attack2IsShield: 0
   attack1IsHeal: 0
@@ -8542,7 +8569,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: A
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9486,6 +9513,7 @@ MonoBehaviour:
   - 1.25
   - 1
   - 0.5
+  secondaryWorths: []
   descriptions:
   - 'Cooldown: 0/5
 
@@ -10855,7 +10883,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11134,7 +11162,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: H
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11368,16 +11396,20 @@ MonoBehaviour:
   warriorAttack: 2
   defaultWarriorHP: 10
   defaultWarriorCooldown: 2
-  defaultWarriorShield: 1
-  defaultWarriorAttack: 3
+  defaultWarriorShield: 3
+  defaultWarriorAttack: 2
   mageHP: 5
   mageCooldown: 2
   mageFire: 3
+  mageSplash: 0
   mageIce: 3
+  mageCool: 0
   defaultMageHP: 5
   defaultMageCooldown: 2
   defaultMageFire: 3
+  defaultMageSplash: 0
   defaultMageIce: 3
+  defaultMageCool: 0
   upgradeButtons:
   - {fileID: 3039180022449742}
   - {fileID: 5926994833268827374}
@@ -12917,7 +12949,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: A
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13956,6 +13988,7 @@ MonoBehaviour:
   - 6
   - 8
   - 10
+  secondaryWorths: []
   descriptions:
   - 'Shield: 0/5
 
@@ -14333,6 +14366,7 @@ MonoBehaviour:
   - 1.25
   - 1
   - 0.5
+  secondaryWorths: []
   descriptions:
   - 'Cooldown: 0/5
 
@@ -14599,6 +14633,7 @@ MonoBehaviour:
   - 4
   - 5
   - 6
+  secondaryWorths: []
   descriptions:
   - 'Attack: 0/5
 
@@ -15676,6 +15711,8 @@ MonoBehaviour:
   attack2Strength: 0
   attack1SplashDMG: 0
   attack2SplashDMG: 0
+  attack1FreezeTime: 0
+  attack2FreezeTime: 0
   attack1IsShield: 0
   attack2IsShield: 0
   attack1IsHeal: 0
@@ -16199,6 +16236,7 @@ MonoBehaviour:
   - 21
   - 28
   - 40
+  secondaryWorths: []
   descriptions:
   - 'Health: 0/5
 
@@ -16422,6 +16460,8 @@ MonoBehaviour:
   attack2Strength: 0
   attack1SplashDMG: 0
   attack2SplashDMG: 0
+  attack1FreezeTime: 0
+  attack2FreezeTime: 0
   attack1IsShield: 0
   attack2IsShield: 0
   attack1IsHeal: 0
@@ -16641,7 +16681,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: C
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17619,6 +17659,7 @@ MonoBehaviour:
   - 12
   - 15
   - 20
+  secondaryWorths: []
   descriptions:
   - 'Heal: 0/5
 

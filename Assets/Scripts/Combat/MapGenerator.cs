@@ -35,15 +35,12 @@ public class MapGenerator : MonoBehaviour
     {
         roomIndex = 0;
         combatManager.StartPartyMembers();
-        Debug.Log("A");
         GenerateNextEncounter();
     }
     
     public void GenerateNextEncounter()
     {
         title.text = maps[currentMap].title;
-        Debug.Log("B");
-        //combatManager.playing = true;
         roomIndex++;
         if (roomIndex < maps[currentMap].roomCount)
         {

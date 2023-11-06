@@ -25,6 +25,9 @@ public class Enemy : MonoBehaviour
     public GameObject dmgDisplay;
     public GameObject healDisplay;
 
+    public Image ice;
+    public float iceTimer;
+
     public bool alive;
 
     // Start is called before the first frame update
@@ -45,10 +48,18 @@ public class Enemy : MonoBehaviour
     {
         if (combatManager.playing && HP > 0)
         {
-            currentCooldown += Time.deltaTime;
-            if (currentCooldown >= cooldownLength)
+            if (iceTimer > 0)
             {
-                Attack();
+                iceTimer -= Time.deltaTime;
+            }
+            else
+            {
+                ice.gameObject.SetActive(false);
+                currentCooldown += Time.deltaTime;
+                if (currentCooldown >= cooldownLength)
+                {
+                    Attack();
+                }
             }
         }
     }
@@ -60,6 +71,12 @@ public class Enemy : MonoBehaviour
             combatManager.attacker.GetComponent<PartyMember>().Attack(gameObject);
         }
     }*/
+
+    public void Freeze(float time)
+    {
+        iceTimer = time;
+        ice.gameObject.SetActive(true);
+    }
 
     public void Attack()
     {

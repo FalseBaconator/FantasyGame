@@ -30,11 +30,15 @@ public class UpgradeManager : MonoBehaviour
     public int mageHP = 7;
     public float mageCooldown = 2;
     public int mageFire = 3;
+    public float mageSplash = 0;
     public int mageIce = 3;
+    public float mageCool = 0;
     public int defaultMageHP;
     public float defaultMageCooldown;
     public int defaultMageFire;
+    public int defaultMageSplash;
     public int defaultMageIce;
+    public float defaultMageCool;
 
     public List<UpgradeButton> upgradeButtons;
     public List<int> upgradeStages = new List<int>();
@@ -135,14 +139,16 @@ public class UpgradeManager : MonoBehaviour
         warriorAttack = amount;
     }
 
-    public void UpgradeFire(int amount)
+    public void UpgradeFire(int amount, int splash)
     {
         mageFire = amount;
+        mageSplash = splash;
     }
 
-    public void UpgradeIce(int amount)
+    public void UpgradeIce(int amount, float cool)
     {
         mageIce = amount;
+        mageCool = cool;
     }
 
     public void ReceiveData(int hHP, float hCooldown, int hAttack, int hHeal, int wHP, float wCooldown, int wShield, int wAttack, int mHP, float mCooldown, int mFire, int mIce, int[] stages)
