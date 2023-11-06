@@ -5,6 +5,9 @@ using UnityEngine;
 public class DMGDisplay : MonoBehaviour
 {
 
+
+    //This is all placeholder until I can make appropriate art.
+
     public float cooldownLength;
     public float currentCooldown;
 
@@ -14,7 +17,6 @@ public class DMGDisplay : MonoBehaviour
         currentCooldown = cooldownLength;
     }
 
-    // Update is called once per frame
     void Update()
     {
         currentCooldown -= Time.deltaTime;

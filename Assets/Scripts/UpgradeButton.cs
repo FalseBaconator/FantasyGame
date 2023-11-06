@@ -34,6 +34,7 @@ public class UpgradeButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Checks if button should be active
         if (stage < maxStage)
         {
             if (gManager.XP < costs[stage])
@@ -54,6 +55,7 @@ public class UpgradeButton : MonoBehaviour
         }
     }
 
+    //Show Description
     public void MouseOver()
     {
         if(stage < maxStage)
@@ -62,11 +64,13 @@ public class UpgradeButton : MonoBehaviour
             uManager.ShowDesc(descriptions[stage]);
     }
 
+    //Hide Description
     public void MouseExit()
     {
         uManager.HideDesc();
     }
 
+    //On Button Press. Upgrades the stat in Upgrade Manager and on this button
     public void Upgrade()
     {
         gManager.XP -= costs[stage];

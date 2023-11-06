@@ -130,6 +130,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //Delays gamestate change until after the scene changed to prevent code being missed
     void SwitchScreenSceneTransition(Scene scene, LoadSceneMode mode)
     {
         switch (gameState)
@@ -153,12 +154,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //On Button Press Methods. Each changes scene
     public void GoToMenu()
     {
         SceneManager.LoadScene(mainMenuScene);
         SceneManager.sceneLoaded += SwitchScreenSceneTransition;
     }
 
+    
     public void GoToUpgrades()
     {
         SceneManager.LoadScene(upgradesScene);
@@ -171,19 +174,22 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded += SwitchScreenSceneTransition;
     }
 
-    public void StartNewDungeon()   //Should have more code to make CombatManager make the dungeon
+    //On Button Press. Saves chosen upgrades, the tells MapGenerator to start the dungeon.
+    public void StartNewDungeon()
     {
         SaveGame();
         gameState = GameState.Map;
         mapGenerator.NewAttempt();
     }
 
+    //Return to Map from Combat. Prepares the next stage of rooms.
     public void GoToMap()
     {
         gameState = GameState.Map;
         mapGenerator.GenerateNextEncounter();
     }
 
+    //Change Game State methods without changing scene.
     public void goToOptions()
     {
         gameState = GameState.Options;
@@ -212,6 +218,7 @@ public class GameManager : MonoBehaviour
 
     public void Win()
     {
+        //Checks if it's the end of the game or not
         if (mapGenerator.currentMap < mapGenerator.maps.Length - 1)
         {
             mapGenerator.currentMap++;
@@ -228,18 +235,21 @@ public class GameManager : MonoBehaviour
         gameState = GameState.BetweenDungeons;
     }
 
+    //Gets data from save file and distributes it accross the game as needed.
     public void LoadSave(int saveIndex)
     {
+        //Saves which save file it is
         currentSaveIndex = saveIndex;
         if (newGame)
         {
-            XP = 100;
+            //Doesn't load data, instead uses default starting data.
+            XP = 100;   //Would be 0 for actual game. Is 100 for testing purposes.
             mapGenerator.currentMap = 0;
-            //currentDungeon = Dungeon.GoblinCavern;
             upgradeManager.returnToDefault();
         }
         else
         {
+            //Gets Data from the appropriate data
             switch (currentSaveIndex)
             {
                 case 1:
@@ -253,10 +263,12 @@ public class GameManager : MonoBehaviour
                             Debug.Log(stage);
                         }
                         file.Close();
+                        //Distributes data accross GameManager and Upgrade Manager
                         data.GetDataFromFile(this, upgradeManager);
                     }
                     else
                     {
+                        //Loads a new game if the save data was empty
                         newGame = true;
                         LoadSave(saveIndex);
                     }
@@ -272,10 +284,12 @@ public class GameManager : MonoBehaviour
                             Debug.Log(stage);
                         }
                         file.Close();
+                        //Distributes data accross GameManager and Upgrade Manager
                         data.GetDataFromFile(this, upgradeManager);
                     }
                     else
                     {
+                        //Loads a new game if the save data was empty
                         newGame = true;
                         LoadSave(saveIndex);
                     }
@@ -291,10 +305,12 @@ public class GameManager : MonoBehaviour
                             Debug.Log(stage);
                         }
                         file.Close();
+                        //Distributes data accross GameManager and Upgrade Manager
                         data.GetDataFromFile(this, upgradeManager);
                     }
                     else
                     {
+                        //Loads a new game if the save data was empty
                         newGame = true;
                         LoadSave(saveIndex);
                     }
@@ -304,11 +320,13 @@ public class GameManager : MonoBehaviour
         GoToUpgrades();
     }
 
+    //On Button Press. Quit Game
     public void QuitGame()
     {
         Application.Quit();
     }
 
+    //On Certain State Changes. Saves Game to most recently opened save file.
     public void SaveGame()
     {
         BinaryFormatter bf = new BinaryFormatter();
@@ -327,13 +345,11 @@ public class GameManager : MonoBehaviour
                 break;
         }
         SaveData data = new SaveData();
+        //Gets data from Game Manager and Upgrade Manager.
         data.GetDataFromGame(this, upgradeManager);
+        //Saves data to file.
         bf.Serialize(file, data);
         file.Close();
-        foreach (int stage in data.stages)
-        {
-            //Debug.Log(stage);
-        }
     }
 
 }

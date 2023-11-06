@@ -6,22 +6,27 @@ using UnityEngine;
 
 public class CombatManager : MonoBehaviour
 {
+    //attacking data
     public bool attackSelected;
     public PartyMember.Target attackTargetType;
     public GameObject attackTarget;
     public GameObject attacker;
 
+    //possible targets
     public List<Enemy> enemies = new List<Enemy>();
     public List<PartyMember> partyMembers = new List<PartyMember>();
 
+    //Enemy generation
     public List<GameObject> enemyPrefabs;
     public GameObject oneEnemyParent;
     public GameObject twoEnemyParent;
     public GameObject threeEnemyParent;
 
+    //Is the combat running data
     public GameObject combatCanvas;
     public bool playing;
 
+    //Shield Data
     public int shields;
     public GameObject shieldSprite;
     public TextMeshProUGUI shieldText;
@@ -29,8 +34,10 @@ public class CombatManager : MonoBehaviour
     public GameManager gameManager;
     public bool IsInBoss;
 
+    //Cooldown Indicater Data
     public Sprite[] Timers;
 
+    //Is In Boss Room?
     public void EnterBoss()
     {
         IsInBoss = true;
@@ -41,22 +48,24 @@ public class CombatManager : MonoBehaviour
         IsInBoss = false;
     }
 
+    //Starts combat with encouter given to it by MapGenerator
     public void StartCombat(GameObject[] enemiesInEncounter)
     {
         shields = 0;
+        //Remove previous encounter's enemies
         foreach (Enemy enemy in enemies)
         {
             Destroy(enemy.gameObject);
         }
         enemies.Clear();
+        //preps Party Members for a new round of combat
         foreach(PartyMember partyMember in partyMembers)
         {
             partyMember.StartCombat();
         }
 
-        System.Random rand = new System.Random();
+        //Places Enemies
         GameObject parent;
-        //int enemyAmount = rand.Next(3);
         switch (enemiesInEncounter.Length)
         {
             default:
@@ -69,18 +78,18 @@ public class CombatManager : MonoBehaviour
         }
         for (int i = 0; i < enemiesInEncounter.Length; i++)
         {
-            //Instantiate(enemyPrefabs[rand.Next(enemyPrefabs.Count)], parent.transform.GetChild(i));
             enemies.Add(Instantiate(enemiesInEncounter[i], parent.transform.GetChild(i)).GetComponent<Enemy>());
             enemies[i].cooldownOffset = i;
         }
-        //playing = true;
     }
 
+    //Gives XP to gameManger upon defeating enemy
     public void GainXP(int xp)
     {
         gameManager.XP += xp;
     }
 
+    //Preps party members for a new dungeon. Upon entering Map through Upgrades
     public void StartPartyMembers()
     {
         foreach (PartyMember member in partyMembers)
@@ -89,7 +98,7 @@ public class CombatManager : MonoBehaviour
         }
     }
 
-
+    //No Longer In combat
     public void LeaveCombat()
     {
         playing = false;
@@ -98,8 +107,9 @@ public class CombatManager : MonoBehaviour
     private void Update()
     {
 
-        Debug.Log(playing);
+        //Debug.Log(playing);
 
+        //Shield Management
         if(shields > 0)
         {
             if(shieldSprite.activeSelf == false)
@@ -110,6 +120,7 @@ public class CombatManager : MonoBehaviour
             shieldSprite.SetActive(false);
         }
 
+        //Initiates an attack by Party Member when both Action and Target are selected. Bypassed by Shield
         if(attackTarget != null && attacker != null)
         {
             attacker.GetComponent<PartyMember>().Attack(attackTarget);
@@ -118,17 +129,20 @@ public class CombatManager : MonoBehaviour
             attacker = null;
         }
 
+        //If combat success
         if(CheckEnemiesAlive() == false && playing)
         {
             Win();
         }
 
+        //If combat loss
         if(CheckPlayersAlive() == false && playing)
         {
             Lose();
         }
     }
 
+    //Checks to see if there are living enemies
     bool CheckEnemiesAlive()
     {
         foreach(Enemy enemy in enemies)
@@ -138,6 +152,7 @@ public class CombatManager : MonoBehaviour
         return false;
     }
 
+    //Checks to see if there are living party members
     bool CheckPlayersAlive()
     {
         foreach(PartyMember pMember in partyMembers)
@@ -147,12 +162,14 @@ public class CombatManager : MonoBehaviour
         return false;
     }
 
+    //Removes Action data
     public void ClearActions()
     {
         attacker = null;
         attackSelected = false;
     }
 
+    //Upon win
     public void Win()
     {
         LeaveCombat();
@@ -160,6 +177,8 @@ public class CombatManager : MonoBehaviour
         {
             p.shutDownButtons();
         }
+
+        //Go to Win or Map
         if (IsInBoss)
         {
             gameManager.Win();
@@ -170,6 +189,7 @@ public class CombatManager : MonoBehaviour
         }
     }
 
+    //Party Defeated
     public void Lose()
     {
         LeaveCombat();

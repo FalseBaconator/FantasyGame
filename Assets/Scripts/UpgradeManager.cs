@@ -9,30 +9,36 @@ public class UpgradeManager : MonoBehaviour
     public TextMeshProUGUI description;
     public GameObject leaveUpgradesButton;
 
-    public int healerHP = 10;
-    public float healerCooldown = 2;
-    public int healerAttack = 1;
-    public int healerHeal = 5;
+    //Healer Stats
+    public int healerHP;
+    public float healerCooldown;
+    public int healerAttack;
+    public int healerHeal;
+    //Healer Default Stats (new game)
     public int defaultHealerHP;
     public float defaultHealerCooldown;
     public int defaultHealerAttack;
     public int defaultHealerHeal;
 
-    public int warriorHP = 10;
-    public float warriorCooldown = 2;
-    public int warriorShield = 3;
-    public int warriorAttack = 2;
+    //Warrior Stats
+    public int warriorHP;
+    public float warriorCooldown;
+    public int warriorShield;
+    public int warriorAttack;
+    //Warrior Default
     public int defaultWarriorHP;
     public float defaultWarriorCooldown;
     public int defaultWarriorShield;
     public int defaultWarriorAttack;
 
-    public int mageHP = 7;
-    public float mageCooldown = 2;
-    public int mageFire = 3;
-    public float mageSplash = 0;
-    public int mageIce = 3;
-    public float mageCool = 0;
+    //Mage Stats
+    public int mageHP;
+    public float mageCooldown;
+    public int mageFire;
+    public float mageSplash;
+    public int mageIce;
+    public float mageCool;  //Time enemy spends stunned
+    //Mage Default
     public int defaultMageHP;
     public float defaultMageCooldown;
     public int defaultMageFire;
@@ -43,12 +49,7 @@ public class UpgradeManager : MonoBehaviour
     public List<UpgradeButton> upgradeButtons;
     public List<int> upgradeStages = new List<int>();
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    //Sets all stats to default stats
     public void returnToDefault()
     {
         healerHP = defaultHealerHP;
@@ -64,7 +65,9 @@ public class UpgradeManager : MonoBehaviour
         mageHP = defaultMageHP;
         mageCooldown = defaultMageCooldown;
         mageFire = defaultMageFire;
+        mageSplash = defaultMageSplash;
         mageIce = defaultMageIce;
+        mageCool = defaultMageCool;
 
         for (int i = 0; i < upgradeButtons.Count; i++)
         {
@@ -74,6 +77,7 @@ public class UpgradeManager : MonoBehaviour
 
     }
 
+    //Show Description of hovered over button
     public void ShowDesc(string message)
     {
         description.text = message;
@@ -81,12 +85,14 @@ public class UpgradeManager : MonoBehaviour
         leaveUpgradesButton.SetActive(false);
     }
 
+    //Hide Description field
     public void HideDesc()
     {
         descriptionField.SetActive(false);
         leaveUpgradesButton.SetActive(true);
     }
 
+    //Upgrade HP of designated character
     public void UpgradeHP(int character, int amount)
     {
         switch (character)
@@ -103,6 +109,7 @@ public class UpgradeManager : MonoBehaviour
         }
     }
 
+    //Upgrade Cooldown of designated character
     public void UpgradeCooldown(int character, float amount)
     {
         switch (character)
@@ -119,6 +126,7 @@ public class UpgradeManager : MonoBehaviour
         }
     }
 
+    //Upgrade Actions
     public void UpgradeHealerAttack(int amount)
     {
         healerAttack = amount;
@@ -151,6 +159,7 @@ public class UpgradeManager : MonoBehaviour
         mageCool = cool;
     }
 
+    //Gets data from another source, for loading save files.
     public void ReceiveData(int hHP, float hCooldown, int hAttack, int hHeal, int wHP, float wCooldown, int wShield, int wAttack, int mHP, float mCooldown, int mFire, int mIce, int[] stages)
     {
         healerHP = hHP;

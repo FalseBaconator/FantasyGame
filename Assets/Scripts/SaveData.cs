@@ -34,20 +34,19 @@ public class SaveData
     public List<int> stages;
 
 
-
+    //Distributes Data accross GameManager and UpgradeManager
     public void GetDataFromFile(GameManager gManager, UpgradeManager uManager)
     {
         gManager.XP = XP;
         gManager.mapGenerator.currentMap = currentMap;
-        //gManager.currentDungeon = currentDungeon;
         uManager.ReceiveData(healerHP, healerCooldown, healerAttack, healerHeal, warriorHP, warriorCooldown, warriorShield, warriorAttack, mageHP, mageCooldown, mageFire, mageIce, stages.ToArray());
     }
 
+    //Gets Data from GameManager and UpgradeManager
     public void GetDataFromGame(GameManager gManager, UpgradeManager uManager)
     {
         XP = gManager.XP;
         currentMap = gManager.mapGenerator.currentMap;
-        //currentDungeon = gManager.currentDungeon;
 
         healerHP = uManager.healerHP;
         healerCooldown = uManager.healerCooldown;

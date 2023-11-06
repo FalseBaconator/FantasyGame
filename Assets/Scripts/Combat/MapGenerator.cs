@@ -15,10 +15,6 @@ public class MapGenerator : MonoBehaviour
     public MapInfo[] maps;
     public int roomIndex;
 
-    /*public int maxRoomCount;
-    public GameObject[] enemyTypes;
-    public GameObject boss;*/
-
     public int enemiesInEncounter1;
     public List<GameObject> encounter1;
     public int enemiesInEncounter2;
@@ -32,6 +28,7 @@ public class MapGenerator : MonoBehaviour
     public TextMeshProUGUI bossEncounterText;
     public TextMeshProUGUI title;
 
+    //Start a dungeon from the first room
     public void NewAttempt()
     {
         roomIndex = 0;
@@ -43,36 +40,42 @@ public class MapGenerator : MonoBehaviour
     {
         title.text = maps[currentMap].title;
         roomIndex++;
+        //Checks if not boss room
         if (roomIndex < maps[currentMap].roomCount)
         {
+            //Make encounter for first room
             encounter1 = new List<GameObject>();
             enemiesInEncounter1 = rand.Next(1, 4);
-            int encounter1Danger = 0;
             for (int i = 0; i < enemiesInEncounter1; i++)
             {
                 encounter1.Add(maps[currentMap].enemyTypes[rand.Next(maps[currentMap].enemyTypes.Length)]);
             }
+
+            //Calculate Danger Score for first room
+            int encounter1Danger = 0;
             foreach (GameObject enemy in encounter1)
             {
                 encounter1Danger += enemy.GetComponent<Enemy>().dangerScore;
             }
-            //encounter1Text.text = "You hear " + enemiesInEncounter1.ToString() + " enemies";
             encounter1Text.text = "Danger Score: " + encounter1Danger.ToString();
 
+            //Make encounter for second room
             encounter2 = new List<GameObject>();
-            enemiesInEncounter2 = rand.Next(1, 4);
             int encounter2Danger = 0;
             for (int i = 0; i < enemiesInEncounter2; i++)
             {
                 encounter2.Add(maps[currentMap].enemyTypes[rand.Next(maps[currentMap].enemyTypes.Length)]);
             }
+
+            //Calculate Danger Score for second room
+            enemiesInEncounter2 = rand.Next(1, 4);
             foreach (GameObject enemy in encounter2)
             {
                 encounter2Danger += enemy.GetComponent<Enemy>().dangerScore;
             }
-            //encounter2Text.text = "You hear " + enemiesInEncounter2.ToString() + " enemies";
             encounter2Text.text = "Danger Score: " + encounter2Danger.ToString();
 
+            //Activate proper buttons
             foreach (GameObject button in encounterButtons)
             {
                 button.SetActive(true);
@@ -84,6 +87,7 @@ public class MapGenerator : MonoBehaviour
         }
         else
         {
+            //Activate boss room button and deactivates other buttons and text
             foreach (GameObject button in encounterButtons)
             {
                 button.SetActive(false);
@@ -96,6 +100,7 @@ public class MapGenerator : MonoBehaviour
 
     }
 
+    //On Button Press. Go to combat with appropriate encounter
     public void StartEncounter(int encounterIndex)
     {
         combatManager.LeaveBoss();
@@ -112,12 +117,14 @@ public class MapGenerator : MonoBehaviour
         }
     }
 
+    //On Button Press. Go to combat with boss encounter.
     public void StartBossEncounter()
     {
         gameManager.GoToCombat();
         combatManager.StartCombat(new GameObject[] { maps[currentMap].boss });
     }
 
+    //These hold the data for your different dungeon types.
     [Serializable]
     public class MapInfo
     {

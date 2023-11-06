@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
     public GameObject WinScreen;
     public GameObject BetweenScreen;
 
+    //Each of these methods makes it so that a single screen is shown at a time
     public void OpenMainMenu()
     {
         MainMenu.SetActive(true);
