@@ -9,10 +9,15 @@ public class MapGenerator : MonoBehaviour
 {
     public CombatManager combatManager;
     public GameManager gameManager;
-    public int roomIndex = 0;
-    public int maxRoomCount = 6;
+
+    public int currentMap;
+    public MapInfo[] maps;
+    public int roomIndex;
+
+    /*public int maxRoomCount;
     public GameObject[] enemyTypes;
-    public GameObject boss;
+    public GameObject boss;*/
+
     public int enemiesInEncounter1;
     public List<GameObject> encounter1;
     public int enemiesInEncounter2;
@@ -24,6 +29,7 @@ public class MapGenerator : MonoBehaviour
     public TextMeshProUGUI encounter1Text;
     public TextMeshProUGUI encounter2Text;
     public TextMeshProUGUI bossEncounterText;
+    public TextMeshProUGUI title;
 
     public void NewAttempt()
     {
@@ -35,16 +41,17 @@ public class MapGenerator : MonoBehaviour
     
     public void GenerateNextEncounter()
     {
+        title.text = maps[currentMap].title;
         Debug.Log("B");
         //combatManager.playing = true;
         roomIndex++;
-        if (roomIndex < maxRoomCount)
+        if (roomIndex < maps[currentMap].roomCount)
         {
             encounter1 = new List<GameObject>();
             enemiesInEncounter1 = rand.Next(1, 4);
             for (int i = 0; i < enemiesInEncounter1; i++)
             {
-                encounter1.Add(enemyTypes[rand.Next(enemyTypes.Length)]);
+                encounter1.Add(maps[currentMap].enemyTypes[rand.Next(maps[currentMap].enemyTypes.Length)]);
             }
             encounter1Text.text = "You hear " + enemiesInEncounter1.ToString() + " enemies";
 
@@ -52,7 +59,7 @@ public class MapGenerator : MonoBehaviour
             enemiesInEncounter2 = rand.Next(1, 4);
             for (int i = 0; i < enemiesInEncounter2; i++)
             {
-                encounter2.Add(enemyTypes[rand.Next(enemyTypes.Length)]);
+                encounter2.Add(maps[currentMap].enemyTypes[rand.Next(maps[currentMap].enemyTypes.Length)]);
             }
             encounter2Text.text = "You hear " + enemiesInEncounter2.ToString() + " enemies";
 
@@ -97,7 +104,16 @@ public class MapGenerator : MonoBehaviour
     public void StartBossEncounter()
     {
         gameManager.GoToCombat();
-        combatManager.StartCombat(new GameObject[] { boss });
+        combatManager.StartCombat(new GameObject[] { maps[currentMap].boss });
+    }
+
+    [Serializable]
+    public class MapInfo
+    {
+        public int roomCount;
+        public string title;
+        public GameObject[] enemyTypes;
+        public GameObject boss;
     }
 
 }

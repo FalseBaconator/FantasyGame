@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     public GameObject OptionsScreen;
     public GameObject LoseScreen;
     public GameObject WinScreen;
+    public GameObject BetweenScreen;
 
     public void OpenMainMenu()
     {
@@ -26,6 +27,7 @@ public class UIManager : MonoBehaviour
         OptionsScreen.SetActive(false);
         LoseScreen.SetActive(false);
         WinScreen.SetActive(false);
+        BetweenScreen.SetActive(false);
     }
 
     public void OpenSavesScreen()
@@ -39,6 +41,7 @@ public class UIManager : MonoBehaviour
         OptionsScreen.SetActive(false);
         LoseScreen.SetActive(false);
         WinScreen.SetActive(false);
+        BetweenScreen.SetActive(false);
     }
 
     public void OpenUpgrades()
@@ -52,6 +55,7 @@ public class UIManager : MonoBehaviour
         OptionsScreen.SetActive(false);
         LoseScreen.SetActive(false);
         WinScreen.SetActive(false);
+        BetweenScreen.SetActive(false);
     }
 
     public void OpenMap()
@@ -65,6 +69,7 @@ public class UIManager : MonoBehaviour
         OptionsScreen.SetActive(false);
         LoseScreen.SetActive(false);
         WinScreen.SetActive(false);
+        BetweenScreen.SetActive(false);
     }
 
     public void OpenCombat()
@@ -78,6 +83,7 @@ public class UIManager : MonoBehaviour
         OptionsScreen.SetActive(false);
         LoseScreen.SetActive(false);
         WinScreen.SetActive(false);
+        BetweenScreen.SetActive(false);
     }
 
     public void OpenPauseScreen()
@@ -91,6 +97,7 @@ public class UIManager : MonoBehaviour
         OptionsScreen.SetActive(false);
         LoseScreen.SetActive(false);
         WinScreen.SetActive(false);
+        BetweenScreen.SetActive(false);
     }
 
     public void OpenOptions()
@@ -104,6 +111,7 @@ public class UIManager : MonoBehaviour
         OptionsScreen.SetActive(true);
         LoseScreen.SetActive(false);
         WinScreen.SetActive(false);
+        BetweenScreen.SetActive(false);
     }
 
     public void OpenLose()
@@ -117,6 +125,7 @@ public class UIManager : MonoBehaviour
         OptionsScreen.SetActive(false);
         LoseScreen.SetActive(true);
         WinScreen.SetActive(false);
+        BetweenScreen.SetActive(false);
     }
 
     public void OpenWin()
@@ -130,6 +139,21 @@ public class UIManager : MonoBehaviour
         OptionsScreen.SetActive(false);
         LoseScreen.SetActive(false);
         WinScreen.SetActive(true);
+        BetweenScreen.SetActive(false);
+    }
+
+    public void OpenBetween()
+    {
+        MainMenu.SetActive(false);
+        SavesScreen.SetActive(false);
+        UpgradeScreen.SetActive(false);
+        MapScreen.SetActive(false);
+        CombatScreen.SetActive(false);
+        PauseScreen.SetActive(false);
+        OptionsScreen.SetActive(false);
+        LoseScreen.SetActive(false);
+        WinScreen.SetActive(false);
+        BetweenScreen.SetActive(true);
     }
 
 }

@@ -23,14 +23,14 @@ public class GameManager : MonoBehaviour
     public int currentSaveIndex;
 
     public int XP;
-    public enum Dungeon { GoblinCavern, };
-    public Dungeon currentDungeon;
+    /*public enum Dungeon { GoblinCavern, };
+    public Dungeon currentDungeon;*/
 
     public TextMeshProUGUI XPText;
 
     public MapGenerator mapGenerator;
 
-    public enum GameState { MainMenu, Saves, Options, Upgrades, Map, Combat, Pause, Lose, Win };
+    public enum GameState { MainMenu, Saves, Options, Upgrades, Map, Combat, Pause, Lose, Win, BetweenDungeons };
     private GameState _gState = GameState.MainMenu;
     private GameState prevState;
     public GameState gameState{
@@ -79,6 +79,10 @@ public class GameManager : MonoBehaviour
                     Time.timeScale = 1;
                     uiManager.OpenWin();
                     break;
+                case GameState.BetweenDungeons:
+                    Time.timeScale = 1;
+                    uiManager.OpenBetween();
+                    break;
             }
             _gState = value;
         }
@@ -122,6 +126,7 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.Win:
                 break;
+            case GameState.BetweenDungeons: break;
         }
     }
 
@@ -137,6 +142,7 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.Combat: break;
             case GameState.Saves:
+            case GameState.BetweenDungeons:
             case GameState.Lose:
                 gameState = GameState.Upgrades;
                 break;
@@ -206,7 +212,20 @@ public class GameManager : MonoBehaviour
 
     public void Win()
     {
-        gameState = GameState.Win;
+        if (mapGenerator.currentMap < mapGenerator.maps.Length - 1)
+        {
+            mapGenerator.currentMap++;
+            GoToBetween();
+        }
+        else {
+            SaveGame();
+            gameState = GameState.Win;
+        }
+    }
+
+    public void GoToBetween()
+    {
+        gameState = GameState.BetweenDungeons;
     }
 
     public void LoadSave(int saveIndex)
@@ -215,7 +234,8 @@ public class GameManager : MonoBehaviour
         if (newGame)
         {
             XP = 100;
-            currentDungeon = Dungeon.GoblinCavern;
+            mapGenerator.currentMap = 0;
+            //currentDungeon = Dungeon.GoblinCavern;
             upgradeManager.returnToDefault();
         }
         else

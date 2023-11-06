@@ -115,7 +115,7 @@ public class PartyMember : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (/*combatManager.playing &&*/ HP > 0)
+        if (combatManager.playing && HP > 0)
         {
             alive = true;
 

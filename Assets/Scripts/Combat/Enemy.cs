@@ -70,13 +70,15 @@ public class Enemy : MonoBehaviour
         }
         else
         {
+            int attempt = 0;
             PartyMember target;
             do
             {
+                attempt++;
                 target = combatManager.partyMembers[Random.Range(0, combatManager.partyMembers.Count)];
-            } while (target.HP <= 0);
+            } while (target.HP <= 0 && attempt < 5);
 
-            target.TakeDMG(dmg);
+            if(target.alive) target.TakeDMG(dmg);
         }
 
         currentCooldown = 0;

@@ -9,7 +9,10 @@ public class SaveData
 
     //GameManager
     int XP;
-    GameManager.Dungeon currentDungeon;
+    //GameManager.Dungeon currentDungeon;
+
+    //Map
+    int currentMap;
 
     //UpgradeManager
     //Healer
@@ -35,14 +38,16 @@ public class SaveData
     public void GetDataFromFile(GameManager gManager, UpgradeManager uManager)
     {
         gManager.XP = XP;
-        gManager.currentDungeon = currentDungeon;
+        gManager.mapGenerator.currentMap = currentMap;
+        //gManager.currentDungeon = currentDungeon;
         uManager.ReceiveData(healerHP, healerCooldown, healerAttack, healerHeal, warriorHP, warriorCooldown, warriorShield, warriorAttack, mageHP, mageCooldown, mageFire, mageIce, stages.ToArray());
     }
 
     public void GetDataFromGame(GameManager gManager, UpgradeManager uManager)
     {
         XP = gManager.XP;
-        currentDungeon = gManager.currentDungeon;
+        currentMap = gManager.mapGenerator.currentMap;
+        //currentDungeon = gManager.currentDungeon;
 
         healerHP = uManager.healerHP;
         healerCooldown = uManager.healerCooldown;
