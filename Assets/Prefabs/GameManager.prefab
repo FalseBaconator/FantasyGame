@@ -17654,22 +17654,22 @@ MonoBehaviour:
   maxStage: 5
   costs: 0a0000000f00000014000000190000001e000000
   worths:
+  - 5
   - 7
   - 10
-  - 12
   - 15
   - 20
   secondaryWorths: []
   descriptions:
   - 'Heal: 0/5
 
-    Increases the Cleric''s Healing to 7.'
+    Increases the Cleric''s Healing to 5.'
   - 'Heal: 1/5
 
-    Increases the Cleric''s Healing to 10.'
+    Increases the Cleric''s Healing to 7.'
   - 'Heal: 2/5
 
-    Increases the Cleric''s Healing to 12.'
+    Increases the Cleric''s Healing to 10.'
   - 'Heal: 3/5
 
     Increases the Cleric''s Healing to 15.'

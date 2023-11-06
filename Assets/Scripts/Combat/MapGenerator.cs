@@ -85,6 +85,7 @@ public class MapGenerator : MonoBehaviour
 
     public void StartEncounter(int encounterIndex)
     {
+        combatManager.LeaveBoss();
         switch (encounterIndex)
         {
             case 1:
