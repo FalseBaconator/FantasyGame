@@ -964,7 +964,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 341, y: -48}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8391178388551427009
 CanvasRenderer:
@@ -8190,12 +8190,12 @@ MonoBehaviour:
   dmgDisplay: {fileID: 4718744759102945867}
   healDisplay: {fileID: 4359299955935471375}
   timer: {fileID: 7596755824083094394}
-  sprite: {fileID: 0}
-  idle: {fileID: 0}
-  windUp: {fileID: 0}
-  attack1Sprite: {fileID: 0}
-  attack2Sprite: {fileID: 0}
-  dead: {fileID: 0}
+  sprite: {fileID: 7890039734466247571}
+  idle: {fileID: 21300000, guid: d0b0fc45c170843498e82ab20b67ef4f, type: 3}
+  windUp: {fileID: 21300000, guid: 62a4dbb5407c26b41b7923e5c42ec09a, type: 3}
+  attack1Sprite: {fileID: 21300000, guid: 67a2270387d0873488c0f4401c01d860, type: 3}
+  attack2Sprite: {fileID: 21300000, guid: 8f983e9a96120664a84b838f5848939b, type: 3}
+  dead: {fileID: 21300000, guid: 91d1653f156ec3b4c86f046cd68b6bcf, type: 3}
   attack1Target: 0
   attack2Target: 0
   combatManager: {fileID: 3048024244643183280}
@@ -10998,18 +10998,18 @@ MonoBehaviour:
   defaultMageFire: 3
   defaultMageIce: 3
   upgradeButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3039180022449742}
+  - {fileID: 5926994833268827374}
+  - {fileID: 153030850780163362}
+  - {fileID: 2986986737201028740}
+  - {fileID: 827730243181738819}
+  - {fileID: 1148025087773075507}
+  - {fileID: 2613112174815331616}
+  - {fileID: 6055068196759459845}
+  - {fileID: 5931070638374149449}
+  - {fileID: 2296443368139070452}
+  - {fileID: 6773121596084437830}
+  - {fileID: 3889623746421662316}
   upgradeStages: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1 &6398551605784614423
 GameObject:
@@ -11445,8 +11445,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -15014,13 +15014,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95aee1b80e9d0c649a7e0e6f1cb41263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 0
-  MaxHP: 0
+  HP: 10
+  MaxHP: 10
   HPField: {fileID: 5623819513938788787}
   character: 0
   uManager: {fileID: 1951100091836613892}
-  cooldownLength: 0
-  currentCooldown: 0
+  cooldownLength: 2
+  currentCooldown: 2
   attack1Strength: 0
   attack2Strength: 0
   attack1SplashDMG: 0
@@ -15035,12 +15035,12 @@ MonoBehaviour:
   dmgDisplay: {fileID: 1446297604705393247}
   healDisplay: {fileID: 5686998156673166100}
   timer: {fileID: 5212441546535533878}
-  sprite: {fileID: 0}
-  idle: {fileID: 0}
-  windUp: {fileID: 0}
-  attack1Sprite: {fileID: 0}
-  attack2Sprite: {fileID: 0}
-  dead: {fileID: 0}
+  sprite: {fileID: 523042585104672606}
+  idle: {fileID: 21300000, guid: f36f30b056383d44a9f847accfb74ad5, type: 3}
+  windUp: {fileID: 21300000, guid: fb2ca7c5bf267224b85c0c27ea577b9e, type: 3}
+  attack1Sprite: {fileID: 21300000, guid: d5bd515f9f665a24994f6b1fb6bef32b, type: 3}
+  attack2Sprite: {fileID: 21300000, guid: 339f14307979d7d428052cf9c60e947e, type: 3}
+  dead: {fileID: 21300000, guid: 020ef0e628972c843a58cbbe2e570fed, type: 3}
   attack1Target: 0
   attack2Target: 0
   combatManager: {fileID: 3048024244643183280}
@@ -15781,12 +15781,12 @@ MonoBehaviour:
   dmgDisplay: {fileID: 5301395162835597580}
   healDisplay: {fileID: 4146219066316855760}
   timer: {fileID: 1055003972402068674}
-  sprite: {fileID: 0}
-  idle: {fileID: 0}
-  windUp: {fileID: 0}
-  attack1Sprite: {fileID: 0}
-  attack2Sprite: {fileID: 0}
-  dead: {fileID: 0}
+  sprite: {fileID: 2863248855748063199}
+  idle: {fileID: 21300000, guid: bbc4171908f783445b7bc6d2e6c90f27, type: 3}
+  windUp: {fileID: 21300000, guid: 2cb95f2b228d8dd4b857e6065bbc395c, type: 3}
+  attack1Sprite: {fileID: 21300000, guid: afc635e4b2d577c41902ccfe266c7b77, type: 3}
+  attack2Sprite: {fileID: 21300000, guid: afc635e4b2d577c41902ccfe266c7b77, type: 3}
+  dead: {fileID: 21300000, guid: ff38dae9a426ecf4d890d2e88b6f6e17, type: 3}
   attack1Target: 0
   attack2Target: 0
   combatManager: {fileID: 3048024244643183280}
@@ -16723,7 +16723,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1960527190458206101
 RectTransform:
   m_ObjectHideFlags: 0
