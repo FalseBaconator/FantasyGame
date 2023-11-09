@@ -18,7 +18,6 @@ public class PartyMember : MonoBehaviour
 
     public float cooldownLength;
     public float currentCooldown;
-    float cooldownFifth;
 
     public float attack1Strength;
     public float attack2Strength;
@@ -38,15 +37,15 @@ public class PartyMember : MonoBehaviour
     public Button attack1Button;
     public Button attack2Button;
 
+    public Image attack1Cover;
+    public Image attack2Cover;
+
     private int SelectedAttack;
     
     //Placeholder feedback
     public GameObject atkDisplay;
     public GameObject dmgDisplay;
     public GameObject healDisplay;
-
-    //Cooldown indicater
-    public Image timer;
 
     //Character art
     public Image sprite;
@@ -109,7 +108,6 @@ public class PartyMember : MonoBehaviour
         HP = MaxHP;
         alive = true;
         HPField.text = HP.ToString() + "/" + MaxHP.ToString();
-        cooldownFifth = cooldownLength / 5;
         //Initiate Combat
         StartCombat();
     }
@@ -165,55 +163,40 @@ public class PartyMember : MonoBehaviour
             {
                 currentCooldown -= Time.deltaTime;
 
-                //Manage cooldown indicater
-                if(currentCooldown > cooldownLength - cooldownFifth)
-                {
-                    timer.sprite = combatManager.Timers[0];
-                }else if(currentCooldown > cooldownLength - (cooldownFifth * 2))
-                {
-                    timer.sprite = combatManager.Timers[1];
-                }
-                else if (currentCooldown > cooldownLength - (cooldownFifth * 3))
-                {
-                    timer.sprite = combatManager.Timers[2];
-                }
-                else if (currentCooldown > cooldownLength - (cooldownFifth * 4))
-                {
-                    timer.sprite = combatManager.Timers[3];
-                }
-                else
-                {
-                    timer.sprite = combatManager.Timers[4];
-                }
+                attack1Cover.fillAmount = currentCooldown/cooldownLength;
+                attack2Cover.fillAmount = currentCooldown/cooldownLength;
             }
-            else if (attack1Button.IsActive() == false)
+            else if (attack1Cover.IsActive() == true)
             {
                 //Allows the player to select Actions for this party member
                 AwakenButtons();
             }
-        }
-        else
-        {
-            //Removes the cooldown indicater when party member is dead
-            timer.gameObject.SetActive(false);
         }
     }
 
     //Party member is ready for action
     public void AwakenButtons()
     {
-        attack1Button.gameObject.SetActive(true);
-        attack2Button.gameObject.SetActive(true);
-        timer.gameObject.SetActive(false);
+        //attack1Button.gameObject.SetActive(true);
+        //attack2Button.gameObject.SetActive(true);
+        attack1Button.interactable = true;
+        attack2Button.interactable = true;
+        attack1Cover.gameObject.SetActive(false);
+        attack2Cover.gameObject.SetActive(false);
     }
 
     //Party member is on cooldown or dead.
     public void shutDownButtons()
     {
-        attack1Button.gameObject.SetActive(false);
-        attack2Button.gameObject.SetActive(false);
-        timer.gameObject.SetActive(true);
-        timer.sprite = combatManager.Timers[0];
+        attack1Button.gameObject.GetComponent<ActionButtonShowDesc>().MouseExit();
+        attack2Button.gameObject.GetComponent<ActionButtonShowDesc>().MouseExit();
+        //attack1Button.gameObject.SetActive(false);
+        //attack2Button.gameObject.SetActive(false);
+        attack1Button.interactable = true;
+        attack2Button.interactable = true;
+        attack1Cover.gameObject.SetActive(true);
+        attack2Cover.gameObject.SetActive(true);
+
         currentCooldown = cooldownLength;
     }
 

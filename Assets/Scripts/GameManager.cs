@@ -258,10 +258,6 @@ public class GameManager : MonoBehaviour
                         BinaryFormatter bf = new BinaryFormatter();
                         FileStream file = File.Open(Application.persistentDataPath + "/Save1.dat", FileMode.Open);
                         SaveData data = (SaveData)bf.Deserialize(file);
-                        foreach (int stage in data.stages)
-                        {
-                            Debug.Log(stage);
-                        }
                         file.Close();
                         //Distributes data accross GameManager and Upgrade Manager
                         data.GetDataFromFile(this, upgradeManager);
