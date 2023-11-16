@@ -6,6 +6,16 @@ using UnityEngine;
 
 public class CombatManager : MonoBehaviour
 {
+
+    //Damage Type Data
+    public enum DamageType { Slash, Stab, Bash, Fire, Ice, None};
+    public Sprite slashOnPlayer;
+    public Sprite slashOnEnemy;
+    public Sprite stab;
+    public Sprite bash;
+    public Sprite fire;
+    public Sprite ice;
+
     //attacking data
     public bool attackSelected;
     public PartyMember.Target attackTargetType;

@@ -22,6 +22,9 @@ public class PartyMember : MonoBehaviour
     public float attack1Strength;
     public float attack2Strength;
 
+    public CombatManager.DamageType attack1Type;
+    public CombatManager.DamageType attack2Type;
+
     public float attack1SplashDMG;
     public float attack2SplashDMG;
 
@@ -43,9 +46,8 @@ public class PartyMember : MonoBehaviour
     private int SelectedAttack;
     
     //Placeholder feedback
-    public GameObject atkDisplay;
-    public GameObject dmgDisplay;
     public GameObject healDisplay;
+    public GameObject dmgDisplay;
 
     //Character art
     public Image sprite;
@@ -54,6 +56,8 @@ public class PartyMember : MonoBehaviour
     public Sprite attack1Sprite;
     public Sprite attack2Sprite;
     public Sprite dead;
+    public Color defaultColor;
+    public Color hurtColor;
 
     //Timers
     float attackingTimer = 1;
@@ -62,6 +66,10 @@ public class PartyMember : MonoBehaviour
     float windUpTime = 0.1f;
     float currentWindUpTime = 0;
     int latestAttack;
+    float hurtLength = 0.25f;
+    float currentHurt = 0;
+
+    Vector3 startPos;
 
     public enum Target
     {
@@ -75,6 +83,11 @@ public class PartyMember : MonoBehaviour
     public CombatManager combatManager;
 
     public bool alive;
+
+    private void Start()
+    {
+        startPos = transform.position;
+    }
 
     public void NewAttempt()
     {
@@ -118,6 +131,8 @@ public class PartyMember : MonoBehaviour
         currentCooldown = 0;
         currentAttackTime = 0;
         currentWindUpTime = 0;
+        currentHurt = 0;
+        windingUp = false;
         sprite.sprite = idle;
         AwakenButtons();
     }
@@ -125,51 +140,76 @@ public class PartyMember : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (combatManager.playing && HP > 0)
+        if (combatManager.playing)
         {
-            alive = true;
-
-            //Manage sprites for character art because I didn't want to mess with the animation window.
-            if (windingUp)
+            if (HP > 0)
             {
-                if (currentWindUpTime > 0)
+                alive = true;
+
+                //Manage sprites for character art because I didn't want to mess with the animation window.
+                if (windingUp)
                 {
-                    currentWindUpTime -= Time.deltaTime;
-                }
-                else
-                {
-                    windingUp = false;
-                    currentAttackTime = attackingTimer;
-                    switch (latestAttack)
+                    if (currentWindUpTime > 0)
                     {
-                        case 1:
-                            sprite.sprite = attack1Sprite; break;
-                        case 2:
-                            sprite.sprite = attack2Sprite; break;
+                        currentWindUpTime -= Time.deltaTime;
+                    }
+                    else
+                    {
+                        windingUp = false;
+                        currentAttackTime = attackingTimer;
+                        switch (latestAttack)
+                        {
+                            case 1:
+                                sprite.sprite = attack1Sprite; break;
+                            case 2:
+                                sprite.sprite = attack2Sprite; break;
+                        }
                     }
                 }
-            }
-            else if (currentAttackTime > 0)
-            {
-                currentAttackTime -= Time.deltaTime;
-            }
-            else if (sprite.sprite != idle)
-            {
-                sprite.sprite = idle;
+                else if (currentAttackTime > 0)
+                {
+                    currentAttackTime -= Time.deltaTime;
+                }
+                else if (sprite.sprite != idle)
+                {
+                    sprite.sprite = idle;
+                }
+
+                //Checks if party member is on cooldown.
+                if (currentCooldown > 0)
+                {
+                    currentCooldown -= Time.deltaTime;
+
+                    attack1Cover.fillAmount = currentCooldown / cooldownLength;
+                    attack2Cover.fillAmount = currentCooldown / cooldownLength;
+                }
+                else if (attack1Cover.IsActive() == true)
+                {
+                    //Allows the player to select Actions for this party member
+                    AwakenButtons();
+                }
             }
 
-            //Checks if party member is on cooldown.
-            if (currentCooldown > 0)
+            if (currentHurt > 0)
             {
-                currentCooldown -= Time.deltaTime;
-
-                attack1Cover.fillAmount = currentCooldown/cooldownLength;
-                attack2Cover.fillAmount = currentCooldown/cooldownLength;
+                sprite.color = hurtColor;
+                currentHurt -= Time.deltaTime;
+                transform.position = new Vector3(transform.position.x, transform.position.y - 0.1f, transform.position.z);
             }
-            else if (attack1Cover.IsActive() == true)
+            else
             {
-                //Allows the player to select Actions for this party member
-                AwakenButtons();
+                if (transform.position != startPos)
+                {
+                    transform.position = startPos;
+                }
+                if (sprite.color != defaultColor)
+                {
+                    sprite.color = defaultColor;
+                }
+                if (dmgDisplay.activeSelf)
+                {
+                    dmgDisplay.SetActive(false);
+                }
             }
         }
     }
@@ -252,7 +292,6 @@ public class PartyMember : MonoBehaviour
     {
         //Party member did an action and is put on cooldown
         shutDownButtons();
-        atkDisplay.GetComponent<DMGDisplay>().activate();
         sprite.sprite = windUp;
         currentWindUpTime = windUpTime;
         windingUp = true;
@@ -264,7 +303,7 @@ public class PartyMember : MonoBehaviour
                 if(attack1Target == Target.enemies)
                 {
                     //Attacking opponent
-                    target.GetComponent<Enemy>().TakeDMG(attack1Strength);
+                    target.GetComponent<Enemy>().TakeDMG(attack1Strength, attack1Type);
                     //Splash Damage
                     if (attack1SplashDMG > 0)
                     {
@@ -272,7 +311,7 @@ public class PartyMember : MonoBehaviour
                         {
                             if (enemy != target)
                             {
-                                enemy.TakeDMG(attack1SplashDMG);
+                                enemy.TakeDMG(attack1SplashDMG, attack1Type);
                             }
                         }
                     }
@@ -296,7 +335,7 @@ public class PartyMember : MonoBehaviour
                 if (attack2Target == Target.enemies)
                 {
                     //Attacking Opponent
-                    target.GetComponent<Enemy>().TakeDMG(attack2Strength);
+                    target.GetComponent<Enemy>().TakeDMG(attack2Strength, attack2Type);
                     //Splash Damage
                     if (attack2SplashDMG > 0)
                     {
@@ -304,7 +343,7 @@ public class PartyMember : MonoBehaviour
                         {
                             if (enemy != target)
                             {
-                                enemy.TakeDMG(attack2SplashDMG);
+                                enemy.TakeDMG(attack2SplashDMG, attack2Type);
                             }
                         }
                     }
@@ -345,10 +384,28 @@ public class PartyMember : MonoBehaviour
     }
 
     //Lose Health
-    public void TakeDMG(float dmg)
+    public void TakeDMG(float dmg, CombatManager.DamageType type)
     {
-        dmgDisplay.GetComponent<DMGDisplay>().activate();
         HP -= dmg;
+        switch (type)
+        {
+            case CombatManager.DamageType.Slash:
+                dmgDisplay.GetComponent<Image>().sprite = combatManager.slashOnPlayer;
+                break;
+            case CombatManager.DamageType.Stab:
+                dmgDisplay.GetComponent<Image>().sprite = combatManager.stab;
+                break;
+            case CombatManager.DamageType.Bash:
+                dmgDisplay.GetComponent<Image>().sprite = combatManager.bash;
+                break;
+            case CombatManager.DamageType.Fire:
+                dmgDisplay.GetComponent<Image>().sprite = combatManager.fire;
+                break;
+            case CombatManager.DamageType.Ice:
+                dmgDisplay.GetComponent<Image>().sprite = combatManager.ice;
+                break;
+        }
+        dmgDisplay.SetActive(true);
         if(HP <= 0)
         {
             sprite.sprite = dead;
@@ -356,7 +413,10 @@ public class PartyMember : MonoBehaviour
             HP = 0;
             if (combatManager.attacker == this) combatManager.ClearActions();
             shutDownButtons();
+            attack1Cover.fillAmount = 1;
+            attack2Cover.fillAmount = 1;
         }
+        currentHurt = hurtLength;
 
         HPField.text = HP.ToString() + "/" + MaxHP.ToString();
     }
