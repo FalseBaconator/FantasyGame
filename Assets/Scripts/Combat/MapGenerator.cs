@@ -28,6 +28,9 @@ public class MapGenerator : MonoBehaviour
     public TextMeshProUGUI bossEncounterText;
     public TextMeshProUGUI title;
 
+    public Image background;
+    public Sprite[] backgrounds;
+
     //Start a dungeon from the first room
     public void NewAttempt()
     {
@@ -39,6 +42,7 @@ public class MapGenerator : MonoBehaviour
     public void GenerateNextEncounter()
     {
         title.text = maps[currentMap].title;
+        background.sprite = backgrounds[maps[currentMap].backgroundIndex];
         roomIndex++;
         //Checks if not boss room
         if (roomIndex < maps[currentMap].roomCount)
@@ -108,11 +112,11 @@ public class MapGenerator : MonoBehaviour
         {
             case 1:
                 gameManager.GoToCombat();
-                combatManager.StartCombat(encounter1.ToArray());
+                combatManager.StartCombat(encounter1.ToArray(), maps[currentMap].backgroundIndex);
                 break;
             case 2:
                 gameManager.GoToCombat();
-                combatManager.StartCombat(encounter2.ToArray());
+                combatManager.StartCombat(encounter2.ToArray(), maps[currentMap].backgroundIndex);
                 break;
         }
     }
@@ -121,7 +125,7 @@ public class MapGenerator : MonoBehaviour
     public void StartBossEncounter()
     {
         gameManager.GoToCombat();
-        combatManager.StartCombat(new GameObject[] { maps[currentMap].boss });
+        combatManager.StartCombat(new GameObject[] { maps[currentMap].boss }, maps[currentMap].backgroundIndex);
     }
 
     //These hold the data for your different dungeon types.
@@ -132,6 +136,7 @@ public class MapGenerator : MonoBehaviour
         public string title;
         public GameObject[] enemyTypes;
         public GameObject boss;
+        public int backgroundIndex;
     }
 
 }

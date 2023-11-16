@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CombatManager : MonoBehaviour
 {
@@ -47,6 +48,10 @@ public class CombatManager : MonoBehaviour
     //Cooldown Indicater Data
     public Sprite[] Timers;
 
+    //Background
+    public Image background;
+    public Sprite[] backgrounds;
+
     //Is In Boss Room?
     public void EnterBoss()
     {
@@ -59,8 +64,9 @@ public class CombatManager : MonoBehaviour
     }
 
     //Starts combat with encouter given to it by MapGenerator
-    public void StartCombat(GameObject[] enemiesInEncounter)
+    public void StartCombat(GameObject[] enemiesInEncounter, int backgroundIndex)
     {
+        background.sprite = backgrounds[backgroundIndex];
         shields = 0;
         //Remove previous encounter's enemies
         foreach (Enemy enemy in enemies)

@@ -9212,12 +9212,14 @@ MonoBehaviour:
     - {fileID: 8666879802084775525, guid: 69712e815307cd24e8d6a8854ba87469, type: 3}
     - {fileID: 8666879802084775525, guid: 3cb19ae9db658fd4b954858808539a7c, type: 3}
     boss: {fileID: 8666879802084775525, guid: b9011a240e8ec62429788f3d59c0388d, type: 3}
+    backgroundIndex: 0
   - roomCount: 5
     title: Undead Catacombs
     enemyTypes:
     - {fileID: 8666879802084775525, guid: 900dc38285acc4f44ac46b2450891c3c, type: 3}
     - {fileID: 8666879802084775525, guid: fd1b5cce22eaca240b21a20a01988e78, type: 3}
     boss: {fileID: 8666879802084775525, guid: f57ba3a826b09bf4d9aaf162e62a0455, type: 3}
+    backgroundIndex: 1
   roomIndex: 0
   enemiesInEncounter1: 0
   encounter1: []
@@ -9231,6 +9233,10 @@ MonoBehaviour:
   encounter2Text: {fileID: 5339524204389618320}
   bossEncounterText: {fileID: 2857478877915706357}
   title: {fileID: 3901835968302806164}
+  background: {fileID: 1770352830416965208}
+  backgrounds:
+  - {fileID: 21300000, guid: 06156aa094e3f8441a938adf2576511a, type: 3}
+  - {fileID: 21300000, guid: 990b1c00711744b4dbc3464a16ad25e2, type: 3}
 --- !u!1 &5193531632553873917
 GameObject:
   m_ObjectHideFlags: 0
@@ -9587,7 +9593,7 @@ MonoBehaviour:
   currentCooldown: 0
   attack1Strength: 0
   attack2Strength: 0
-  attack1Type: 0
+  attack1Type: 5
   attack2Type: 0
   attack1SplashDMG: 0
   attack2SplashDMG: 0
@@ -10592,7 +10598,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 116}
   m_SizeDelta: {x: 896, y: 692.5625}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6312687464034812210
@@ -11052,7 +11058,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4317965708037964768
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11065,6 +11071,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 9052167273298890249}
   - {fileID: 966234124052956633}
   - {fileID: 2305397851515681639}
   - {fileID: 738347881254795691}
@@ -11635,7 +11642,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1afadb8d303390f499dc90d53640a588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageSprites: []
+  slashOnPlayer: {fileID: 21300000, guid: dd6d2e4f44b2cc54280a54d573e4e293, type: 3}
+  slashOnEnemy: {fileID: 21300000, guid: 8fe0e0a8b6e1a3143b0411247b13914b, type: 3}
+  stab: {fileID: 21300000, guid: 02ee400d780ffe64bb99129551a7322c, type: 3}
+  bash: {fileID: 21300000, guid: b57f426ba5d9ae44385b09dc53142def, type: 3}
+  fire: {fileID: 21300000, guid: 5a94742cae5582445936f537f934c35b, type: 3}
+  ice: {fileID: 21300000, guid: 65e2d813d0e4f99478385f3b30484d98, type: 3}
   attackSelected: 0
   attackTargetType: 0
   attackTarget: {fileID: 0}
@@ -11663,6 +11675,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 91c70adc94acb1841b16d4c79458b514, type: 3}
   - {fileID: 21300000, guid: 4c744faee45fb04498627d160ef4d8d8, type: 3}
   - {fileID: 21300000, guid: 3d319406f8f154c469e567f5f0914c69, type: 3}
+  background: {fileID: 266513537848630617}
+  backgrounds:
+  - {fileID: 21300000, guid: 06156aa094e3f8441a938adf2576511a, type: 3}
+  - {fileID: 21300000, guid: 990b1c00711744b4dbc3464a16ad25e2, type: 3}
 --- !u!1 &5816962888408159165
 GameObject:
   m_ObjectHideFlags: 0
@@ -12477,6 +12493,81 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &6106491549904855220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9052167273298890249}
+  - component: {fileID: 1447597349371949416}
+  - component: {fileID: 1770352830416965208}
+  m_Layer: 0
+  m_Name: Background (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &9052167273298890249
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6106491549904855220}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4317965708037964768}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 116}
+  m_SizeDelta: {x: 896, y: 692.5625}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1447597349371949416
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6106491549904855220}
+  m_CullTransparentMesh: 1
+--- !u!114 &1770352830416965208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6106491549904855220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 06156aa094e3f8441a938adf2576511a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &6123761209847979500
 GameObject:
   m_ObjectHideFlags: 0
@@ -16462,8 +16553,8 @@ MonoBehaviour:
   currentCooldown: 2
   attack1Strength: 0
   attack2Strength: 0
-  attack1Type: 0
-  attack2Type: 0
+  attack1Type: 5
+  attack2Type: 2
   attack1SplashDMG: 0
   attack2SplashDMG: 0
   attack1FreezeTime: 0
@@ -17386,8 +17477,8 @@ MonoBehaviour:
   currentCooldown: 0
   attack1Strength: 0
   attack2Strength: 0
-  attack1Type: 0
-  attack2Type: 0
+  attack1Type: 3
+  attack2Type: 4
   attack1SplashDMG: 0
   attack2SplashDMG: 0
   attack1FreezeTime: 0
