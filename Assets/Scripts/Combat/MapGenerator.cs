@@ -61,14 +61,14 @@ public class MapGenerator : MonoBehaviour
 
             //Make encounter for second room
             encounter2 = new List<GameObject>();
-            int encounter2Danger = 0;
+            enemiesInEncounter2 = rand.Next(1, 4);
             for (int i = 0; i < enemiesInEncounter2; i++)
             {
                 encounter2.Add(maps[currentMap].enemyTypes[rand.Next(maps[currentMap].enemyTypes.Length)]);
             }
 
             //Calculate Danger Score for second room
-            enemiesInEncounter2 = rand.Next(1, 4);
+            int encounter2Danger = 0;
             foreach (GameObject enemy in encounter2)
             {
                 encounter2Danger += enemy.GetComponent<Enemy>().dangerScore;
