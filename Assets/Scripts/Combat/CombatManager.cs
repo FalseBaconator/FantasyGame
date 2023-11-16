@@ -63,7 +63,7 @@ public class CombatManager : MonoBehaviour
         IsInBoss = false;
     }
 
-    //Starts combat with encouter given to it by MapGenerator
+    //Starts combat with encouter given to it by EncounterGenerator
     public void StartCombat(GameObject[] enemiesInEncounter, int backgroundIndex)
     {
         background.sprite = backgrounds[backgroundIndex];

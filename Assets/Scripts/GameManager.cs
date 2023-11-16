@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI XPText;
 
-    public MapGenerator mapGenerator;
+    public EncounterGenerator mapGenerator;
 
     public enum GameState { MainMenu, Saves, Options, Upgrades, Map, Combat, Pause, Lose, Win, BetweenDungeons };
     private GameState _gState = GameState.MainMenu;

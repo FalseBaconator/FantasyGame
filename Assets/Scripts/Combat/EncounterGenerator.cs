@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MapGenerator : MonoBehaviour
+public class EncounterGenerator : MonoBehaviour
 {
     public CombatManager combatManager;
     public GameManager gameManager;
@@ -31,13 +31,21 @@ public class MapGenerator : MonoBehaviour
     public Image background;
     public Sprite[] backgrounds;
 
+    public Sprite[] leftDoors;
+    public Sprite[] rightDoors;
+    public Sprite[] centerDoors;
+
     //Start a dungeon from the first room
     public void NewAttempt()
     {
         roomIndex = 0;
+        encounterButtons[0].GetComponent<Image>().sprite = leftDoors[currentMap];
+        encounterButtons[1].GetComponent<Image>().sprite = rightDoors[currentMap];
+        bossButton.GetComponent<Image>().sprite = centerDoors[currentMap];
         combatManager.StartPartyMembers();
         GenerateNextEncounter();
     }
+
     
     public void GenerateNextEncounter()
     {
