@@ -12,7 +12,7 @@ public class SaveData
     //GameManager.Dungeon currentDungeon;
 
     //Map
-    int currentMap;
+    int completedDungeons;
 
     //UpgradeManager
     //Healer
@@ -40,7 +40,7 @@ public class SaveData
     public void GetDataFromFile(GameManager gManager, UpgradeManager uManager)
     {
         gManager.XP = XP;
-        gManager.mapGenerator.currentMap = currentMap;
+        gManager.completedDungeons = completedDungeons;
         uManager.ReceiveData(healerHP, healerCooldown, healerAttack, healerHeal, warriorHP, warriorCooldown, warriorShield, warriorAttack, mageHP, mageCooldown, mageFire, mageIce, mageSplash, mageStun, stages.ToArray());
     }
 
@@ -48,7 +48,7 @@ public class SaveData
     public void GetDataFromGame(GameManager gManager, UpgradeManager uManager)
     {
         XP = gManager.XP;
-        currentMap = gManager.mapGenerator.currentMap;
+        completedDungeons = gManager.completedDungeons;
 
         healerHP = uManager.healerHP;
         healerCooldown = uManager.healerCooldown;

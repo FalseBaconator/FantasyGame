@@ -201,7 +201,7 @@ public class CombatManager : MonoBehaviour
         }
         else
         {
-            gameManager.GoToMap();
+            gameManager.GoToEncounterGen();
         }
     }
 

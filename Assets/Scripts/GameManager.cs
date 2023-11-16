@@ -28,9 +28,12 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI XPText;
 
-    public EncounterGenerator mapGenerator;
+    public EncounterGenerator encounterGenerator;
+    public LevelSelecter levelSelecter;
 
-    public enum GameState { MainMenu, Saves, Options, Upgrades, Map, Combat, Pause, Lose, Win, BetweenDungeons };
+    public int completedDungeons;
+
+    public enum GameState { MainMenu, Saves, Options, Upgrades, LevelSelect, EncounterGen, Combat, Pause, Lose, Win, BetweenDungeons };
     private GameState _gState = GameState.MainMenu;
     private GameState prevState;
     public GameState gameState{
@@ -58,9 +61,13 @@ public class GameManager : MonoBehaviour
                     uiManager.OpenUpgrades();
                     SaveGame();
                     break;
-                case GameState.Map:
+                case GameState.LevelSelect:
                     Time.timeScale = 1;
-                    uiManager.OpenMap();
+                    uiManager.OpenLevelSelect();
+                    break;
+                case GameState.EncounterGen:
+                    Time.timeScale = 1;
+                    uiManager.OpenDungeon();
                     break;
                 case GameState.Combat:
                     Time.timeScale = 1;
@@ -108,7 +115,7 @@ public class GameManager : MonoBehaviour
             case GameState.Upgrades:
                 XPText.text = "XP: " + XP;
                 break;
-            case GameState.Map:
+            case GameState.EncounterGen:
                 break;
             case GameState.Combat:
                 if (Input.GetKeyDown(KeyCode.Escape))
@@ -138,7 +145,8 @@ public class GameManager : MonoBehaviour
             case GameState.MainMenu: break;
             case GameState.Options: break;
             case GameState.Upgrades: break;
-            case GameState.Map:
+            case GameState.LevelSelect: break;
+            case GameState.EncounterGen:
                 gameState = GameState.Combat;
                 break;
             case GameState.Combat: break;
@@ -175,18 +183,18 @@ public class GameManager : MonoBehaviour
     }
 
     //On Button Press. Saves chosen upgrades, the tells MapGenerator to start the dungeon.
-    public void StartNewDungeon()
+    public void StartNewDungeon(int dungeonIndex)
     {
         SaveGame();
-        gameState = GameState.Map;
-        mapGenerator.NewAttempt();
+        gameState = GameState.EncounterGen;
+        encounterGenerator.NewAttempt(dungeonIndex);
     }
 
     //Return to Map from Combat. Prepares the next stage of rooms.
-    public void GoToMap()
+    public void GoToEncounterGen()
     {
-        gameState = GameState.Map;
-        mapGenerator.GenerateNextEncounter();
+        gameState = GameState.EncounterGen;
+        encounterGenerator.GenerateNextEncounter();
     }
 
     //Change Game State methods without changing scene.
@@ -219,15 +227,26 @@ public class GameManager : MonoBehaviour
     public void Win()
     {
         //Checks if it's the end of the game or not
-        if (mapGenerator.currentMap < mapGenerator.maps.Length - 1)
+        //completedDungeons++;
+        if(encounterGenerator.currentMap >= completedDungeons)
         {
-            mapGenerator.currentMap++;
+            completedDungeons++;
+        }
+        SaveGame();
+        if (encounterGenerator.currentMap < encounterGenerator.maps.Length - 1)
+        {
+            encounterGenerator.currentMap++;
             GoToBetween();
         }
         else {
-            SaveGame();
             gameState = GameState.Win;
         }
+    }
+
+    public void GoToLevelSelect()
+    {
+        gameState = GameState.LevelSelect;
+        levelSelecter.Refresh();
     }
 
     public void GoToBetween()
@@ -244,7 +263,7 @@ public class GameManager : MonoBehaviour
         {
             //Doesn't load data, instead uses default starting data.
             XP = 100;   //Would be 0 for actual game. Is 100 for testing purposes.
-            mapGenerator.currentMap = 0;
+            encounterGenerator.currentMap = 0;
             upgradeManager.returnToDefault();
         }
         else

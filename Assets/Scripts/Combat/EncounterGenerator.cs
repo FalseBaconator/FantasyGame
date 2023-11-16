@@ -36,8 +36,9 @@ public class EncounterGenerator : MonoBehaviour
     public Sprite[] centerDoors;
 
     //Start a dungeon from the first room
-    public void NewAttempt()
+    public void NewAttempt(int dungeonIndex)
     {
+        currentMap = dungeonIndex;
         roomIndex = 0;
         encounterButtons[0].GetComponent<Image>().sprite = leftDoors[currentMap];
         encounterButtons[1].GetComponent<Image>().sprite = rightDoors[currentMap];

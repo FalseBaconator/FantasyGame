@@ -8,7 +8,8 @@ public class UIManager : MonoBehaviour
     public GameObject MainMenu;
     public GameObject SavesScreen;
     public GameObject UpgradeScreen;
-    public GameObject MapScreen;
+    public GameObject LevelSelectScreen;
+    public GameObject DungeonScreen;
     public GameObject CombatScreen;
     public GameObject PauseScreen;
     public GameObject OptionsScreen;
@@ -22,7 +23,8 @@ public class UIManager : MonoBehaviour
         MainMenu.SetActive(true);
         SavesScreen.SetActive(false);
         UpgradeScreen.SetActive(false);
-        MapScreen.SetActive(false);
+        LevelSelectScreen.SetActive(false);
+        DungeonScreen.SetActive(false);
         CombatScreen.SetActive(false);
         PauseScreen.SetActive(false);
         OptionsScreen.SetActive(false);
@@ -36,7 +38,8 @@ public class UIManager : MonoBehaviour
         MainMenu.SetActive(false);
         SavesScreen.SetActive(true);
         UpgradeScreen.SetActive(false);
-        MapScreen.SetActive(false);
+        LevelSelectScreen.SetActive(false);
+        DungeonScreen.SetActive(false);
         CombatScreen.SetActive(false);
         PauseScreen.SetActive(false);
         OptionsScreen.SetActive(false);
@@ -50,7 +53,8 @@ public class UIManager : MonoBehaviour
         MainMenu.SetActive(false);
         SavesScreen.SetActive(false);
         UpgradeScreen.SetActive(true);
-        MapScreen.SetActive(false);
+        LevelSelectScreen.SetActive(false);
+        DungeonScreen.SetActive(false);
         CombatScreen.SetActive(false);
         PauseScreen.SetActive(false);
         OptionsScreen.SetActive(false);
@@ -59,12 +63,28 @@ public class UIManager : MonoBehaviour
         BetweenScreen.SetActive(false);
     }
 
-    public void OpenMap()
+    public void OpenLevelSelect()
     {
         MainMenu.SetActive(false);
         SavesScreen.SetActive(false);
         UpgradeScreen.SetActive(false);
-        MapScreen.SetActive(true);
+        LevelSelectScreen.SetActive(true);
+        DungeonScreen.SetActive(false);
+        CombatScreen.SetActive(false);
+        PauseScreen.SetActive(false);
+        OptionsScreen.SetActive(false);
+        LoseScreen.SetActive(false);
+        WinScreen.SetActive(false);
+        BetweenScreen.SetActive(false);
+    }
+
+    public void OpenDungeon()
+    {
+        MainMenu.SetActive(false);
+        SavesScreen.SetActive(false);
+        UpgradeScreen.SetActive(false);
+        LevelSelectScreen.SetActive(false);
+        DungeonScreen.SetActive(true);
         CombatScreen.SetActive(false);
         PauseScreen.SetActive(false);
         OptionsScreen.SetActive(false);
@@ -78,7 +98,8 @@ public class UIManager : MonoBehaviour
         MainMenu.SetActive(false);
         SavesScreen.SetActive(false);
         UpgradeScreen.SetActive(false);
-        MapScreen.SetActive(false);
+        LevelSelectScreen.SetActive(false);
+        DungeonScreen.SetActive(false);
         CombatScreen.SetActive(true);
         PauseScreen.SetActive(false);
         OptionsScreen.SetActive(false);
@@ -92,7 +113,8 @@ public class UIManager : MonoBehaviour
         MainMenu.SetActive(false);
         SavesScreen.SetActive(false);
         UpgradeScreen.SetActive(false);
-        MapScreen.SetActive(false);
+        LevelSelectScreen.SetActive(false);
+        DungeonScreen.SetActive(false);
         CombatScreen.SetActive(false);
         PauseScreen.SetActive(true);
         OptionsScreen.SetActive(false);
@@ -106,7 +128,8 @@ public class UIManager : MonoBehaviour
         MainMenu.SetActive(false);
         SavesScreen.SetActive(false);
         UpgradeScreen.SetActive(false);
-        MapScreen.SetActive(false);
+        LevelSelectScreen.SetActive(false);
+        DungeonScreen.SetActive(false);
         CombatScreen.SetActive(false);
         PauseScreen.SetActive(false);
         OptionsScreen.SetActive(true);
@@ -120,7 +143,8 @@ public class UIManager : MonoBehaviour
         MainMenu.SetActive(false);
         SavesScreen.SetActive(false);
         UpgradeScreen.SetActive(false);
-        MapScreen.SetActive(false);
+        LevelSelectScreen.SetActive(false);
+        DungeonScreen.SetActive(false);
         CombatScreen.SetActive(false);
         PauseScreen.SetActive(false);
         OptionsScreen.SetActive(false);
@@ -134,7 +158,8 @@ public class UIManager : MonoBehaviour
         MainMenu.SetActive(false);
         SavesScreen.SetActive(false);
         UpgradeScreen.SetActive(false);
-        MapScreen.SetActive(false);
+        LevelSelectScreen.SetActive(false);
+        DungeonScreen.SetActive(false);
         CombatScreen.SetActive(false);
         PauseScreen.SetActive(false);
         OptionsScreen.SetActive(false);
@@ -148,7 +173,8 @@ public class UIManager : MonoBehaviour
         MainMenu.SetActive(false);
         SavesScreen.SetActive(false);
         UpgradeScreen.SetActive(false);
-        MapScreen.SetActive(false);
+        LevelSelectScreen.SetActive(false);
+        DungeonScreen.SetActive(false);
         CombatScreen.SetActive(false);
         PauseScreen.SetActive(false);
         OptionsScreen.SetActive(false);
