@@ -160,7 +160,7 @@ public class UpgradeManager : MonoBehaviour
     }
 
     //Gets data from another source, for loading save files.
-    public void ReceiveData(int hHP, float hCooldown, int hAttack, int hHeal, int wHP, float wCooldown, int wShield, int wAttack, int mHP, float mCooldown, int mFire, int mIce, int[] stages)
+    public void ReceiveData(int hHP, float hCooldown, int hAttack, int hHeal, int wHP, float wCooldown, int wShield, int wAttack, int mHP, float mCooldown, int mFire, int mIce, float mSplash, float mCool, int[] stages)
     {
         healerHP = hHP;
         healerCooldown = hCooldown;
@@ -176,6 +176,8 @@ public class UpgradeManager : MonoBehaviour
         mageCooldown = mCooldown;
         mageFire = mFire;
         mageIce = mIce;
+        mageSplash = mSplash;
+        mageCool = mCool;
 
         for (int i = 0; i < upgradeButtons.Count; i++)
         {

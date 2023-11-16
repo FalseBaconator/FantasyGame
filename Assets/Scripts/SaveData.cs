@@ -29,7 +29,9 @@ public class SaveData
     int mageHP;
     float mageCooldown;
     int mageFire;
+    float mageSplash;
     int mageIce;
+    float mageStun;
     //UpgradeStages
     public List<int> stages;
 
@@ -39,7 +41,7 @@ public class SaveData
     {
         gManager.XP = XP;
         gManager.mapGenerator.currentMap = currentMap;
-        uManager.ReceiveData(healerHP, healerCooldown, healerAttack, healerHeal, warriorHP, warriorCooldown, warriorShield, warriorAttack, mageHP, mageCooldown, mageFire, mageIce, stages.ToArray());
+        uManager.ReceiveData(healerHP, healerCooldown, healerAttack, healerHeal, warriorHP, warriorCooldown, warriorShield, warriorAttack, mageHP, mageCooldown, mageFire, mageIce, mageSplash, mageStun, stages.ToArray());
     }
 
     //Gets Data from GameManager and UpgradeManager
@@ -61,7 +63,9 @@ public class SaveData
         mageHP = uManager.mageHP;
         mageCooldown = uManager.mageCooldown;
         mageFire = uManager.mageFire;
+        mageSplash = uManager.mageSplash;
         mageIce = uManager.mageIce;
+        mageStun = uManager.mageCool;
 
         stages = new List<int>();
         foreach (int item in uManager.upgradeStages)
