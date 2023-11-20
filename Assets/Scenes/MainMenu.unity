@@ -236,7 +236,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.5647059, g: 0.5647059, b: 0.5647059, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -415,6 +415,10 @@ PrefabInstance:
     - target: {fileID: 1148025087773075507, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: descriptions.Array.data[5]
       value: The Cleric's Healing is 20.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708326066500972480, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1951100091836613892, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: stageFill
@@ -607,6 +611,10 @@ PrefabInstance:
     - target: {fileID: 3889623746421662316, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: descriptions.Array.data[5]
       value: The Mage's Cooldown is 0.5.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5614387877241159302, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5926994833268827374, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: title

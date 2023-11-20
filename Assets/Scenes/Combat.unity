@@ -159,7 +159,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.5647059, g: 0.5647059, b: 0.5647059, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -241,19 +241,34 @@ MonoBehaviour:
   currentCooldown: 0
   attack1Strength: 3
   attack2Strength: 3
+  attack1Type: 0
+  attack2Type: 0
   attack1SplashDMG: 0
   attack2SplashDMG: 0
+  attack1FreezeTime: 0
+  attack2FreezeTime: 0
   attack1IsShield: 0
   attack2IsShield: 0
   attack1IsHeal: 0
   attack2IsHeal: 0
   attack1Button: {fileID: 0}
   attack2Button: {fileID: 0}
-  atkDisplay: {fileID: 0}
-  dmgDisplay: {fileID: 0}
+  attack1Cover: {fileID: 0}
+  attack2Cover: {fileID: 0}
   healDisplay: {fileID: 0}
+  dmgDisplay: {fileID: 0}
+  sprite: {fileID: 0}
+  idle: {fileID: 0}
+  windUp: {fileID: 0}
+  attack1Sprite: {fileID: 0}
+  attack2Sprite: {fileID: 0}
+  dead: {fileID: 0}
+  defaultColor: {r: 0, g: 0, b: 0, a: 0}
+  hurtColor: {r: 0, g: 0, b: 0, a: 0}
   attack1Target: 0
   attack2Target: 0
+  combatManager: {fileID: 0}
+  alive: 0
 --- !u!1001 &3210393527202284569
 PrefabInstance:
   m_ObjectHideFlags: 0
