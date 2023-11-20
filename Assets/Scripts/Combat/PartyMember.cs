@@ -137,6 +137,7 @@ public class PartyMember : MonoBehaviour
         windingUp = false;
         sprite.sprite = idle;
         AwakenButtons();
+        if (HP <= 0) BecomeDead();
     }
 
     // Update is called once per frame
@@ -412,13 +413,7 @@ public class PartyMember : MonoBehaviour
         if(HP <= 0)
         {
             audioManager.PlaySFX(AudioManager.ClipToPlay.Die);
-            sprite.sprite = dead;
-            alive = false;
-            HP = 0;
-            if (combatManager.attacker == this) combatManager.ClearActions();
-            shutDownButtons();
-            attack1Cover.fillAmount = 1;
-            attack2Cover.fillAmount = 1;
+            BecomeDead();
         }
         else
         {
@@ -427,6 +422,17 @@ public class PartyMember : MonoBehaviour
         currentHurt = hurtLength;
 
         HPField.text = HP.ToString() + "/" + MaxHP.ToString();
+    }
+
+    void BecomeDead()
+    {
+        sprite.sprite = dead;
+        alive = false;
+        HP = 0;
+        if (combatManager.attacker == this) combatManager.ClearActions();
+        shutDownButtons();
+        attack1Cover.fillAmount = 1;
+        attack2Cover.fillAmount = 1;
     }
 
 }
