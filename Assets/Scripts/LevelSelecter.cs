@@ -8,6 +8,9 @@ public class LevelSelecter : MonoBehaviour
     public GameManager gManager;
     //public EncounterGenerator encounterGenerator;
     public Button[] levelButtons;
+    public Sprite[] lockedLevels;
+    public Sprite[] unlockedLevels;
+    public Sprite[] completedLevels;
 
     public void Refresh()
     {
@@ -17,10 +20,19 @@ public class LevelSelecter : MonoBehaviour
             if(i <= index)
             {
                 levelButtons[i].interactable = true;
+
+                if(i < index)
+                {
+                    levelButtons[i].GetComponent<Image>().sprite = completedLevels[i];
+                }else if (i == index)
+                {
+                    levelButtons[i].GetComponent<Image>().sprite = unlockedLevels[i];
+                }
             }
             else
             {
                 levelButtons[i].interactable = false;
+                levelButtons[i].GetComponent<Image>().sprite = lockedLevels[i];
             }
         }
     }
