@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UpgradeManager : MonoBehaviour
 {
     public GameObject descriptionField;
-    public TextMeshProUGUI description;
+    public TextMeshProUGUI upgradeTitle;
+    public TextMeshProUGUI upgradeDescription;
+    public Image[] stageIndicators;
+    public Sprite stageEmpty;
+    public Sprite stageFill;
     public GameObject leaveUpgradesButton;
 
     //Healer Stats
@@ -78,9 +83,24 @@ public class UpgradeManager : MonoBehaviour
     }
 
     //Show Description of hovered over button
-    public void ShowDesc(string message)
+    public void ShowDesc(string desc, string title, int cost, int stage)
     {
-        description.text = message;
+        if(cost > 0)
+            upgradeTitle.text = title + ": " + cost + "XP";
+        else
+            upgradeTitle.text = title;
+        upgradeDescription.text = desc;
+        for (int i = 0; i < stageIndicators.Length; i++)
+        {
+            if(i <= stage)
+            {
+                stageIndicators[i].sprite = stageFill;
+            }
+            else
+            {
+                stageIndicators[i].sprite = stageEmpty;
+            }
+        }
         descriptionField.SetActive(true);
         leaveUpgradesButton.SetActive(false);
     }

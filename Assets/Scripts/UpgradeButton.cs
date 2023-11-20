@@ -15,6 +15,7 @@ public class UpgradeButton : MonoBehaviour
     public int[] costs;
     public float[] worths;
     public float[] secondaryWorths;
+    public string title;
     [TextArea] public string[] descriptions;
 
     public int upgradeIndex;
@@ -59,9 +60,9 @@ public class UpgradeButton : MonoBehaviour
     public void MouseOver()
     {
         if(stage < maxStage)
-            uManager.ShowDesc(costs[stage] + " XP: " + descriptions[stage]);
+            uManager.ShowDesc(descriptions[stage], title, costs[stage], stage - 1);
         else
-            uManager.ShowDesc(descriptions[stage]);
+            uManager.ShowDesc(descriptions[stage], title, 0, stage);
     }
 
     //Hide Description
