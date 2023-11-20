@@ -160,25 +160,14 @@ MonoBehaviour:
   - 35
   - 50
   secondaryWorths: []
+  title: Health
   descriptions:
-  - 'Health: 0/5
-
-    Increases the Warrior''s Health to 15.'
-  - 'Health: 1/5
-
-    Increases the Warrior''s Health to 20.'
-  - 'Health: 2/5
-
-    Increases the Warrior''s Health to 25.'
-  - 'Health: 3/5
-
-    Increases the Warrior''s Health to 35.'
-  - 'Health: 4/5
-
-    Increases the Warrior''s Health to 50.'
-  - 'Health: 5/5 (MAX)
-
-    The Warrior''s Health is 50.'
+  - Increases the Warrior's Health to 15.
+  - Increases the Warrior's Health to 20.
+  - Increases the Warrior's Health to 25.
+  - Increases the Warrior's Health to 35.
+  - Increases the Warrior's Health to 50.
+  - The Warrior's Health is 50.
   upgradeIndex: 4
   open: {fileID: 21300000, guid: 3138a91e3df7ece4586ac8fc40fd61d9, type: 3}
   close: {fileID: 21300000, guid: 14eb70312855ef44ab5d7f1190b7389e, type: 3}
@@ -558,25 +547,14 @@ MonoBehaviour:
   - 35
   - 50
   secondaryWorths: []
+  title: Health
   descriptions:
-  - 'Health: 0/5
-
-    Increases the Cleric''s Health to 15.'
-  - 'Health: 1/5
-
-    Increases the Cleric''s Health to 20.'
-  - 'Health: 2/5
-
-    Increases the Cleric''s Health to 25.'
-  - 'Health: 3/5
-
-    Increases the Cleric''s Health to 35.'
-  - 'Health: 4/5
-
-    Increases the Cleric''s Health to 50'
-  - 'Health: 5/5 (MAX)
-
-    The Cleric''s Health is 50.'
+  - Increases the Cleric's Health to 15.
+  - Increases the Cleric's Health to 20.
+  - Increases the Cleric's Health to 25.
+  - Increases the Cleric's Health to 35.
+  - Increases the Cleric's Health to 50
+  - The Cleric's Health is 50.
   upgradeIndex: 0
   open: {fileID: 21300000, guid: 8c1b113e96835574fabd926744ca9ec6, type: 3}
   close: {fileID: 21300000, guid: f9bc2bb31285ac44cb8522eea53af14f, type: 3}
@@ -1300,25 +1278,14 @@ MonoBehaviour:
   - 10
   - 15
   secondaryWorths: []
+  title: Sword
   descriptions:
-  - 'Attack: 0/5
-
-    Increases the Warrior''s Attack to 3.'
-  - 'Attack: 1/5
-
-    Increases the Warrior''s Attack to 5.'
-  - 'Attack: 2/5
-
-    Increases the Warrior''s Attack to 7.'
-  - 'Attack: 3/5
-
-    Increases the Warrior''s Attack to 10.'
-  - 'Attack: 4/5
-
-    Increases the Warrior''s Attack to 15'
-  - 'Attack: 5/5 (MAX)
-
-    The Warrior''s Attack is 15.'
+  - Increases the Warrior's Attack to 3.
+  - Increases the Warrior's Attack to 5.
+  - Increases the Warrior's Attack to 7.
+  - Increases the Warrior's Attack to 10.
+  - Increases the Warrior's Attack to 15
+  - The Warrior's Attack is 15.
   upgradeIndex: 7
   open: {fileID: 21300000, guid: 82cfa08c12ec95849bf907aaa53f7976, type: 3}
   close: {fileID: 21300000, guid: c35815c741baaa24b846173de8ce6244, type: 3}
@@ -1770,6 +1737,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4777014274692762970}
   - {fileID: 8784473114450319304}
   - {fileID: 7306657927439640594}
   - {fileID: 4024952446869508588}
@@ -3436,7 +3404,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &865771663186871740
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4976,31 +4944,14 @@ MonoBehaviour:
   - 2
   - 2.5
   - 5
+  title: Ice
   descriptions:
-  - 'Ice: 0/5
-
-    Increases the Mage''s Ice damage to 5. Freezes opponent for a
-    second'
-  - 'Ice: 1/5
-
-    Increases the Mage''s Ice damage to 10. Freezes opponent for 1.5
-    seconds'
-  - 'Ice: 2/5
-
-    Increases the Mage''s Ice damage to 15. Freezes opponent for 2
-    seconds'
-  - 'Ice: 3/5
-
-    Increases the Mage''s Ice damage to 17. Freezes opponent for 2.5
-    seconds.'
-  - 'Ice: 4/5
-
-    Increases the Mage''s Ice damage to 20. Freezes opponent for 5
-    seconds.'
-  - 'Ice: 5/5 (MAX)
-
-    The Mage''s Ice damage is 20. Opponent gets frozen for 5
-    seconds.'
+  - Increases the Mage's Ice damage to 5. Freezes opponent for a second
+  - Increases the Mage's Ice damage to 10. Freezes opponent for 1.5 seconds
+  - Increases the Mage's Ice damage to 15. Freezes opponent for 2 seconds
+  - Increases the Mage's Ice damage to 17. Freezes opponent for 2.5 seconds.
+  - Increases the Mage's Ice damage to 20. Freezes opponent for 5 seconds.
+  - The Mage's Ice damage is 20. Opponent gets frozen for 5 seconds.
   upgradeIndex: 11
   open: {fileID: 21300000, guid: 21757dd657e8c274eacbd69e110e8aff, type: 3}
   close: {fileID: 21300000, guid: cb8b6ca6dd488094ca05d717fd85b6a2, type: 3}
@@ -5974,30 +5925,14 @@ MonoBehaviour:
   - 3
   - 4
   - 5
+  title: Fire
   descriptions:
-  - 'Fire: 0/5
-
-    Increases the Mage''s Fire damage to 5. Makes other enemies take
-    1 damage.'
-  - 'Fire: 1/5
-
-    Increases the Mage''s Fire damage to 10. Makes other enemies
-    take 2 damage.'
-  - 'Fire: 2/5
-
-    Increases the Mage''s Fire damage to 15. Makes other enemies
-    take 3 damage.'
-  - 'Fire: 3/5
-
-    Increases the Mage''s Fire damage to 17. Makes other enemies
-    take 4 damage.'
-  - 'Fire: 4/5
-
-    Increases the Mage''s Fire damage to 20. Makes other enemies
-    take 5 damage.'
-  - 'Fire: 5/5 (MAX)
-
-    The Mage''s Fire damage is 20. Other enemies take 5 damage.'
+  - Increases the Mage's Fire damage to 5. Makes other enemies take 1 damage.
+  - Increases the Mage's Fire damage to 10. Makes other enemies take 2 damage.
+  - Increases the Mage's Fire damage to 15. Makes other enemies take 3 damage.
+  - Increases the Mage's Fire damage to 17. Makes other enemies take 4 damage.
+  - Increases the Mage's Fire damage to 20. Makes other enemies take 5 damage.
+  - The Mage's Fire damage is 20. Other enemies take 5 damage.
   upgradeIndex: 10
   open: {fileID: 21300000, guid: a48a2bd11db3b464cb8b6e0ca0014058, type: 3}
   close: {fileID: 21300000, guid: 0406453f2bf59e74d8da4e36b596da23, type: 3}
@@ -7372,25 +7307,14 @@ MonoBehaviour:
   - 1
   - 0.5
   secondaryWorths: []
+  title: Cooldown
   descriptions:
-  - 'Cooldown: 0/5
-
-    Decreases the Warrior''s Cooldown to 1.75.'
-  - 'Cooldown: 1/5
-
-    Decreases the Warrior''s Cooldown to 1.5.'
-  - 'Cooldown: 2/5
-
-    Decreases the Warrior''s Cooldown to 1.25.'
-  - 'Cooldown: 3/5
-
-    Decreases the Warrior''s Cooldown to 1.'
-  - 'Cooldown: 4/5
-
-    Decreases the Warrior''s Cooldown to 0.5.'
-  - 'Cooldown: 5/5 (MAX)
-
-    The Warrior''s Cooldown is 0.5.'
+  - Decreases the Warrior's Cooldown to 1.75.
+  - Decreases the Warrior's Cooldown to 1.5.
+  - Decreases the Warrior's Cooldown to 1.25.
+  - Decreases the Warrior's Cooldown to 1.
+  - Decreases the Warrior's Cooldown to 0.5.
+  - The Warrior's Cooldown is 0.5.
   upgradeIndex: 5
   open: {fileID: 21300000, guid: 98ccc1944acb266499102183e6cf81d6, type: 3}
   close: {fileID: 21300000, guid: bb4f93abc437ab848b7f21c1ec3fd756, type: 3}
@@ -10153,6 +10077,37 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &4827958079919423966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4777014274692762970}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4777014274692762970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4827958079919423966}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3579799116014739666}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4976692155640828463
 GameObject:
   m_ObjectHideFlags: 0
@@ -11543,25 +11498,14 @@ MonoBehaviour:
   - 1
   - 0.5
   secondaryWorths: []
+  title: Cooldown
   descriptions:
-  - 'Cooldown: 0/5
-
-    Decreases the Mage''s Cooldown to 1.75.'
-  - 'Cooldown: 1/5
-
-    Decreases the Mage''s Cooldown to 1.5.'
-  - 'Cooldown: 2/5
-
-    Decreases the Mage''s Cooldown to 1.25.'
-  - 'Cooldown: 3/5
-
-    Decreases the Mage''s Cooldown to 1.'
-  - 'Cooldown: 4/5
-
-    Decreases the Mage''s Cooldown to 0.5.'
-  - 'Cooldown: 5/5 (MAX)
-
-    The Mage''s Cooldown is 0.5.'
+  - Decreases the Mage's Cooldown to 1.75.
+  - Decreases the Mage's Cooldown to 1.5.
+  - Decreases the Mage's Cooldown to 1.25.
+  - Decreases the Mage's Cooldown to 1.
+  - Decreases the Mage's Cooldown to 0.5.
+  - The Mage's Cooldown is 0.5.
   upgradeIndex: 9
   open: {fileID: 21300000, guid: 86ae726693f926d49ab2b1e331631250, type: 3}
   close: {fileID: 21300000, guid: c0314dcd6f484c84682625c452609e0b, type: 3}
@@ -12104,7 +12048,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4317965708037964768
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13878,7 +13822,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   descriptionField: {fileID: 8355295425086686663}
-  description: {fileID: 4315508039844035721}
+  upgradeTitle: {fileID: 4358496899382700401}
+  upgradeDescription: {fileID: 4315508039844035721}
+  stageIndicators:
+  - {fileID: 2277135416588930744}
+  - {fileID: 2675451135096691045}
+  - {fileID: 5721236289176539153}
+  - {fileID: 8087177042447407177}
+  - {fileID: 8561892818359135906}
+  stageEmpty: {fileID: 21300000, guid: d2b9a309d752e9142ac185e917ae85cd, type: 3}
+  stageFill: {fileID: 21300000, guid: ac4c59e3b5190b846b2fe52aea7ff1a5, type: 3}
   leaveUpgradesButton: {fileID: 1581698681422014752}
   healerHP: 10
   healerCooldown: 2
@@ -16610,25 +16563,14 @@ MonoBehaviour:
   - 8
   - 10
   secondaryWorths: []
+  title: Shield
   descriptions:
-  - 'Shield: 0/5
-
-    Increase the amount of attacks the shield can take to 4.'
-  - 'Shield: 1/5
-
-    Increase the amount of attacks the shield can take to 5.'
-  - 'Shield: 2/5
-
-    Increase the amount of attacks the shield can take to 6.'
-  - 'Shield: 3/5
-
-    Increase the amount of attacks the shield can take to 8.'
-  - 'Shield: 4/5
-
-    Increase the amount of attacks the shield can take to 10.'
-  - 'Shield: 5/5 (MAX)
-
-    The shield can withstand 10 attacks.'
+  - Increases the amount of attacks the shield can take to 4.
+  - Increases the amount of attacks the shield can take to 5.
+  - Increases the amount of attacks the shield can take to 6.
+  - Increases the amount of attacks the shield can take to 8.
+  - Increases the amount of attacks the shield can take to 10.
+  - The shield can withstand 10 attacks.
   upgradeIndex: 6
   open: {fileID: 21300000, guid: a996287a13661bc46910d75b52d4cfa2, type: 3}
   close: {fileID: 21300000, guid: afdd57b28bf64da4f93ff3c30673ede8, type: 3}
@@ -16913,25 +16855,14 @@ MonoBehaviour:
   - 1
   - 0.5
   secondaryWorths: []
+  title: Cooldown
   descriptions:
-  - 'Cooldown: 0/5
-
-    Decreases the Cleric''s Cooldown to 1.75.'
-  - 'Cooldown: 1/5
-
-    Decreases the Cleric''s Cooldown to 1.5.'
-  - 'Cooldown: 2/5
-
-    Decreases the Cleric''s Cooldown to 1.25.'
-  - 'Cooldown: 3/5
-
-    Decreases the Cleric''s Cooldown to 1.'
-  - 'Cooldown: 4/5
-
-    Decreases the Cleric''s Cooldown to 0.5'
-  - 'Cooldown: 5/5 (MAX)
-
-    The Cleric''s Cooldown is 0.5.'
+  - Decreases the Cleric's Cooldown to 1.75.
+  - Decreases the Cleric's Cooldown to 1.5.
+  - Decreases the Cleric's Cooldown to 1.25.
+  - Decreases the Cleric's Cooldown to 1.
+  - Decreases the Cleric's Cooldown to 0.5
+  - The Cleric's Cooldown is 0.5.
   upgradeIndex: 1
   open: {fileID: 21300000, guid: b8ded7299552a34438d3220449061664, type: 3}
   close: {fileID: 21300000, guid: 6a33431f4297f8e40a834c2ae5c21608, type: 3}
@@ -17180,25 +17111,14 @@ MonoBehaviour:
   - 5
   - 6
   secondaryWorths: []
+  title: Staff
   descriptions:
-  - 'Attack: 0/5
-
-    Increases the Cleric''s Attack to 2.'
-  - 'Attack: 1/5
-
-    Increases the Cleric''s Attack to 3.'
-  - 'Attack: 2/5
-
-    Increases the Cleric''s Attack to 4.'
-  - 'Attack: 3/5
-
-    Increases the Cleric''s Attack to 5.'
-  - 'Attack: 4/5
-
-    Increses the Cleric''s Attack to 6.'
-  - 'Attack: 5/5
-
-    The Cleric''s Attack is 6.'
+  - Increases the Cleric's Attack to 2.
+  - Increases the Cleric's Attack to 3.
+  - Increases the Cleric's Attack to 4.
+  - Increases the Cleric's Attack to 5.
+  - Increses the Cleric's Attack to 6.
+  - The Cleric's Attack is 6.
   upgradeIndex: 2
   open: {fileID: 21300000, guid: e2ef9bb6350b8724cbf629c9feae29ed, type: 3}
   close: {fileID: 21300000, guid: d6ffb22d49e9614428936c0f39e34424, type: 3}
@@ -18668,7 +18588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6623014593549450433
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19023,25 +18943,14 @@ MonoBehaviour:
   - 28
   - 40
   secondaryWorths: []
+  title: Health
   descriptions:
-  - 'Health: 0/5
-
-    Increases the Mage''s Health to 10.'
-  - 'Health: 1/5
-
-    Increases the Mage''s Health to 14.'
-  - 'Health: 2/5
-
-    Increases the Mage''s Health to 21.'
-  - 'Health: 3/5
-
-    Increases the Mage''s Health to 28.'
-  - 'Health: 4/5
-
-    Increases the Mage''s Health to 40.'
-  - 'Health: 5/5 (MAX)
-
-    The Mage''s Health is 40.'
+  - Increases the Mage's Health to 10.
+  - Increases the Mage's Health to 14.
+  - Increases the Mage's Health to 21.
+  - Increases the Mage's Health to 28.
+  - Increases the Mage's Health to 40.
+  - The Mage's Health is 40.
   upgradeIndex: 8
   open: {fileID: 21300000, guid: 8de3800504a5a55479392d7de0b8185a, type: 3}
   close: {fileID: 21300000, guid: 583e22b7e16cd1f4199514fcb15ba387, type: 3}
@@ -20659,25 +20568,14 @@ MonoBehaviour:
   - 15
   - 20
   secondaryWorths: []
+  title: Healing
   descriptions:
-  - 'Heal: 0/5
-
-    Increases the Cleric''s Healing to 5.'
-  - 'Heal: 1/5
-
-    Increases the Cleric''s Healing to 7.'
-  - 'Heal: 2/5
-
-    Increases the Cleric''s Healing to 10.'
-  - 'Heal: 3/5
-
-    Increases the Cleric''s Healing to 15.'
-  - 'Heal: 4/5
-
-    Increases the Cleric''s Healing to 20.'
-  - 'Heal: 5/5 (MAX)
-
-    The Cleric''s Healing is 20.'
+  - Increases the Cleric's Healing to 5.
+  - Increases the Cleric's Healing to 7.
+  - Increases the Cleric's Healing to 10.
+  - Increases the Cleric's Healing to 15.
+  - Increases the Cleric's Healing to 20.
+  - The Cleric's Healing is 20.
   upgradeIndex: 3
   open: {fileID: 21300000, guid: ab16520e598c99e418b8d631a78991f7, type: 3}
   close: {fileID: 21300000, guid: bd695b9deb1cad14481465ed740d34b6, type: 3}

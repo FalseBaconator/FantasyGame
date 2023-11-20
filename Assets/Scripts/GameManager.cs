@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public UIManager uiManager;
     public CombatManager combatManager;
     public UpgradeManager upgradeManager;
+    public AudioManager audioManager;
 
     private bool newGame;
 
@@ -77,6 +78,7 @@ public class GameManager : MonoBehaviour
                 case GameState.Pause:
                     Time.timeScale = 0;
                     uiManager.OpenPauseScreen();
+                    audioManager.PauseAllAudio();
                     break;
                 case GameState.Lose:
                     Time.timeScale = 1;
@@ -165,6 +167,7 @@ public class GameManager : MonoBehaviour
     //On Button Press Methods. Each changes scene
     public void GoToMenu()
     {
+        audioManager.PlaySFX(AudioManager.ClipToPlay.MenuClick);
         SceneManager.LoadScene(mainMenuScene);
         SceneManager.sceneLoaded += SwitchScreenSceneTransition;
     }
@@ -172,12 +175,14 @@ public class GameManager : MonoBehaviour
     
     public void GoToUpgrades()
     {
+        audioManager.PlaySFX(AudioManager.ClipToPlay.MenuClick);
         SceneManager.LoadScene(upgradesScene);
         SceneManager.sceneLoaded += SwitchScreenSceneTransition;
     }
 
     public void GoToCombat()
     {
+        audioManager.PlaySFX(AudioManager.ClipToPlay.MenuClick);
         SceneManager.LoadScene(gamePlayScene);
         SceneManager.sceneLoaded += SwitchScreenSceneTransition;
     }
@@ -185,6 +190,7 @@ public class GameManager : MonoBehaviour
     //On Button Press. Saves chosen upgrades, the tells MapGenerator to start the dungeon.
     public void StartNewDungeon(int dungeonIndex)
     {
+        audioManager.PlaySFX(AudioManager.ClipToPlay.MenuClick);
         SaveGame();
         gameState = GameState.EncounterGen;
         encounterGenerator.NewAttempt(dungeonIndex);
@@ -200,22 +206,26 @@ public class GameManager : MonoBehaviour
     //Change Game State methods without changing scene.
     public void goToOptions()
     {
+        audioManager.PlaySFX(AudioManager.ClipToPlay.MenuClick);
         gameState = GameState.Options;
     }
 
     public void goToPrev()
     {
+        audioManager.PlaySFX(AudioManager.ClipToPlay.MenuClick);
         gameState = prevState;
     }
 
     public void goToSave(bool newGame)
     {
+        audioManager.PlaySFX(AudioManager.ClipToPlay.MenuClick);
         this.newGame = newGame;
         gameState = GameState.Saves;
     }
 
     public void exitPause()
     {
+        audioManager.UnpauseAllAudio();
         gameState = GameState.Combat;
     }
 
@@ -245,6 +255,7 @@ public class GameManager : MonoBehaviour
 
     public void GoToLevelSelect()
     {
+        audioManager.PlaySFX(AudioManager.ClipToPlay.MenuClick);
         gameState = GameState.LevelSelect;
         levelSelecter.Refresh();
     }
@@ -338,6 +349,7 @@ public class GameManager : MonoBehaviour
     //On Button Press. Quit Game
     public void QuitGame()
     {
+        audioManager.PlaySFX(AudioManager.ClipToPlay.MenuClick);
         Application.Quit();
     }
 

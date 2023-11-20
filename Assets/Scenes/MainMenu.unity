@@ -123,83 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &377511655 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2675451135096691045, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-  m_PrefabInstance: {fileID: 8959830326056079577}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &523054510 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8561892818359135906, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-  m_PrefabInstance: {fileID: 8959830326056079577}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1264353980 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4358496899382700401, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-  m_PrefabInstance: {fileID: 8959830326056079577}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1373382300 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8087177042447407177, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-  m_PrefabInstance: {fileID: 8959830326056079577}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1490230586 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4315508039844035721, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-  m_PrefabInstance: {fileID: 8959830326056079577}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1614172630 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2277135416588930744, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-  m_PrefabInstance: {fileID: 8959830326056079577}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1786653437 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5721236289176539153, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-  m_PrefabInstance: {fileID: 8959830326056079577}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2110665593
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,249 +223,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3039180022449742, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: title
-      value: Shield
-      objectReference: {fileID: 0}
-    - target: {fileID: 3039180022449742, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[0]
-      value: Increases the amount of attacks the shield can take to 4.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3039180022449742, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[1]
-      value: Increases the amount of attacks the shield can take to 5.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3039180022449742, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[2]
-      value: Increases the amount of attacks the shield can take to 6.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3039180022449742, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[3]
-      value: Increases the amount of attacks the shield can take to 8.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3039180022449742, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[4]
-      value: Increases the amount of attacks the shield can take to 10.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3039180022449742, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[5]
-      value: The shield can withstand 10 attacks.
-      objectReference: {fileID: 0}
-    - target: {fileID: 153030850780163362, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: title
-      value: Health
-      objectReference: {fileID: 0}
-    - target: {fileID: 153030850780163362, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[0]
-      value: Increases the Warrior's Health to 15.
-      objectReference: {fileID: 0}
-    - target: {fileID: 153030850780163362, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[1]
-      value: Increases the Warrior's Health to 20.
-      objectReference: {fileID: 0}
-    - target: {fileID: 153030850780163362, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[2]
-      value: Increases the Warrior's Health to 25.
-      objectReference: {fileID: 0}
-    - target: {fileID: 153030850780163362, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[3]
-      value: Increases the Warrior's Health to 35.
-      objectReference: {fileID: 0}
-    - target: {fileID: 153030850780163362, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[4]
-      value: Increases the Warrior's Health to 50.
-      objectReference: {fileID: 0}
-    - target: {fileID: 153030850780163362, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[5]
-      value: The Warrior's Health is 50.
-      objectReference: {fileID: 0}
     - target: {fileID: 730076717170939195, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 827730243181738819, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: title
-      value: Staff
-      objectReference: {fileID: 0}
-    - target: {fileID: 827730243181738819, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[0]
-      value: Increases the Cleric's Attack to 2.
-      objectReference: {fileID: 0}
-    - target: {fileID: 827730243181738819, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[1]
-      value: Increases the Cleric's Attack to 3.
-      objectReference: {fileID: 0}
-    - target: {fileID: 827730243181738819, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[2]
-      value: Increases the Cleric's Attack to 4.
-      objectReference: {fileID: 0}
-    - target: {fileID: 827730243181738819, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[3]
-      value: Increases the Cleric's Attack to 5.
-      objectReference: {fileID: 0}
-    - target: {fileID: 827730243181738819, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[4]
-      value: Increses the Cleric's Attack to 6.
-      objectReference: {fileID: 0}
-    - target: {fileID: 827730243181738819, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[5]
-      value: The Cleric's Attack is 6.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1148025087773075507, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: title
-      value: Healing
-      objectReference: {fileID: 0}
-    - target: {fileID: 1148025087773075507, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[0]
-      value: Increases the Cleric's Healing to 5.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1148025087773075507, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[1]
-      value: Increases the Cleric's Healing to 7.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1148025087773075507, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[2]
-      value: Increases the Cleric's Healing to 10.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1148025087773075507, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[3]
-      value: Increases the Cleric's Healing to 15.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1148025087773075507, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[4]
-      value: Increases the Cleric's Healing to 20.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1148025087773075507, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[5]
-      value: The Cleric's Healing is 20.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1708326066500972480, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1951100091836613892, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: stageFill
+    - target: {fileID: 2680483966034658328, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: audioManager
       value: 
-      objectReference: {fileID: 21300000, guid: ac4c59e3b5190b846b2fe52aea7ff1a5, type: 3}
-    - target: {fileID: 1951100091836613892, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: stageEmpty
+      objectReference: {fileID: 8959830326056079579}
+    - target: {fileID: 3408118497752276674, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408118497752276674, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408118497752276674, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 21300000, guid: d2b9a309d752e9142ac185e917ae85cd, type: 3}
-    - target: {fileID: 1951100091836613892, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: upgradeTitle
-      value: 
-      objectReference: {fileID: 1264353980}
-    - target: {fileID: 1951100091836613892, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: upgradeDescription
-      value: 
-      objectReference: {fileID: 1490230586}
-    - target: {fileID: 1951100091836613892, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: stageIndicators.Array.size
-      value: 5
+      objectReference: {fileID: 8959830326056079578}
+    - target: {fileID: 3408118497752276674, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1951100091836613892, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: stageIndicators.Array.data[0]
-      value: 
-      objectReference: {fileID: 1614172630}
-    - target: {fileID: 1951100091836613892, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: stageIndicators.Array.data[1]
-      value: 
-      objectReference: {fileID: 377511655}
-    - target: {fileID: 1951100091836613892, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: stageIndicators.Array.data[2]
-      value: 
-      objectReference: {fileID: 1786653437}
-    - target: {fileID: 1951100091836613892, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: stageIndicators.Array.data[3]
-      value: 
-      objectReference: {fileID: 1373382300}
-    - target: {fileID: 1951100091836613892, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: stageIndicators.Array.data[4]
-      value: 
-      objectReference: {fileID: 523054510}
-    - target: {fileID: 2296443368139070452, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: title
-      value: Ice
+    - target: {fileID: 3408118497752276674, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
-    - target: {fileID: 2296443368139070452, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[0]
-      value: Increases the Mage's Ice damage to 5. Freezes opponent for a second
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296443368139070452, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[1]
-      value: Increases the Mage's Ice damage to 10. Freezes opponent for 1.5 seconds
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296443368139070452, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[2]
-      value: Increases the Mage's Ice damage to 15. Freezes opponent for 2 seconds
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296443368139070452, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[3]
-      value: Increases the Mage's Ice damage to 17. Freezes opponent for 2.5 seconds.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296443368139070452, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[4]
-      value: Increases the Mage's Ice damage to 20. Freezes opponent for 5 seconds.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296443368139070452, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[5]
-      value: The Mage's Ice damage is 20. Opponent gets frozen for 5 seconds.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2613112174815331616, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: title
-      value: Health
-      objectReference: {fileID: 0}
-    - target: {fileID: 2613112174815331616, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[0]
-      value: Increases the Cleric's Health to 15.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2613112174815331616, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[1]
-      value: Increases the Cleric's Health to 20.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2613112174815331616, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[2]
-      value: Increases the Cleric's Health to 25.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2613112174815331616, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[3]
-      value: Increases the Cleric's Health to 35.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2613112174815331616, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[4]
-      value: Increases the Cleric's Health to 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2613112174815331616, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[5]
-      value: The Cleric's Health is 50.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2986986737201028740, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: title
-      value: Cooldown
-      objectReference: {fileID: 0}
-    - target: {fileID: 2986986737201028740, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[0]
-      value: Decreases the Warrior's Cooldown to 1.75.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2986986737201028740, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[1]
-      value: Decreases the Warrior's Cooldown to 1.5.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2986986737201028740, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[2]
-      value: Decreases the Warrior's Cooldown to 1.25.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2986986737201028740, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[3]
-      value: Decreases the Warrior's Cooldown to 1.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2986986737201028740, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[4]
-      value: Decreases the Warrior's Cooldown to 0.5.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2986986737201028740, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[5]
-      value: The Warrior's Cooldown is 0.5.
+    - target: {fileID: 3408118497752276674, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3579799116014739666, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -584,159 +295,256 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3889623746421662316, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: title
-      value: Cooldown
-      objectReference: {fileID: 0}
-    - target: {fileID: 3889623746421662316, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[0]
-      value: Decreases the Mage's Cooldown to 1.75.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3889623746421662316, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[1]
-      value: Decreases the Mage's Cooldown to 1.5.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3889623746421662316, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[2]
-      value: Decreases the Mage's Cooldown to 1.25.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3889623746421662316, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[3]
-      value: Decreases the Mage's Cooldown to 1.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3889623746421662316, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[4]
-      value: Decreases the Mage's Cooldown to 0.5.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3889623746421662316, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[5]
-      value: The Mage's Cooldown is 0.5.
-      objectReference: {fileID: 0}
+    - target: {fileID: 3967063549130384138, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 8959830326056079579}
     - target: {fileID: 5614387877241159302, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5926994833268827374, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: title
-      value: Sword
-      objectReference: {fileID: 0}
-    - target: {fileID: 5926994833268827374, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[0]
-      value: Increases the Warrior's Attack to 3.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5926994833268827374, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[1]
-      value: Increases the Warrior's Attack to 5.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5926994833268827374, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[2]
-      value: Increases the Warrior's Attack to 7.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5926994833268827374, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[3]
-      value: Increases the Warrior's Attack to 10.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5926994833268827374, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[4]
-      value: Increases the Warrior's Attack to 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5926994833268827374, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[5]
-      value: The Warrior's Attack is 15.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5931070638374149449, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: title
-      value: Fire
-      objectReference: {fileID: 0}
-    - target: {fileID: 5931070638374149449, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[0]
-      value: Increases the Mage's Fire damage to 5. Makes other enemies take 1 damage.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5931070638374149449, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[1]
-      value: Increases the Mage's Fire damage to 10. Makes other enemies take 2 damage.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5931070638374149449, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[2]
-      value: Increases the Mage's Fire damage to 15. Makes other enemies take 3 damage.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5931070638374149449, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[3]
-      value: Increases the Mage's Fire damage to 17. Makes other enemies take 4 damage.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5931070638374149449, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[4]
-      value: Increases the Mage's Fire damage to 20. Makes other enemies take 5 damage.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5931070638374149449, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[5]
-      value: The Mage's Fire damage is 20. Other enemies take 5 damage.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6055068196759459845, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: title
-      value: Cooldown
-      objectReference: {fileID: 0}
-    - target: {fileID: 6055068196759459845, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[0]
-      value: Decreases the Cleric's Cooldown to 1.75.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6055068196759459845, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[1]
-      value: Decreases the Cleric's Cooldown to 1.5.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6055068196759459845, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[2]
-      value: Decreases the Cleric's Cooldown to 1.25.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6055068196759459845, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[3]
-      value: Decreases the Cleric's Cooldown to 1.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6055068196759459845, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[4]
-      value: Decreases the Cleric's Cooldown to 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6055068196759459845, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[5]
-      value: The Cleric's Cooldown is 0.5.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6773121596084437830, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: title
-      value: Health
-      objectReference: {fileID: 0}
-    - target: {fileID: 6773121596084437830, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[0]
-      value: Increases the Mage's Health to 10.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6773121596084437830, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[1]
-      value: Increases the Mage's Health to 14.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6773121596084437830, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[2]
-      value: Increases the Mage's Health to 21.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6773121596084437830, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[3]
-      value: Increases the Mage's Health to 28.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6773121596084437830, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[4]
-      value: Increases the Mage's Health to 40.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6773121596084437830, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: descriptions.Array.data[5]
-      value: The Mage's Health is 40.
-      objectReference: {fileID: 0}
-    - target: {fileID: 8355295425086686663, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262205066894445854, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 8959830326056079579}
+    - target: {fileID: 9092216153350063270, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 8959830326056079579}
+    - target: {fileID: 9120847898522619200, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4827958079919423966, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8959830326056079581}
+    - targetCorrespondingSourceObject: {fileID: 4827958079919423966, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8959830326056079580}
+    - targetCorrespondingSourceObject: {fileID: 4827958079919423966, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8959830326056079579}
   m_SourcePrefab: {fileID: 100100000, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+--- !u!1 &8959830326056079578 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4827958079919423966, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+  m_PrefabInstance: {fileID: 8959830326056079577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8959830326056079579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8959830326056079578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d755f0b95b660484296ddd1bcd7284de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgm: {fileID: 8959830326056079581}
+  sfx: {fileID: 8959830326056079580}
+  upgrade: {fileID: 8300000, guid: c36c13bb987f1214c9c88b1367bf95a5, type: 3}
+  menuClick: {fileID: 8300000, guid: 7b6d139aa2bdaec49809da54e296b612, type: 3}
+  heal: {fileID: 8300000, guid: 1d547ca4e452bd54194c9eca6fbd69a2, type: 3}
+  hurt: {fileID: 8300000, guid: dd9c5ebb32749744d8571dd2d2aefb83, type: 3}
+  die: {fileID: 8300000, guid: cfc2bbe669e11f04cafe8e0d8f02dc85, type: 3}
+--- !u!82 &8959830326056079580
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8959830326056079578}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &8959830326056079581
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8959830326056079578}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

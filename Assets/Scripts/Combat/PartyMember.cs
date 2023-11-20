@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class PartyMember : MonoBehaviour
 {
+    public AudioManager audioManager;
+
     public float HP;
     public float MaxHP;
     public TextMeshProUGUI HPField;
@@ -377,6 +379,7 @@ public class PartyMember : MonoBehaviour
     //Gain Health
     public void Heal(float heal)
     {
+        audioManager.PlaySFX(AudioManager.ClipToPlay.Heal);
         healDisplay.GetComponent<DMGDisplay>().activate();
         HP += heal;
         if (HP > MaxHP) HP = MaxHP;
@@ -408,6 +411,7 @@ public class PartyMember : MonoBehaviour
         dmgDisplay.SetActive(true);
         if(HP <= 0)
         {
+            audioManager.PlaySFX(AudioManager.ClipToPlay.Die);
             sprite.sprite = dead;
             alive = false;
             HP = 0;
@@ -415,6 +419,10 @@ public class PartyMember : MonoBehaviour
             shutDownButtons();
             attack1Cover.fillAmount = 1;
             attack2Cover.fillAmount = 1;
+        }
+        else
+        {
+            audioManager.PlaySFX(AudioManager.ClipToPlay.Hurt);
         }
         currentHurt = hurtLength;
 

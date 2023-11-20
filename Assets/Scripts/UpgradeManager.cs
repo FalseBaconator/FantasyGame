@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class UpgradeManager : MonoBehaviour
 {
+    public AudioManager audioManager;
     public GameObject descriptionField;
     public TextMeshProUGUI upgradeTitle;
     public TextMeshProUGUI upgradeDescription;
@@ -115,6 +116,7 @@ public class UpgradeManager : MonoBehaviour
     //Upgrade HP of designated character
     public void UpgradeHP(int character, int amount)
     {
+        audioManager.PlaySFX(AudioManager.ClipToPlay.Upgrade);
         switch (character)
         {
             case 0:
@@ -132,6 +134,7 @@ public class UpgradeManager : MonoBehaviour
     //Upgrade Cooldown of designated character
     public void UpgradeCooldown(int character, float amount)
     {
+        audioManager.PlaySFX(AudioManager.ClipToPlay.Upgrade);
         switch (character)
         {
             case 0:
@@ -149,32 +152,38 @@ public class UpgradeManager : MonoBehaviour
     //Upgrade Actions
     public void UpgradeHealerAttack(int amount)
     {
+        audioManager.PlaySFX(AudioManager.ClipToPlay.Upgrade);
         healerAttack = amount;
     }
 
     public void UpgradeHeal(int amount)
     {
+        audioManager.PlaySFX(AudioManager.ClipToPlay.Upgrade);
         healerHeal = amount;
     }
 
     public void UpgradeShield(int amount)
     {
+        audioManager.PlaySFX(AudioManager.ClipToPlay.Upgrade);
         warriorShield = amount;
     }
 
     public void UpgradeWarriorAttack(int amount)
     {
+        audioManager.PlaySFX(AudioManager.ClipToPlay.Upgrade);
         warriorAttack = amount;
     }
 
     public void UpgradeFire(int amount, int splash)
     {
+        audioManager.PlaySFX(AudioManager.ClipToPlay.Upgrade);
         mageFire = amount;
         mageSplash = splash;
     }
 
     public void UpgradeIce(int amount, float cool)
     {
+        audioManager.PlaySFX(AudioManager.ClipToPlay.Upgrade);
         mageIce = amount;
         mageCool = cool;
     }

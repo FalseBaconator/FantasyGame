@@ -8,6 +8,7 @@ public class UpgradeButton : MonoBehaviour
     
     public GameManager gManager;
     public UpgradeManager uManager;
+    public AudioManager audioManager;
     public Button button;
 
     public int stage;
