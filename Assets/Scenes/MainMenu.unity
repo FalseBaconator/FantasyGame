@@ -227,10 +227,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1855252682094096067, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855252682094096067, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1951100091836613892, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 8959830326056079579}
     - target: {fileID: 2680483966034658328, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 8959830326056079579}
+    - target: {fileID: 2680483966034658328, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: buttonOffset
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3408118497752276674, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -295,22 +311,70 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3903447428871812338, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3903447428871812338, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3967063549130384138, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 8959830326056079579}
+    - target: {fileID: 5132771762849752420, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132771762849752420, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517802814558552108, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517802814558552108, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5614387877241159302, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598778131840818658, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598778131840818658, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8262205066894445854, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 8959830326056079579}
+    - target: {fileID: 8262205066894445854, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: buttonOffset
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8756060082173866111, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8756060082173866111, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9092216153350063270, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 8959830326056079579}
+    - target: {fileID: 9092216153350063270, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: buttonOffset
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 9120847898522619200, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_IsActive
       value: 1

@@ -149,6 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gManager: {fileID: 3967063549130384138}
   uManager: {fileID: 1951100091836613892}
+  audioManager: {fileID: 0}
   button: {fileID: 4527296274753943468}
   stage: 0
   maxStage: 5
@@ -536,6 +537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gManager: {fileID: 3967063549130384138}
   uManager: {fileID: 1951100091836613892}
+  audioManager: {fileID: 0}
   button: {fileID: 5239071300782221026}
   stage: 0
   maxStage: 5
@@ -706,7 +708,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
     m_PressedColor: {r: 0.04585886, g: 1, b: 0, a: 1}
-    m_SelectedColor: {r: 0.04705883, g: 1, b: 0, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1267,6 +1269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gManager: {fileID: 3967063549130384138}
   uManager: {fileID: 1951100091836613892}
+  audioManager: {fileID: 0}
   button: {fileID: 915998248523369325}
   stage: 0
   maxStage: 5
@@ -1762,6 +1765,7 @@ MonoBehaviour:
   uiManager: {fileID: 7882744052753444899}
   combatManager: {fileID: 3048024244643183280}
   upgradeManager: {fileID: 1951100091836613892}
+  audioManager: {fileID: 9167697274763742489}
   currentSaveIndex: 0
   XP: 100
   XPText: {fileID: 5226960396530245259}
@@ -3901,7 +3905,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
     m_PressedColor: {r: 0.04585886, g: 1, b: 0, a: 1}
-    m_SelectedColor: {r: 0.04705883, g: 1, b: 0, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -4094,7 +4098,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
     m_PressedColor: {r: 0.04585886, g: 1, b: 0, a: 1}
-    m_SelectedColor: {r: 0.04705883, g: 1, b: 0, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -4555,7 +4559,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
     m_PressedColor: {r: 0.04585886, g: 1, b: 0, a: 1}
-    m_SelectedColor: {r: 0.04705883, g: 1, b: 0, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -4928,6 +4932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gManager: {fileID: 3967063549130384138}
   uManager: {fileID: 1951100091836613892}
+  audioManager: {fileID: 0}
   button: {fileID: 4657254521524259944}
   stage: 0
   maxStage: 5
@@ -5909,6 +5914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gManager: {fileID: 3967063549130384138}
   uManager: {fileID: 1951100091836613892}
+  audioManager: {fileID: 0}
   button: {fileID: 5386232557769690595}
   stage: 0
   maxStage: 5
@@ -7296,6 +7302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gManager: {fileID: 3967063549130384138}
   uManager: {fileID: 1951100091836613892}
+  audioManager: {fileID: 0}
   button: {fileID: 5480967697440438325}
   stage: 0
   maxStage: 5
@@ -7733,7 +7740,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
     m_PressedColor: {r: 0.04585886, g: 1, b: 0, a: 1}
-    m_SelectedColor: {r: 0.04705883, g: 1, b: 0, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -10086,6 +10093,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4777014274692762970}
+  - component: {fileID: 2432923772292796742}
+  - component: {fileID: 6650546637546022590}
+  - component: {fileID: 9167697274763742489}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -10108,6 +10118,217 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3579799116014739666}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2432923772292796742
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4827958079919423966}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &6650546637546022590
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4827958079919423966}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &9167697274763742489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4827958079919423966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d755f0b95b660484296ddd1bcd7284de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgm: {fileID: 2432923772292796742}
+  sfx: {fileID: 6650546637546022590}
+  upgrade: {fileID: 8300000, guid: c36c13bb987f1214c9c88b1367bf95a5, type: 3}
+  menuClick: {fileID: 8300000, guid: 7b6d139aa2bdaec49809da54e296b612, type: 3}
+  heal: {fileID: 8300000, guid: 1d547ca4e452bd54194c9eca6fbd69a2, type: 3}
+  hurt: {fileID: 8300000, guid: dd9c5ebb32749744d8571dd2d2aefb83, type: 3}
+  die: {fileID: 8300000, guid: cfc2bbe669e11f04cafe8e0d8f02dc85, type: 3}
 --- !u!1 &4976692155640828463
 GameObject:
   m_ObjectHideFlags: 0
@@ -10585,6 +10806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95aee1b80e9d0c649a7e0e6f1cb41263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 9167697274763742489}
   HP: 0
   MaxHP: 0
   HPField: {fileID: 6080348167577573404}
@@ -10606,6 +10828,8 @@ MonoBehaviour:
   attack2IsHeal: 0
   attack1Button: {fileID: 1855252682094096067}
   attack2Button: {fileID: 5517802814558552108}
+  buttonOffset: 10
+  selectedButton: 0
   attack1Cover: {fileID: 8753376844222589203}
   attack2Cover: {fileID: 4387617386208910962}
   healDisplay: {fileID: 4359299955935471375}
@@ -11487,6 +11711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gManager: {fileID: 3967063549130384138}
   uManager: {fileID: 1951100091836613892}
+  audioManager: {fileID: 0}
   button: {fileID: 8261176577781703223}
   stage: 0
   maxStage: 5
@@ -12048,7 +12273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4317965708037964768
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12669,6 +12894,7 @@ MonoBehaviour:
   backgrounds:
   - {fileID: 21300000, guid: 06156aa094e3f8441a938adf2576511a, type: 3}
   - {fileID: 21300000, guid: 990b1c00711744b4dbc3464a16ad25e2, type: 3}
+  selectedButton: {fileID: 0}
 --- !u!1 &5816962888408159165
 GameObject:
   m_ObjectHideFlags: 0
@@ -13821,6 +14047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26184096ca246b840b1402271c5fc862, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 9167697274763742489}
   descriptionField: {fileID: 8355295425086686663}
   upgradeTitle: {fileID: 4358496899382700401}
   upgradeDescription: {fileID: 4315508039844035721}
@@ -16552,6 +16779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gManager: {fileID: 3967063549130384138}
   uManager: {fileID: 1951100091836613892}
+  audioManager: {fileID: 0}
   button: {fileID: 628681168150561476}
   stage: 0
   maxStage: 5
@@ -16844,6 +17072,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gManager: {fileID: 3967063549130384138}
   uManager: {fileID: 1951100091836613892}
+  audioManager: {fileID: 0}
   button: {fileID: 6268518716635169635}
   stage: 0
   maxStage: 5
@@ -17100,6 +17329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gManager: {fileID: 3967063549130384138}
   uManager: {fileID: 1951100091836613892}
+  audioManager: {fileID: 0}
   button: {fileID: 9053143554207348216}
   stage: 0
   maxStage: 5
@@ -17762,7 +17992,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
     m_PressedColor: {r: 0.04585886, g: 1, b: 0, a: 1}
-    m_SelectedColor: {r: 0.04705883, g: 1, b: 0, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -18168,6 +18398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95aee1b80e9d0c649a7e0e6f1cb41263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 9167697274763742489}
   HP: 10
   MaxHP: 10
   HPField: {fileID: 5623819513938788787}
@@ -18189,6 +18420,8 @@ MonoBehaviour:
   attack2IsHeal: 0
   attack1Button: {fileID: 5132771762849752420}
   attack2Button: {fileID: 6598778131840818658}
+  buttonOffset: 10
+  selectedButton: 0
   attack1Cover: {fileID: 821119400339762653}
   attack2Cover: {fileID: 7912008782530612242}
   healDisplay: {fileID: 5686998156673166100}
@@ -18932,6 +19165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gManager: {fileID: 3967063549130384138}
   uManager: {fileID: 1951100091836613892}
+  audioManager: {fileID: 0}
   button: {fileID: 82136596028295161}
   stage: 0
   maxStage: 5
@@ -19144,6 +19378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95aee1b80e9d0c649a7e0e6f1cb41263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 9167697274763742489}
   HP: 0
   MaxHP: 0
   HPField: {fileID: 661319562707483585}
@@ -19165,6 +19400,8 @@ MonoBehaviour:
   attack2IsHeal: 0
   attack1Button: {fileID: 3903447428871812338}
   attack2Button: {fileID: 8756060082173866111}
+  buttonOffset: 10
+  selectedButton: 0
   attack1Cover: {fileID: 3285501725734354857}
   attack2Cover: {fileID: 5360161222179645698}
   healDisplay: {fileID: 4146219066316855760}
@@ -20321,7 +20558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1960527190458206101
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20557,6 +20794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gManager: {fileID: 3967063549130384138}
   uManager: {fileID: 1951100091836613892}
+  audioManager: {fileID: 0}
   button: {fileID: 8655573182974519170}
   stage: 0
   maxStage: 5

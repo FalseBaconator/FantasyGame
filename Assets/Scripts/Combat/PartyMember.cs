@@ -41,6 +41,8 @@ public class PartyMember : MonoBehaviour
 
     public Button attack1Button;
     public Button attack2Button;
+    public float buttonOffset;
+    public int selectedButton = 0;
 
     public Image attack1Cover;
     public Image attack2Cover;
@@ -145,6 +147,57 @@ public class PartyMember : MonoBehaviour
     {
         if (combatManager.playing)
         {
+
+            if(combatManager.selectedButton == attack1Button)
+            {
+                switch(selectedButton)
+                {
+                    case 0:
+                        selectedButton = 1;
+                        attack1Button.transform.position = new Vector3(attack1Button.transform.position.x, attack1Button.transform.position.y + buttonOffset, attack1Button.transform.position.z);
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        selectedButton = 1;
+                        attack1Button.transform.position = new Vector3(attack1Button.transform.position.x, attack1Button.transform.position.y + buttonOffset, attack1Button.transform.position.z);
+                        attack2Button.transform.position = new Vector3(attack2Button.transform.position.x, attack2Button.transform.position.y - buttonOffset, attack2Button.transform.position.z);
+                        break;
+                }
+            }else if (combatManager.selectedButton == attack2Button)
+            {
+                switch (selectedButton)
+                {
+                    case 0:
+                        selectedButton = 2;
+                        attack2Button.transform.position = new Vector3(attack2Button.transform.position.x, attack2Button.transform.position.y + buttonOffset, attack2Button.transform.position.z);
+                        break;
+                    case 1:
+                        selectedButton = 2;
+                        attack1Button.transform.position = new Vector3(attack1Button.transform.position.x, attack1Button.transform.position.y - buttonOffset, attack1Button.transform.position.z);
+                        attack2Button.transform.position = new Vector3(attack2Button.transform.position.x, attack2Button.transform.position.y + buttonOffset, attack2Button.transform.position.z);
+                        break;
+                    case 2:
+                        break;
+                }
+            }
+            else if (combatManager.selectedButton != attack1Button && combatManager.selectedButton != attack2Button)
+            {
+                switch (selectedButton)
+                {
+                    case 0:
+                        break;
+                    case 1:
+                        selectedButton = 0;
+                        attack1Button.transform.position = new Vector3(attack1Button.transform.position.x, attack1Button.transform.position.y - buttonOffset, attack1Button.transform.position.z);
+                        break;
+                    case 2:
+                        selectedButton = 0;
+                        attack2Button.transform.position = new Vector3(attack2Button.transform.position.x, attack2Button.transform.position.y - buttonOffset, attack2Button.transform.position.z);
+                        break;
+                }
+            }
+
             if (HP > 0)
             {
                 alive = true;
@@ -268,6 +321,7 @@ public class PartyMember : MonoBehaviour
                 {
                     //Tells Combat Manager what type of target the player should be targeting
                     combatManager.attackTargetType = attack1Target;
+                    combatManager.selectedButton = attack1Button;
                 }
                 break;
             case 2:
@@ -285,6 +339,7 @@ public class PartyMember : MonoBehaviour
                 {
                     //Tells Combat Manager what type of target the player should be targeting
                     combatManager.attackTargetType = attack2Target;
+                    combatManager.selectedButton = attack2Button;
                 }
                 break;
         }

@@ -52,6 +52,8 @@ public class CombatManager : MonoBehaviour
     public Image background;
     public Sprite[] backgrounds;
 
+    public Button selectedButton;
+
     //Is In Boss Room?
     public void EnterBoss()
     {
@@ -66,6 +68,7 @@ public class CombatManager : MonoBehaviour
     //Starts combat with encouter given to it by EncounterGenerator
     public void StartCombat(GameObject[] enemiesInEncounter, int backgroundIndex)
     {
+        ClearActions();
         background.sprite = backgrounds[backgroundIndex];
         shields = 0;
         //Remove previous encounter's enemies
@@ -140,9 +143,7 @@ public class CombatManager : MonoBehaviour
         if(attackTarget != null && attacker != null)
         {
             attacker.GetComponent<PartyMember>().Attack(attackTarget);
-            attackSelected = false;
-            attackTarget = null;
-            attacker = null;
+            ClearActions();
         }
 
         //If combat success
@@ -183,6 +184,8 @@ public class CombatManager : MonoBehaviour
     {
         attacker = null;
         attackSelected = false;
+        attackTarget = null;
+        selectedButton = null;
     }
 
     //Upon win
