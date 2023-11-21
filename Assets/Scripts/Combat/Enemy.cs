@@ -138,10 +138,9 @@ public class Enemy : MonoBehaviour
         spriteTimerCurrent = attackLength;
         img.sprite = attack;
         //atkDisplay.GetComponent<DMGDisplay>().activate();   //Placeholder Feedback
-        if (combatManager.shields > 0)  //Attacks Shield
+        if (combatManager.shield.shieldInt > 0)  //Attacks Shield
         {
-            audioManager.PlaySFX(AudioManager.ClipToPlay.Block);
-            combatManager.shields--;
+            combatManager.shield.Bonk();
         }
         else    //Attacks Party Member
         {

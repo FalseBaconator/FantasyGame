@@ -37,10 +37,11 @@ public class CombatManager : MonoBehaviour
     public GameObject combatCanvas;
     public bool playing;
 
+    public Shield shield;
     //Shield Data
-    public int shields;
-    public GameObject shieldSprite;
-    public TextMeshProUGUI shieldText;
+    //public int shields;
+    //public GameObject shieldSprite;
+    //public TextMeshProUGUI shieldText;
 
     public GameManager gameManager;
     public bool IsInBoss;
@@ -70,7 +71,7 @@ public class CombatManager : MonoBehaviour
     {
         ClearActions();
         background.sprite = backgrounds[backgroundIndex];
-        shields = 0;
+        shield.SetShieldInt(0);
         //Remove previous encounter's enemies
         foreach (Enemy enemy in enemies)
         {
@@ -115,6 +116,7 @@ public class CombatManager : MonoBehaviour
         {
             member.NewAttempt();
         }
+        shield.StartCombat();
     }
 
     //No Longer In combat
@@ -129,15 +131,15 @@ public class CombatManager : MonoBehaviour
         //Debug.Log(playing);
 
         //Shield Management
-        if(shields > 0)
-        {
-            if(shieldSprite.activeSelf == false)
-                shieldSprite.SetActive(true);
-            shieldText.text = shields.ToString();
-        }else if(shieldSprite.activeSelf == true)
-        {
-            shieldSprite.SetActive(false);
-        }
+        //if(shields > 0)
+        //{
+        //    if(shieldSprite.activeSelf == false)
+        //        shieldSprite.SetActive(true);
+        //    shieldText.text = shields.ToString();
+        //}else if(shieldSprite.activeSelf == true)
+        //{
+        //    shieldSprite.SetActive(false);
+        //}
 
         //Initiates an attack by Party Member when both Action and Target are selected. Bypassed by Shield
         if(attackTarget != null && attacker != null)

@@ -1055,6 +1055,7 @@ GameObject:
   - component: {fileID: 7602897417279107666}
   - component: {fileID: 8391178388551427009}
   - component: {fileID: 5089493681390996589}
+  - component: {fileID: 5973256872436251943}
   m_Layer: 5
   m_Name: Shield
   m_TagString: Untagged
@@ -1097,7 +1098,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 321870399590657210}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1120,6 +1121,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5973256872436251943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321870399590657210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 987e6b4e0fed77243bb66651529d3596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  hurtColor: {r: 1, g: 0.4392157, b: 0.4392157, a: 1}
+  shieldInt: 0
+  dmgDisplay: {fileID: 2942361021921269427}
+  sprite: {fileID: 5089493681390996589}
+  shieldText: {fileID: 1597728923728376100}
+  audioManager: {fileID: 9167697274763742489}
 --- !u!1 &331770857097394304
 GameObject:
   m_ObjectHideFlags: 0
@@ -6294,6 +6314,81 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 20}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2942361021921269427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6963935354578306936}
+  - component: {fileID: 8815214607292356621}
+  - component: {fileID: 3489795077757548560}
+  m_Layer: 5
+  m_Name: ShieldDMGDisplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &6963935354578306936
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942361021921269427}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1960527190458206101}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 311, y: -2}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &8815214607292356621
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942361021921269427}
+  m_CullTransparentMesh: 1
+--- !u!114 &3489795077757548560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942361021921269427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b57f426ba5d9ae44385b09dc53142def, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &2953224295233652035
 GameObject:
   m_ObjectHideFlags: 0
@@ -10329,6 +10424,8 @@ MonoBehaviour:
   heal: {fileID: 8300000, guid: 1d547ca4e452bd54194c9eca6fbd69a2, type: 3}
   hurt: {fileID: 8300000, guid: dd9c5ebb32749744d8571dd2d2aefb83, type: 3}
   die: {fileID: 8300000, guid: cfc2bbe669e11f04cafe8e0d8f02dc85, type: 3}
+  block: {fileID: 8300000, guid: f05f40fd0baeca94d90ad5d4e45e62cc, type: 3}
+  raiseShield: {fileID: 8300000, guid: 920c4421645ef6f4eb902f3ca4f231da, type: 3}
 --- !u!1 &4976692155640828463
 GameObject:
   m_ObjectHideFlags: 0
@@ -12879,9 +12976,7 @@ MonoBehaviour:
   threeEnemyParent: {fileID: 6769026202476910262}
   combatCanvas: {fileID: 9120847898522619200}
   playing: 0
-  shields: 0
-  shieldSprite: {fileID: 321870399590657210}
-  shieldText: {fileID: 1597728923728376100}
+  shield: {fileID: 5973256872436251943}
   gameManager: {fileID: 3967063549130384138}
   IsInBoss: 0
   Timers:
@@ -14247,12 +14342,12 @@ GameObject:
   - component: {fileID: 7434863715045255795}
   - component: {fileID: 1597728923728376100}
   m_Layer: 5
-  m_Name: Shield
+  m_Name: ShieldText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &9211324911100500992
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20573,6 +20668,7 @@ RectTransform:
   m_Children:
   - {fileID: 1985772418077661038}
   - {fileID: 7602897417279107666}
+  - {fileID: 6963935354578306936}
   - {fileID: 8346625344657845469}
   - {fileID: 4605866579817962319}
   m_Father: {fileID: 4024952446869508588}

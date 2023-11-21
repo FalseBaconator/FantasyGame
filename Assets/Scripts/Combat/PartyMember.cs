@@ -313,7 +313,7 @@ public class PartyMember : MonoBehaviour
                     //Doesn't need a target, just activates the shield
                     audioManager.PlaySFX(AudioManager.ClipToPlay.RaiseShield);
                     combatManager.ClearActions();
-                    combatManager.shields = (int)attack1Strength;
+                    combatManager.shield.SetShieldInt((int)attack1Strength);
                     currentAttackTime = attackingTimer;
                     sprite.sprite = attack1Sprite;
                     shutDownButtons();
@@ -331,7 +331,7 @@ public class PartyMember : MonoBehaviour
                 {
                     //Doesn't need a target, just activates the shield
                     combatManager.ClearActions();
-                    combatManager.shields = (int)attack2Strength;
+                    combatManager.shield.SetShieldInt((int)attack2Strength);
                     currentAttackTime = attackingTimer;
                     sprite.sprite= attack2Sprite;
                     shutDownButtons();
