@@ -140,6 +140,7 @@ public class Enemy : MonoBehaviour
         //atkDisplay.GetComponent<DMGDisplay>().activate();   //Placeholder Feedback
         if (combatManager.shields > 0)  //Attacks Shield
         {
+            audioManager.PlaySFX(AudioManager.ClipToPlay.Block);
             combatManager.shields--;
         }
         else    //Attacks Party Member

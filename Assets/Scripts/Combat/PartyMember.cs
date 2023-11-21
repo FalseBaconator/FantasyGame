@@ -311,6 +311,7 @@ public class PartyMember : MonoBehaviour
                 if (attack1IsShield)
                 {
                     //Doesn't need a target, just activates the shield
+                    audioManager.PlaySFX(AudioManager.ClipToPlay.RaiseShield);
                     combatManager.ClearActions();
                     combatManager.shields = (int)attack1Strength;
                     currentAttackTime = attackingTimer;

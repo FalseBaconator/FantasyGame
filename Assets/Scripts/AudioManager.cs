@@ -7,13 +7,15 @@ public class AudioManager : MonoBehaviour
     public AudioSource bgm;
     public AudioSource sfx;
 
-    public enum ClipToPlay { Upgrade, MenuClick, Heal, Hurt, Die}
+    public enum ClipToPlay { Upgrade, MenuClick, Heal, Hurt, Die, Block, RaiseShield }
 
     public AudioClip upgrade;
     public AudioClip menuClick;
     public AudioClip heal;
     public AudioClip hurt;
     public AudioClip die;
+    public AudioClip block;
+    public AudioClip raiseShield;
 
     public void PlaySFX(ClipToPlay clipToPlay)
     {
@@ -33,6 +35,12 @@ public class AudioManager : MonoBehaviour
                 break;
             case ClipToPlay.Die:
                 sfx.clip = die;
+                break;
+            case ClipToPlay.Block:
+                sfx.clip = block;
+                break;
+            case ClipToPlay.RaiseShield:
+                sfx.clip = raiseShield;
                 break;
         }
         sfx.Play();
