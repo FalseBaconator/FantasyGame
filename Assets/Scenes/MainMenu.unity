@@ -227,6 +227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2432923772292796742, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 85acd18f095ef094f95211637e282168, type: 3}
     - target: {fileID: 3579799116014739666, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.7570211
@@ -267,6 +271,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9167697274763742489, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 8300000, guid: 85acd18f095ef094f95211637e282168, type: 3}
+    - target: {fileID: 9167697274763742489, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: goblin
+      value: 
+      objectReference: {fileID: 8300000, guid: fe9a8327a40a7e54dbfdbb7d2ec676ce, type: 3}
+    - target: {fileID: 9167697274763742489, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: necromancer
+      value: 
+      objectReference: {fileID: 8300000, guid: 0d5f82b3bd935b44ba3b5e0b5b4c58ed, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

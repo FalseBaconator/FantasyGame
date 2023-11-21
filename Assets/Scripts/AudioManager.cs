@@ -8,7 +8,15 @@ public class AudioManager : MonoBehaviour
     public AudioSource sfx;
 
     public enum ClipToPlay { Upgrade, MenuClick, Heal, Hurt, Die, Block, RaiseShield }
+    public enum BGM { Menu, Goblin, Necromancer };
+    BGM currentTrack;
 
+    [Header("BGM Tracks")]
+    public AudioClip menu;
+    public AudioClip goblin;
+    public AudioClip necromancer;
+
+    [Header("SFX")]
     public AudioClip upgrade;
     public AudioClip menuClick;
     public AudioClip heal;
@@ -16,6 +24,27 @@ public class AudioManager : MonoBehaviour
     public AudioClip die;
     public AudioClip block;
     public AudioClip raiseShield;
+
+    public void SwitchTrack(BGM track)
+    {
+        if (currentTrack == track) return;
+
+        currentTrack = track;
+
+        bgm.Stop();
+        switch(track){
+            case BGM.Menu:
+                bgm.clip = menu;
+                break;
+            case BGM.Goblin:
+                bgm.clip = goblin;
+                break;
+            case BGM.Necromancer:
+                bgm.clip = necromancer;
+                break;
+        }
+        bgm.Play();
+    }
 
     public void PlaySFX(ClipToPlay clipToPlay)
     {

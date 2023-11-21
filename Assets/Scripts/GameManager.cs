@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
             switch (value)
             {
                 case GameState.MainMenu:
+                    audioManager.SwitchTrack(AudioManager.BGM.Menu);
                     Time.timeScale = 1;
                     uiManager.OpenMainMenu();
                     //SaveGame();
@@ -58,6 +59,7 @@ public class GameManager : MonoBehaviour
                     uiManager.OpenOptions();
                     break;
                 case GameState.Upgrades:
+                    audioManager.SwitchTrack(AudioManager.BGM.Menu);
                     Time.timeScale = 1;
                     uiManager.OpenUpgrades();
                     SaveGame();
@@ -81,14 +83,17 @@ public class GameManager : MonoBehaviour
                     audioManager.PauseAllAudio();
                     break;
                 case GameState.Lose:
+                    audioManager.SwitchTrack(AudioManager.BGM.Menu);
                     Time.timeScale = 1;
                     uiManager.OpenLose();
                     break;
                 case GameState.Win:
+                    audioManager.SwitchTrack(AudioManager.BGM.Menu);
                     Time.timeScale = 1;
                     uiManager.OpenWin();
                     break;
                 case GameState.BetweenDungeons:
+                    audioManager.SwitchTrack(AudioManager.BGM.Menu);
                     Time.timeScale = 1;
                     uiManager.OpenBetween();
                     break;

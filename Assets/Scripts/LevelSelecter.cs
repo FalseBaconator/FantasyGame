@@ -39,6 +39,16 @@ public class LevelSelecter : MonoBehaviour
 
     public void StartDungeon(int dungeonIndex)
     {
+        switch(dungeonIndex)
+        {
+            case 0:
+                gManager.audioManager.SwitchTrack(AudioManager.BGM.Goblin);
+                break;
+            case 1:
+                gManager.audioManager.SwitchTrack(AudioManager.BGM.Necromancer);
+                break;
+
+        }
         gManager.StartNewDungeon(dungeonIndex);
     }
 
