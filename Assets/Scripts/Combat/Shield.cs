@@ -10,7 +10,7 @@ public class Shield : MonoBehaviour
     public Color defaultColor;
     public Color hurtColor;
 
-    Vector3 startPos;
+    [SerializeField] Vector2 startPos;
 
     float hurtLength = 0.25f;
     float currentHurt = 0;
@@ -21,15 +21,21 @@ public class Shield : MonoBehaviour
     public TextMeshProUGUI shieldText;
     public AudioManager audioManager;
 
+    public RectTransform rect;
+
     // Start is called before the first frame update
     void Start()
     {
-        startPos = transform.position;
+        //startPos = transform.position;
+        //transform.position = startPos;
+        rect.anchoredPosition = startPos;
+        Debug.Log(startPos);
+        Debug.Log(rect.localPosition);
     }
 
     public void StartCombat()
     {
-        transform.position = startPos;
+        rect.anchoredPosition = startPos;
         currentHurt = 0;
         GetComponent<Image>().color = defaultColor;
     }
@@ -41,7 +47,7 @@ public class Shield : MonoBehaviour
         shieldText.text = shieldInt.ToString();
         currentHurt = hurtLength;
         dmgDisplay.SetActive(true);
-        transform.position = startPos;
+        rect.anchoredPosition = startPos;
         if (shieldInt <= 0)
         {
             sprite.enabled = false;
@@ -76,9 +82,9 @@ public class Shield : MonoBehaviour
         }
         else
         {
-            if (transform.position != startPos)
+            if (rect.anchoredPosition != startPos)
             {
-                transform.position = startPos;
+                rect.anchoredPosition = startPos;
             }
             if (sprite.color != defaultColor)
             {

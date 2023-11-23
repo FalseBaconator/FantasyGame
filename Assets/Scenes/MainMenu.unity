@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!224 &1421601694 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7602897417279107666, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+  m_PrefabInstance: {fileID: 8959830326056079577}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2110665593
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +232,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1436800744362717445, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2432923772292796742, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_audioClip
       value: 
@@ -269,6 +278,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3579799116014739666, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5089493681390996589, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5673302822363282059, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5973256872436251943, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: rect
+      value: 
+      objectReference: {fileID: 1421601694}
+    - target: {fileID: 5973256872436251943, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: startPos.x
+      value: 341
+      objectReference: {fileID: 0}
+    - target: {fileID: 5973256872436251943, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: startPos.y
+      value: -48
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120847898522619200, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9167697274763742489, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
