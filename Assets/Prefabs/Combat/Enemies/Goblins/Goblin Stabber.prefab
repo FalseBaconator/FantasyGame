@@ -432,6 +432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5d3669e0d9ae3b49a4599236d9a2452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 0}
   HP: 10
   MaxHP: 10
   HPField: {fileID: 5856502632613534910}
@@ -458,3 +459,4 @@ MonoBehaviour:
   attack: {fileID: 21300000, guid: b8e03710728111143ad63c645b29396b, type: 3}
   hurt: {fileID: 21300000, guid: 70c11216c89eda244a9295cd1905d759, type: 3}
   dmgDisplay: {fileID: 4676748756803481401}
+  XPDisplay: {fileID: 6743128298624345744, guid: 28c0a9e5fbcf0da43a268d531916577a, type: 3}

@@ -55,6 +55,11 @@ public class CombatManager : MonoBehaviour
 
     public Button selectedButton;
 
+    public float endDelay;
+    private float currentEndDelay;
+    public bool winning;
+    public bool losing;
+
     //Is In Boss Room?
     public void EnterBoss()
     {
@@ -69,6 +74,8 @@ public class CombatManager : MonoBehaviour
     //Starts combat with encouter given to it by EncounterGenerator
     public void StartCombat(GameObject[] enemiesInEncounter, int backgroundIndex)
     {
+        winning = false;
+        losing = false;
         ClearActions();
         background.sprite = backgrounds[backgroundIndex];
         shield.SetShieldInt(0);
@@ -122,6 +129,8 @@ public class CombatManager : MonoBehaviour
     //No Longer In combat
     public void LeaveCombat()
     {
+        winning = false;
+        losing = false;
         playing = false;
     }
 
@@ -149,16 +158,29 @@ public class CombatManager : MonoBehaviour
         }
 
         //If combat success
-        if(CheckEnemiesAlive() == false && playing)
+        if(CheckEnemiesAlive() == false && playing && !winning)
         {
-            Win();
+            winning = true;
+            currentEndDelay = endDelay;
         }
 
         //If combat loss
-        if(CheckPlayersAlive() == false && playing)
+        if(CheckPlayersAlive() == false && playing && !losing)
         {
-            Lose();
+            losing = true;
+            currentEndDelay = endDelay;
         }
+
+        if(winning || losing)
+        {
+            currentEndDelay -= Time.deltaTime;
+            if(currentEndDelay <= 0)
+            {
+                if (winning) Win();
+                else if (losing) Lose();
+            }
+        }
+
     }
 
     //Checks to see if there are living enemies

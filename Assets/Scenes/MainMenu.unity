@@ -240,17 +240,25 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 85acd18f095ef094f95211637e282168, type: 3}
+    - target: {fileID: 2442036023745193808, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048024244643183280, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: endDelay
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 3579799116014739666, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7570211
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3579799116014739666, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9700024
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3579799116014739666, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.067620076
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3579799116014739666, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -280,6 +288,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3967063549130384138, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: XP
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5089493681390996589, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -299,6 +311,10 @@ PrefabInstance:
     - target: {fileID: 5973256872436251943, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: startPos.y
       value: -48
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434004957616730231, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9120847898522619200, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_IsActive

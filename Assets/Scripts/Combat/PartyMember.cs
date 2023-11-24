@@ -368,7 +368,7 @@ public class PartyMember : MonoBehaviour
                     {
                         foreach (Enemy enemy in combatManager.enemies)
                         {
-                            if (enemy != target)
+                            if (enemy != target && enemy.alive)
                             {
                                 enemy.TakeDMG(attack1SplashDMG, attack1Type);
                             }
@@ -400,7 +400,7 @@ public class PartyMember : MonoBehaviour
                     {
                         foreach (Enemy enemy in combatManager.enemies)
                         {
-                            if (enemy != target)
+                            if (enemy != target && enemy.alive)
                             {
                                 enemy.TakeDMG(attack2SplashDMG, attack2Type);
                             }

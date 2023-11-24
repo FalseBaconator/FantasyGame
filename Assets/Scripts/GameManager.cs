@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public int currentSaveIndex;
 
     public int XP;
+    public int defaultXP;
     /*public enum Dungeon { GoblinCavern, };
     public Dungeon currentDungeon;*/
 
@@ -278,7 +279,7 @@ public class GameManager : MonoBehaviour
         if (newGame)
         {
             //Doesn't load data, instead uses default starting data.
-            XP = 100;   //Would be 0 for actual game. Is 100 for testing purposes.
+            XP = defaultXP;   //Would be 0 for actual game. Is 100 for testing purposes.
             encounterGenerator.currentMap = 0;
             upgradeManager.returnToDefault();
         }
