@@ -26,11 +26,7 @@ public class Shield : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //startPos = transform.position;
-        //transform.position = startPos;
         rect.anchoredPosition = startPos;
-        Debug.Log(startPos);
-        Debug.Log(rect.localPosition);
     }
 
     public void StartCombat()

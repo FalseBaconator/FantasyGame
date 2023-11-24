@@ -24,6 +24,8 @@ public class Enemy : MonoBehaviour
 
     private CombatManager combatManager;
 
+    private GameManager gameManager;
+
     //Objects to make invisible upon death.
     public GameObject[] objectsToHide;
 
@@ -61,6 +63,7 @@ public class Enemy : MonoBehaviour
         img.sprite = idle;
         currentCooldown = cooldownOffset;
         combatManager = FindObjectOfType<CombatManager>();
+        gameManager = FindObjectOfType<GameManager>();
         HP = MaxHP;
         HPField.text = HP.ToString() + "/" + MaxHP.ToString();
         alive = true;
@@ -212,7 +215,7 @@ public class Enemy : MonoBehaviour
     public void Die()
     {
         alive = false;
-        combatManager.GainXP(XP);
+        gameManager.GainXP(XP);
         GameObject temp = Instantiate(XPDisplay);
         temp.GetComponent<RectTransform>().position = GetComponent<RectTransform>().position;
         temp.GetComponent<XPDisplay>().XP = XP;

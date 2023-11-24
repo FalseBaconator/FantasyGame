@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!224 &1421601694 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7602897417279107666, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-  m_PrefabInstance: {fileID: 8959830326056079577}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2110665593
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,25 +223,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 200794476547336010, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_text
+      value: Returning home, the party find they have earned 100 XP to help them
+        complete their next quest.
+      objectReference: {fileID: 0}
+    - target: {fileID: 310600856229476843, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_text
+      value: Having completed all their quests, the party has earned 100 XP.
+      objectReference: {fileID: 0}
+    - target: {fileID: 531836527094472752, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 550
+      objectReference: {fileID: 0}
     - target: {fileID: 730076717170939195, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 1436800744362717445, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2432923772292796742, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 85acd18f095ef094f95211637e282168, type: 3}
-    - target: {fileID: 2442036023745193808, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3048024244643183280, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: endDelay
-      value: 0.6
+    - target: {fileID: 1342315369967627390, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_text
+      value: Having retreated, the party has gained 100 XP.
       objectReference: {fileID: 0}
     - target: {fileID: 3579799116014739666, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -288,50 +284,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3967063549130384138, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: XP
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5089493681390996589, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5673302822363282059, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+    - target: {fileID: 5318797645779533422, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5973256872436251943, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: rect
-      value: 
-      objectReference: {fileID: 1421601694}
-    - target: {fileID: 5973256872436251943, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: startPos.x
-      value: 341
+    - target: {fileID: 6123761209847979500, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5973256872436251943, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: startPos.y
-      value: -48
+    - target: {fileID: 7232243269022643373, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: 7434004957616730231, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9120847898522619200, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 9053704979968575687, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 550
       objectReference: {fileID: 0}
-    - target: {fileID: 9167697274763742489, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: menu
-      value: 
-      objectReference: {fileID: 8300000, guid: 85acd18f095ef094f95211637e282168, type: 3}
-    - target: {fileID: 9167697274763742489, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: goblin
-      value: 
-      objectReference: {fileID: 8300000, guid: fe9a8327a40a7e54dbfdbb7d2ec676ce, type: 3}
-    - target: {fileID: 9167697274763742489, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: necromancer
-      value: 
-      objectReference: {fileID: 8300000, guid: 0d5f82b3bd935b44ba3b5e0b5b4c58ed, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -1135,11 +1135,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   hurtColor: {r: 1, g: 0.4392157, b: 0.4392157, a: 1}
+  startPos: {x: 341, y: -48}
   shieldInt: 0
   dmgDisplay: {fileID: 2942361021921269427}
   sprite: {fileID: 5089493681390996589}
   shieldText: {fileID: 1597728923728376100}
   audioManager: {fileID: 9167697274763742489}
+  rect: {fileID: 7602897417279107666}
 --- !u!1 &331770857097394304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1787,11 +1789,17 @@ MonoBehaviour:
   upgradeManager: {fileID: 1951100091836613892}
   audioManager: {fileID: 9167697274763742489}
   currentSaveIndex: 0
-  XP: 100
+  XP: 0
+  defaultXP: 0
+  XPGained: 0
   XPText: {fileID: 5226960396530245259}
   encounterGenerator: {fileID: 2717811930810827539}
   levelSelecter: {fileID: 9083369057076653084}
   completedDungeons: 0
+  resultTexts:
+  - {fileID: 5623421768117660749}
+  - {fileID: 4327564314154584375}
+  - {fileID: 2300484803763661380}
 --- !u!114 &3530607086315755573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5421,7 +5429,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -100}
   m_SizeDelta: {x: 153.6, y: 57.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2500311743983677695
@@ -6711,6 +6719,157 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &3063036538127777497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9053704979968575687}
+  - component: {fileID: 5382504515511227375}
+  - component: {fileID: 310600856229476843}
+  - component: {fileID: 2300484803763661380}
+  m_Layer: 0
+  m_Name: Victory Message
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &9053704979968575687
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3063036538127777497}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4291057855122891482}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5382504515511227375
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3063036538127777497}
+  m_CullTransparentMesh: 1
+--- !u!114 &310600856229476843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3063036538127777497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: You Win!
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2300484803763661380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3063036538127777497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc245bf170cf65448865db0a4bec1cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 310600856229476843}
+  gameManager: {fileID: 3967063549130384138}
+  halfMessage1: 'Having completed all their quests, the party has earned '
+  halfMessage2: ' XP.'
 --- !u!1 &3150992763297195959
 GameObject:
   m_ObjectHideFlags: 0
@@ -8069,8 +8228,9 @@ GameObject:
   - component: {fileID: 531836527094472752}
   - component: {fileID: 2170829819155120039}
   - component: {fileID: 200794476547336010}
+  - component: {fileID: 4327564314154584375}
   m_Layer: 0
-  m_Name: Title (1)
+  m_Name: Results
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8192,6 +8352,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4327564314154584375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3569219508553024081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc245bf170cf65448865db0a4bec1cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 200794476547336010}
+  gameManager: {fileID: 3967063549130384138}
+  halfMessage1: 'Returning home, the party find they have earned '
+  halfMessage2: ' XP to help them complete their next quest.'
 --- !u!1 &3586556272498816649
 GameObject:
   m_ObjectHideFlags: 0
@@ -10223,7 +10399,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 85acd18f095ef094f95211637e282168, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -10419,6 +10595,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgm: {fileID: 2432923772292796742}
   sfx: {fileID: 6650546637546022590}
+  menu: {fileID: 8300000, guid: 85acd18f095ef094f95211637e282168, type: 3}
+  goblin: {fileID: 8300000, guid: fe9a8327a40a7e54dbfdbb7d2ec676ce, type: 3}
+  necromancer: {fileID: 8300000, guid: 0d5f82b3bd935b44ba3b5e0b5b4c58ed, type: 3}
   upgrade: {fileID: 8300000, guid: c36c13bb987f1214c9c88b1367bf95a5, type: 3}
   menuClick: {fileID: 8300000, guid: 7b6d139aa2bdaec49809da54e296b612, type: 3}
   heal: {fileID: 8300000, guid: 1d547ca4e452bd54194c9eca6fbd69a2, type: 3}
@@ -11298,8 +11477,9 @@ GameObject:
   - component: {fileID: 7232243269022643373}
   - component: {fileID: 616958197037959287}
   - component: {fileID: 1342315369967627390}
+  - component: {fileID: 5623421768117660749}
   m_Layer: 0
-  m_Name: Title (1)
+  m_Name: Results
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11421,6 +11601,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5623421768117660749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5306723100563655511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc245bf170cf65448865db0a4bec1cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1342315369967627390}
+  gameManager: {fileID: 3967063549130384138}
+  halfMessage1: 'Having retreated, the party has gained '
+  halfMessage2: ' XP.'
 --- !u!1 &5318797645779533422
 GameObject:
   m_ObjectHideFlags: 0
@@ -12990,6 +13186,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 06156aa094e3f8441a938adf2576511a, type: 3}
   - {fileID: 21300000, guid: 990b1c00711744b4dbc3464a16ad25e2, type: 3}
   selectedButton: {fileID: 0}
+  endDelay: 0.6
+  winning: 0
+  losing: 0
 --- !u!1 &5816962888408159165
 GameObject:
   m_ObjectHideFlags: 0
@@ -16313,6 +16512,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7322147925653936139}
+  - {fileID: 9053704979968575687}
   - {fileID: 8672684417386824931}
   m_Father: {fileID: 4024952446869508588}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20653,7 +20853,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1960527190458206101
 RectTransform:
   m_ObjectHideFlags: 0

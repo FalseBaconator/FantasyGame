@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
 
     public int XP;
     public int defaultXP;
+    public int XPGained; //The amount gained in this dungeon;
     /*public enum Dungeon { GoblinCavern, };
     public Dungeon currentDungeon;*/
 
@@ -34,6 +35,8 @@ public class GameManager : MonoBehaviour
     public LevelSelecter levelSelecter;
 
     public int completedDungeons;
+
+    public ResultsText[] resultTexts;
 
     public enum GameState { MainMenu, Saves, Options, Upgrades, LevelSelect, EncounterGen, Combat, Pause, Lose, Win, BetweenDungeons };
     private GameState _gState = GameState.MainMenu;
@@ -199,6 +202,7 @@ public class GameManager : MonoBehaviour
         audioManager.PlaySFX(AudioManager.ClipToPlay.MenuClick);
         SaveGame();
         gameState = GameState.EncounterGen;
+        XPGained = 0;
         encounterGenerator.NewAttempt(dungeonIndex);
     }
 
@@ -237,26 +241,28 @@ public class GameManager : MonoBehaviour
 
     public void Lose()
     {
+        RefreshResultTexts();
         gameState = GameState.Lose;
     }
 
     public void Win()
     {
+        RefreshResultTexts();
         //Checks if it's the end of the game or not
         //completedDungeons++;
         if(encounterGenerator.currentMap >= completedDungeons)
         {
             completedDungeons++;
         }
-        SaveGame();
         if (encounterGenerator.currentMap < encounterGenerator.maps.Length - 1)
         {
-            encounterGenerator.currentMap++;
+            //encounterGenerator.currentMap++;
             GoToBetween();
         }
         else {
             gameState = GameState.Win;
         }
+        SaveGame();
     }
 
     public void GoToLevelSelect()
@@ -266,9 +272,23 @@ public class GameManager : MonoBehaviour
         levelSelecter.Refresh();
     }
 
+    public void GainXP(int XPToGain)
+    {
+        XP += XPToGain;
+        XPGained += XPToGain;
+    }
+
     public void GoToBetween()
     {
         gameState = GameState.BetweenDungeons;
+    }
+
+    public void RefreshResultTexts()
+    {
+        foreach (ResultsText result in resultTexts)
+        {
+            result.Refresh();
+        }
     }
 
     //Gets data from save file and distributes it accross the game as needed.

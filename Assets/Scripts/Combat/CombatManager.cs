@@ -111,10 +111,10 @@ public class CombatManager : MonoBehaviour
     }
 
     //Gives XP to gameManger upon defeating enemy
-    public void GainXP(int xp)
-    {
-        gameManager.XP += xp;
-    }
+    //public void GainXP(int xp)
+    //{
+    //    gameManager.XP += xp;
+    //}
 
     //Preps party members for a new dungeon. Upon entering Map through Upgrades
     public void StartPartyMembers()
