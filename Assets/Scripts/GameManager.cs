@@ -111,6 +111,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SceneManager.sceneLoaded += SwitchScreenSceneTransition;
         gameState = GameState.MainMenu;
     }
 
@@ -191,7 +192,7 @@ public class GameManager : MonoBehaviour
     {
         audioManager.PlaySFX(AudioManager.ClipToPlay.MenuClick);
         SceneManager.LoadScene(mainMenuScene);
-        SceneManager.sceneLoaded += SwitchScreenSceneTransition;
+        //SceneManager.sceneLoaded += SwitchScreenSceneTransition;
     }
 
     
@@ -199,14 +200,14 @@ public class GameManager : MonoBehaviour
     {
         audioManager.PlaySFX(AudioManager.ClipToPlay.MenuClick);
         SceneManager.LoadScene(upgradesScene);
-        SceneManager.sceneLoaded += SwitchScreenSceneTransition;
+        //SceneManager.sceneLoaded += SwitchScreenSceneTransition;
     }
 
     public void GoToCombat()
     {
         audioManager.PlaySFX(AudioManager.ClipToPlay.MenuClick);
         SceneManager.LoadScene(gamePlayScene);
-        SceneManager.sceneLoaded += SwitchScreenSceneTransition;
+        //SceneManager.sceneLoaded += SwitchScreenSceneTransition;
     }
 
     //On Button Press. Saves chosen upgrades, the tells MapGenerator to start the dungeon.
@@ -263,7 +264,6 @@ public class GameManager : MonoBehaviour
     {
         RefreshResultTexts();
         //Checks if it's the end of the game or not
-        //completedDungeons++;
         if(encounterGenerator.currentMap >= completedDungeons)
         {
             completedDungeons++;

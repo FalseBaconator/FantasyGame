@@ -29,11 +29,6 @@ public class Enemy : MonoBehaviour
     //Objects to make invisible upon death.
     public GameObject[] objectsToHide;
 
-    //Placeholder Feedback
-    //public GameObject atkDisplay;
-    //public GameObject dmgDisplay;
-    //public GameObject healDisplay;
-
     public Image ice;
     public float iceTimer;
 
@@ -144,14 +139,6 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    /*private void OnMouseDrag()            I don't know when I might need this
-    {
-        if(combatManager.attackTargetType == PartyMember.Target.enemies)
-        {
-            combatManager.attacker.GetComponent<PartyMember>().Attack(gameObject);
-        }
-    }*/
-
     //Stuns because of Ice
     public void Freeze(float time)
     {
@@ -170,7 +157,6 @@ public class Enemy : MonoBehaviour
     {
         spriteTimerCurrent = attackLength;
         img.sprite = attack;
-        //atkDisplay.GetComponent<DMGDisplay>().activate();   //Placeholder Feedback
         if (combatManager.shield.shieldInt > 0)  //Attacks Shield
         {
             combatManager.shield.Bonk();

@@ -433,10 +433,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioManager: {fileID: 0}
-  HP: 20
-  MaxHP: 20
+  HP: 17
+  MaxHP: 17
   HPField: {fileID: 5856502632613534910}
-  XP: 20
+  XP: 17
   dmg: 4
   attackType: 2
   cooldownLength: 6
@@ -460,3 +460,6 @@ MonoBehaviour:
   hurt: {fileID: 21300000, guid: b64faa595a008fb4ca0e842703af7210, type: 3}
   dmgDisplay: {fileID: 4676748756803481401}
   XPDisplay: {fileID: 6743128298624345744, guid: 28c0a9e5fbcf0da43a268d531916577a, type: 3}
+  isBoss: 0
+  deadLength: 0
+  dead: {fileID: 0}

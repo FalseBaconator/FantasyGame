@@ -273,8 +273,6 @@ public class PartyMember : MonoBehaviour
     //Party member is ready for action
     public void AwakenButtons()
     {
-        //attack1Button.gameObject.SetActive(true);
-        //attack2Button.gameObject.SetActive(true);
         attack1Button.interactable = true;
         attack2Button.interactable = true;
         attack1Cover.gameObject.SetActive(false);
@@ -286,8 +284,6 @@ public class PartyMember : MonoBehaviour
     {
         attack1Button.gameObject.GetComponent<ActionButtonShowDesc>().MouseExit();
         attack2Button.gameObject.GetComponent<ActionButtonShowDesc>().MouseExit();
-        //attack1Button.gameObject.SetActive(false);
-        //attack2Button.gameObject.SetActive(false);
         attack1Button.interactable = true;
         attack2Button.interactable = true;
         attack1Cover.gameObject.SetActive(true);
