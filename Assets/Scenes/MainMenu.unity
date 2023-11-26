@@ -300,6 +300,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3282123918960410270, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_text
+      value: Hand Drawn Dungeon
+      objectReference: {fileID: 0}
     - target: {fileID: 3579799116014739666, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
