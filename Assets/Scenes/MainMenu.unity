@@ -223,26 +223,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 200794476547336010, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_text
-      value: Returning home, the party find they have earned 100 XP to help them
-        complete their next quest.
-      objectReference: {fileID: 0}
-    - target: {fileID: 310600856229476843, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_text
-      value: Having completed all their quests, the party has earned 100 XP.
-      objectReference: {fileID: 0}
-    - target: {fileID: 531836527094472752, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 550
-      objectReference: {fileID: 0}
     - target: {fileID: 730076717170939195, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 1342315369967627390, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_text
-      value: Having retreated, the party has gained 100 XP.
+    - target: {fileID: 3048024244643183280, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: bossEndDelay
+      value: 1.85
       objectReference: {fileID: 0}
     - target: {fileID: 3579799116014739666, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -283,26 +270,6 @@ PrefabInstance:
     - target: {fileID: 3579799116014739666, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5318797645779533422, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6123761209847979500, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7232243269022643373, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 550
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434004957616730231, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9053704979968575687, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 550
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

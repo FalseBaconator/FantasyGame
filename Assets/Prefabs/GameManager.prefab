@@ -6755,7 +6755,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 550, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5382504515511227375
 CanvasRenderer:
@@ -6785,7 +6785,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You Win!
+  m_text: Having completed all their quests, the party has earned 100 XP.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8253,7 +8253,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 100}
+  m_SizeDelta: {x: 550, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2170829819155120039
 CanvasRenderer:
@@ -8283,7 +8283,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: There are yet more dungeons to explore...
+  m_text: Returning home, the party find they have earned 100 XP to help them complete
+    their next quest.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10700,6 +10701,7 @@ MonoBehaviour:
     enemyTypes:
     - {fileID: 8666879802084775525, guid: 69712e815307cd24e8d6a8854ba87469, type: 3}
     - {fileID: 8666879802084775525, guid: 3cb19ae9db658fd4b954858808539a7c, type: 3}
+    - {fileID: 8666879802084775525, guid: 31c4b15322a678346b85c4a8a1ee3c84, type: 3}
     boss: {fileID: 8666879802084775525, guid: b9011a240e8ec62429788f3d59c0388d, type: 3}
     backgroundIndex: 0
   - roomCount: 5
@@ -10707,6 +10709,7 @@ MonoBehaviour:
     enemyTypes:
     - {fileID: 8666879802084775525, guid: 900dc38285acc4f44ac46b2450891c3c, type: 3}
     - {fileID: 8666879802084775525, guid: fd1b5cce22eaca240b21a20a01988e78, type: 3}
+    - {fileID: 8666879802084775525, guid: 60384151bdcb4aa47815eee0e0514c80, type: 3}
     boss: {fileID: 8666879802084775525, guid: f57ba3a826b09bf4d9aaf162e62a0455, type: 3}
     backgroundIndex: 1
   roomIndex: 0
@@ -11502,7 +11505,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 100}
+  m_SizeDelta: {x: 550, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &616958197037959287
 CanvasRenderer:
@@ -11532,7 +11535,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Better luck next time!
+  m_text: Having retreated, the party has gained 100 XP.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13187,6 +13190,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 990b1c00711744b4dbc3464a16ad25e2, type: 3}
   selectedButton: {fileID: 0}
   endDelay: 0.6
+  bossEndDelay: 1.35
   winning: 0
   losing: 0
 --- !u!1 &5816962888408159165

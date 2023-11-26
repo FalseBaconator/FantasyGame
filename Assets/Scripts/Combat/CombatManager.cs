@@ -56,6 +56,7 @@ public class CombatManager : MonoBehaviour
     public Button selectedButton;
 
     public float endDelay;
+    public float bossEndDelay;
     private float currentEndDelay;
     public bool winning;
     public bool losing;
@@ -136,20 +137,6 @@ public class CombatManager : MonoBehaviour
 
     private void Update()
     {
-
-        //Debug.Log(playing);
-
-        //Shield Management
-        //if(shields > 0)
-        //{
-        //    if(shieldSprite.activeSelf == false)
-        //        shieldSprite.SetActive(true);
-        //    shieldText.text = shields.ToString();
-        //}else if(shieldSprite.activeSelf == true)
-        //{
-        //    shieldSprite.SetActive(false);
-        //}
-
         //Initiates an attack by Party Member when both Action and Target are selected. Bypassed by Shield
         if(attackTarget != null && attacker != null)
         {
@@ -161,7 +148,10 @@ public class CombatManager : MonoBehaviour
         if(CheckEnemiesAlive() == false && playing && !winning)
         {
             winning = true;
-            currentEndDelay = endDelay;
+            if(!IsInBoss)
+                currentEndDelay = endDelay;
+            else
+                currentEndDelay = bossEndDelay;
         }
 
         //If combat loss
