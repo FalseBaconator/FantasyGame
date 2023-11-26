@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
     public AudioSource bgm;
     public AudioSource sfx;
+
+    public Slider bgSlider;
+    public Slider sfxSlider;
 
     public enum ClipToPlay { Upgrade, MenuClick, Heal, Hurt, Die, Block, RaiseShield }
     public enum BGM { Menu, Goblin, Necromancer };
@@ -24,6 +28,14 @@ public class AudioManager : MonoBehaviour
     public AudioClip die;
     public AudioClip block;
     public AudioClip raiseShield;
+
+    private void Start()
+    {
+        bgm.volume = PlayerPrefs.GetFloat("BGVolume", 1);
+        sfx.volume = PlayerPrefs.GetFloat("SFXVolume", 1);
+        bgSlider.value = bgm.volume;
+        sfxSlider.value = sfx.volume;
+    }
 
     public void SwitchTrack(BGM track)
     {
@@ -86,6 +98,18 @@ public class AudioManager : MonoBehaviour
         bgm.UnPause();
         sfx.UnPause();
 
+    }
+
+    public void ChangeBGVolume(Slider slider)
+    {
+        bgm.volume = slider.value;
+        PlayerPrefs.SetFloat("BGVolume", slider.value);
+    }
+
+    public void ChangeSFXVolume(Slider slider)
+    {
+        sfx.volume = slider.value;
+        PlayerPrefs.SetFloat("SFXVolume", slider.value);
     }
 
 }
