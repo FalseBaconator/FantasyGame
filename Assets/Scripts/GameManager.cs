@@ -41,11 +41,13 @@ public class GameManager : MonoBehaviour
     public enum GameState { MainMenu, Saves, Options, Upgrades, LevelSelect, EncounterGen, Combat, Pause, Lose, Win, BetweenDungeons };
     private GameState _gState = GameState.MainMenu;
     private GameState prevState;
+    private GameState prevNotPause;
     public GameState gameState{
         get => _gState;
         set
         {
             prevState = _gState;
+            if(_gState != GameState.Pause && _gState != GameState.Options) prevNotPause = _gState;
             switch (value)
             {
                 case GameState.MainMenu:
@@ -125,8 +127,18 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.Upgrades:
                 XPText.text = "XP: " + XP;
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    gameState = GameState.Pause;
+                }
+                break;
+            case GameState.LevelSelect:
                 break;
             case GameState.EncounterGen:
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    gameState = GameState.Pause;
+                }
                 break;
             case GameState.Combat:
                 if (Input.GetKeyDown(KeyCode.Escape))
@@ -144,7 +156,8 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.Win:
                 break;
-            case GameState.BetweenDungeons: break;
+            case GameState.BetweenDungeons:
+                break;
         }
     }
 
@@ -216,6 +229,7 @@ public class GameManager : MonoBehaviour
     //Change Game State methods without changing scene.
     public void goToOptions()
     {
+        audioManager.UnpauseAllAudio();
         audioManager.PlaySFX(AudioManager.ClipToPlay.MenuClick);
         gameState = GameState.Options;
     }
@@ -236,7 +250,7 @@ public class GameManager : MonoBehaviour
     public void exitPause()
     {
         audioManager.UnpauseAllAudio();
-        gameState = GameState.Combat;
+        gameState = prevNotPause;
     }
 
     public void Lose()
