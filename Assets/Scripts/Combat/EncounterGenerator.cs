@@ -116,7 +116,7 @@ public class EncounterGenerator : MonoBehaviour
             encounter1Text.gameObject.SetActive(false);
             encounter2Text.gameObject.SetActive(false);
             bossEncounterText.gameObject.SetActive(true);
-            if (tutorial.inTutorial)
+            if (currentMap == tutorialIndex)
             {
                 bossEncounterText.text = tutorialMessage;
             }
