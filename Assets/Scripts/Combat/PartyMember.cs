@@ -9,6 +9,8 @@ public class PartyMember : MonoBehaviour
 {
     public AudioManager audioManager;
 
+    public SpecialEncounterTutorial tutorial;
+
     public float HP;
     public float MaxHP;
     public TextMeshProUGUI HPField;
@@ -232,14 +234,14 @@ public class PartyMember : MonoBehaviour
                 }
 
                 //Checks if party member is on cooldown.
-                if (currentCooldown > 0)
+                if (currentCooldown > 0 && tutorial.inTutorial == false)
                 {
                     currentCooldown -= Time.deltaTime;
 
                     attack1Cover.fillAmount = currentCooldown / cooldownLength;
                     attack2Cover.fillAmount = currentCooldown / cooldownLength;
                 }
-                else if (attack1Cover.IsActive() == true)
+                else if (attack1Cover.IsActive() == true && tutorial.inTutorial == false)
                 {
                     //Allows the player to select Actions for this party member
                     AwakenButtons();
@@ -273,6 +275,7 @@ public class PartyMember : MonoBehaviour
     //Party member is ready for action
     public void AwakenButtons()
     {
+        if (tutorial.inTutorial) return;
         attack1Button.interactable = true;
         attack2Button.interactable = true;
         attack1Cover.gameObject.SetActive(false);
@@ -282,10 +285,11 @@ public class PartyMember : MonoBehaviour
     //Party member is on cooldown or dead.
     public void shutDownButtons()
     {
+        if (tutorial.inTutorial) return;
         attack1Button.gameObject.GetComponent<ActionButtonShowDesc>().MouseExit();
         attack2Button.gameObject.GetComponent<ActionButtonShowDesc>().MouseExit();
-        attack1Button.interactable = true;
-        attack2Button.interactable = true;
+        attack1Button.interactable = false;
+        attack2Button.interactable = false;
         attack1Cover.gameObject.SetActive(true);
         attack2Cover.gameObject.SetActive(true);
 

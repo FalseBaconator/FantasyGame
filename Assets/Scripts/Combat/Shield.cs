@@ -17,7 +17,7 @@ public class Shield : MonoBehaviour
 
     public int shieldInt;
     public GameObject dmgDisplay;
-    public Image sprite;
+    public Image[] sprites;
     public TextMeshProUGUI shieldText;
     public AudioManager audioManager;
 
@@ -46,8 +46,32 @@ public class Shield : MonoBehaviour
         rect.anchoredPosition = startPos;
         if (shieldInt <= 0)
         {
-            sprite.enabled = false;
+            DisableSprites();
             shieldText.gameObject.SetActive(false);
+        }
+    }
+
+    public void EnableSprites()
+    {
+        foreach (Image sprite in sprites)
+        {
+            sprite.enabled = true;
+        }
+    }
+
+    public void DisableSprites()
+    {
+        foreach (Image sprite in sprites)
+        {
+            sprite.enabled = false;
+        }
+    }
+
+    public void SwitchColour(Color colour)
+    {
+        foreach (Image sprite in sprites)
+        {
+            sprite.color = colour;
         }
     }
 
@@ -57,12 +81,12 @@ public class Shield : MonoBehaviour
         shieldText.text = shieldInt.ToString();
         if (value > 0)
         {
-            sprite.enabled = true;
+            EnableSprites();
             shieldText.gameObject.SetActive(true);
         }
         else
         {
-            sprite.enabled = false;
+            DisableSprites();
             shieldText.gameObject.SetActive(false);
         }
     }
@@ -72,7 +96,7 @@ public class Shield : MonoBehaviour
     {
         if(currentHurt > 0)
         {
-            sprite.color = hurtColor;
+            SwitchColour(hurtColor);
             currentHurt -= Time.deltaTime;
             transform.position = new Vector3(transform.position.x, transform.position.y - (50 * Time.deltaTime), transform.position.z);
         }
@@ -82,9 +106,9 @@ public class Shield : MonoBehaviour
             {
                 rect.anchoredPosition = startPos;
             }
-            if (sprite.color != defaultColor)
+            if (sprites[0].color != defaultColor)
             {
-                sprite.color = defaultColor;
+                SwitchColour(defaultColor);
             }
             if (dmgDisplay.activeSelf)
             {

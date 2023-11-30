@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &2093090610 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6591706611606682895, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+  m_PrefabInstance: {fileID: 8959830326056079577}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e187dea5a207ce34998379e0682dc36f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2110665593
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +238,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2680483966034658328, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: tutorial
+      value: 
+      objectReference: {fileID: 2093090610}
+    - target: {fileID: 2717811930810827539, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: maps.Array.data[0].boss
+      value: 
+      objectReference: {fileID: 8666879802084775525, guid: 6a122a40d8bbbec4eaa1387c8443b411, type: 3}
     - target: {fileID: 3579799116014739666, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -267,14 +286,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5318797645779533422, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6123761209847979500, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 8262205066894445854, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: tutorial
+      value: 
+      objectReference: {fileID: 2093090610}
+    - target: {fileID: 9092216153350063270, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: tutorial
+      value: 
+      objectReference: {fileID: 2093090610}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

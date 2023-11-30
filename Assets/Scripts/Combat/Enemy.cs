@@ -26,6 +26,8 @@ public class Enemy : MonoBehaviour
 
     private GameManager gameManager;
 
+    SpecialEncounterTutorial tutorial;
+
     //Objects to make invisible upon death.
     public GameObject[] objectsToHide;
 
@@ -64,6 +66,7 @@ public class Enemy : MonoBehaviour
         currentCooldown = cooldownOffset;
         combatManager = FindObjectOfType<CombatManager>();
         gameManager = FindObjectOfType<GameManager>();
+        tutorial = FindObjectOfType<SpecialEncounterTutorial>();
         HP = MaxHP;
         HPField.text = HP.ToString() + "/" + MaxHP.ToString();
         alive = true;
@@ -80,11 +83,11 @@ public class Enemy : MonoBehaviour
             {
                 iceTimer -= Time.deltaTime;
             }
-            else
+            else if(tutorial.inTutorial == false)
             {
                 ice.gameObject.SetActive(false);
 
-                //Attack when Cooldown is done]
+                //Attack when Cooldown is done
                 if (img.sprite == idle)
                 {
                     currentCooldown += Time.deltaTime;

@@ -515,7 +515,7 @@ MonoBehaviour:
   XP: 17
   dmg: 4
   attackType: 2
-  cooldownLength: 6
+  cooldownLength: 10
   cooldownOffset: 0
   currentCooldown: 0
   objectsToHide:

@@ -35,6 +35,10 @@ public class EncounterGenerator : MonoBehaviour
     public Sprite[] rightDoors;
     public Sprite[] centerDoors;
 
+    public int tutorialIndex;
+    public SpecialEncounterTutorial tutorial;
+
+
     //Start a dungeon from the first room
     public void NewAttempt(int dungeonIndex)
     {
@@ -116,6 +120,14 @@ public class EncounterGenerator : MonoBehaviour
     //On Button Press. Go to combat with appropriate encounter
     public void StartEncounter(int encounterIndex)
     {
+        if (currentMap == tutorialIndex)
+        {
+            tutorial.EnterTutorial();
+        }
+        else
+        {
+            tutorial.EnterNotTutorial();
+        }
         combatManager.LeaveBoss();
         switch (encounterIndex)
         {
@@ -133,6 +145,14 @@ public class EncounterGenerator : MonoBehaviour
     //On Button Press. Go to combat with boss encounter.
     public void StartBossEncounter()
     {
+        if (currentMap == tutorialIndex)
+        {
+            tutorial.EnterTutorial();
+        }
+        else
+        {
+            tutorial.EnterNotTutorial();
+        }
         gameManager.GoToCombat();
         combatManager.StartCombat(new GameObject[] { maps[currentMap].boss }, maps[currentMap].backgroundIndex);
     }

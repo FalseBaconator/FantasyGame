@@ -315,7 +315,7 @@ public class GameManager : MonoBehaviour
             //Doesn't load data, instead uses default starting data.
             XP = defaultXP;   //Would be 0 for actual game. Is 100 for testing purposes.
             encounterGenerator.currentMap = 0;
-            completedDungeons = 0;
+            completedDungeons = 1;
             upgradeManager.returnToDefault();
         }
         else

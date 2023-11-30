@@ -14,7 +14,7 @@ public class LevelSelecter : MonoBehaviour
 
     public void Refresh()
     {
-        int index = gManager.completedDungeons;
+        int index = gManager.completedDungeons - 1;//-1 to account for tutorial dungeon
         for (int i = 0; i < levelButtons.Length; i++)
         {
             if(i <= index)
@@ -42,9 +42,10 @@ public class LevelSelecter : MonoBehaviour
         switch(dungeonIndex)
         {
             case 0:
+            case 1:
                 gManager.audioManager.SwitchTrack(AudioManager.BGM.Goblin);
                 break;
-            case 1:
+            case 2:
                 gManager.audioManager.SwitchTrack(AudioManager.BGM.Necromancer);
                 break;
 
