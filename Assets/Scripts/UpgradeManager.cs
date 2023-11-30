@@ -13,7 +13,7 @@ public class UpgradeManager : MonoBehaviour
     public Image[] stageIndicators;
     public Sprite stageEmpty;
     public Sprite stageFill;
-    public GameObject leaveUpgradesButton;
+    public GameObject toHide;
 
     //Healer Stats
     public int healerHP;
@@ -103,14 +103,14 @@ public class UpgradeManager : MonoBehaviour
             }
         }
         descriptionField.SetActive(true);
-        leaveUpgradesButton.SetActive(false);
+        toHide.SetActive(false);
     }
 
     //Hide Description field
     public void HideDesc()
     {
         descriptionField.SetActive(false);
-        leaveUpgradesButton.SetActive(true);
+        toHide.SetActive(true);
     }
 
     //Upgrade HP of designated character
