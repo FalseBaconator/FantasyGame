@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 8367574488811081072}
   - component: {fileID: 3450752326607485476}
   m_Layer: 5
-  m_Name: Tutorial Enemy
+  m_Name: Scarecrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -354,7 +354,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cce0746fdadb4684b9ff049403515a52, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 37a8f85f189970c40b4946a0b83f3bc2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -433,13 +433,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioManager: {fileID: 0}
-  HP: 10
-  MaxHP: 10
+  HP: 20
+  MaxHP: 20
   HPField: {fileID: 5856502632613534910}
   XP: 10
   dmg: 2
   attackType: 1
-  cooldownLength: 8
+  cooldownLength: 5
   cooldownOffset: 0
   currentCooldown: 0
   objectsToHide:
@@ -454,15 +454,15 @@ MonoBehaviour:
   attackLength: 0.5
   hurtLength: 0.5
   img: {fileID: 4419638249624513150}
-  idle: {fileID: 21300000, guid: cce0746fdadb4684b9ff049403515a52, type: 3}
-  windUp: {fileID: 21300000, guid: 2c69e834233d2114f80b7ec7193b3d16, type: 3}
-  attack: {fileID: 21300000, guid: b8e03710728111143ad63c645b29396b, type: 3}
-  hurt: {fileID: 21300000, guid: 70c11216c89eda244a9295cd1905d759, type: 3}
+  idle: {fileID: 21300000, guid: 37a8f85f189970c40b4946a0b83f3bc2, type: 3}
+  windUp: {fileID: 21300000, guid: acfbf01f2af8cc8468d31ee8634d1e71, type: 3}
+  attack: {fileID: 21300000, guid: 8a77b3da05312bd47b41df2fd60eb07f, type: 3}
+  hurt: {fileID: 21300000, guid: 000b167f062c14648841a3768c933992, type: 3}
   dmgDisplay: {fileID: 4676748756803481401}
   XPDisplay: {fileID: 6743128298624345744, guid: 28c0a9e5fbcf0da43a268d531916577a, type: 3}
   isBoss: 1
   deadLength: 0.75
-  dead: {fileID: 21300000, guid: 4b185847ea7b0e84fa8000b2a60521d2, type: 3}
+  dead: {fileID: 21300000, guid: 8da70db8649acb74785bfc1c5b89f0e6, type: 3}
 --- !u!1 &9054226087323021598
 GameObject:
   m_ObjectHideFlags: 0

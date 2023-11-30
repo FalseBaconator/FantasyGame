@@ -83,12 +83,12 @@ public class Enemy : MonoBehaviour
             {
                 iceTimer -= Time.deltaTime;
             }
-            else if(tutorial.inTutorial == false)
+            else
             {
                 ice.gameObject.SetActive(false);
 
                 //Attack when Cooldown is done
-                if (img.sprite == idle)
+                if (img.sprite == idle && tutorial.inTutorial == false)
                 {
                     currentCooldown += Time.deltaTime;
                     if (currentCooldown >= cooldownLength)

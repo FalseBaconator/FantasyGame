@@ -38,6 +38,9 @@ public class EncounterGenerator : MonoBehaviour
     public int tutorialIndex;
     public SpecialEncounterTutorial tutorial;
 
+    [TextArea] public string bossMessage;
+    [TextArea] public string tutorialMessage;
+
 
     //Start a dungeon from the first room
     public void NewAttempt(int dungeonIndex)
@@ -113,6 +116,15 @@ public class EncounterGenerator : MonoBehaviour
             encounter1Text.gameObject.SetActive(false);
             encounter2Text.gameObject.SetActive(false);
             bossEncounterText.gameObject.SetActive(true);
+            if (tutorial.inTutorial)
+            {
+                bossEncounterText.text = tutorialMessage;
+            }
+            else
+            {
+                bossEncounterText.text = bossMessage;
+            }
+
         }
 
     }

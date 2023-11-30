@@ -12799,7 +12799,7 @@ MonoBehaviour:
     - {fileID: 8666879802084775525, guid: 900dc38285acc4f44ac46b2450891c3c, type: 3}
     - {fileID: 8666879802084775525, guid: fd1b5cce22eaca240b21a20a01988e78, type: 3}
     - {fileID: 8666879802084775525, guid: 60384151bdcb4aa47815eee0e0514c80, type: 3}
-    boss: {fileID: 8666879802084775525, guid: f57ba3a826b09bf4d9aaf162e62a0455, type: 3}
+    boss: {fileID: 8666879802084775525, guid: 6a122a40d8bbbec4eaa1387c8443b411, type: 3}
     backgroundIndex: 1
   - roomCount: 3
     title: Goblin Caverns
@@ -13268,7 +13268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioManager: {fileID: 9167697274763742489}
-  tutorial: {fileID: 0}
+  tutorial: {fileID: 6591706611606682895}
   HP: 0
   MaxHP: 0
   HPField: {fileID: 6080348167577573404}
@@ -21640,7 +21640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioManager: {fileID: 9167697274763742489}
-  tutorial: {fileID: 0}
+  tutorial: {fileID: 6591706611606682895}
   HP: 10
   MaxHP: 10
   HPField: {fileID: 5623819513938788787}
@@ -22835,7 +22835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioManager: {fileID: 9167697274763742489}
-  tutorial: {fileID: 0}
+  tutorial: {fileID: 6591706611606682895}
   HP: 0
   MaxHP: 0
   HPField: {fileID: 661319562707483585}

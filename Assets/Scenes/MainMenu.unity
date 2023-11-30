@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &2093090610 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6591706611606682895, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-  m_PrefabInstance: {fileID: 8959830326056079577}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e187dea5a207ce34998379e0682dc36f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2110665593
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,14 +227,90 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 2680483966034658328, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: tutorial
-      value: 
-      objectReference: {fileID: 2093090610}
     - target: {fileID: 2717811930810827539, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: maps.Array.data[0].boss
+      propertyPath: bossMessage
+      value: You hear a powerful enemy ahead.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717811930810827539, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: tutorialMessage
+      value: You are approaching a training encounter.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717811930810827539, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: leftDoors.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717811930810827539, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: rightDoors.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717811930810827539, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: backgrounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717811930810827539, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: centerDoors.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717811930810827539, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: leftDoors.Array.data[0]
       value: 
-      objectReference: {fileID: 8666879802084775525, guid: 6a122a40d8bbbec4eaa1387c8443b411, type: 3}
+      objectReference: {fileID: 21300000, guid: ec4564076fbca004bad8f88464c04494, type: 3}
+    - target: {fileID: 2717811930810827539, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: leftDoors.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 28d10fef36cce964e94bcc8eb74bb3e6, type: 3}
+    - target: {fileID: 2717811930810827539, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: leftDoors.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: ec4564076fbca004bad8f88464c04494, type: 3}
+    - target: {fileID: 2717811930810827539, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: rightDoors.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1151460b27522df44abc7c8cbaad2797, type: 3}
+    - target: {fileID: 2717811930810827539, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: rightDoors.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: b8a0916c09add5d46b7483024cbe393a, type: 3}
+    - target: {fileID: 2717811930810827539, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: rightDoors.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1151460b27522df44abc7c8cbaad2797, type: 3}
+    - target: {fileID: 2717811930810827539, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: backgrounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 22169e5a529536c4ba464f1160cfbd76, type: 3}
+    - target: {fileID: 2717811930810827539, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: backgrounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 06156aa094e3f8441a938adf2576511a, type: 3}
+    - target: {fileID: 2717811930810827539, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: backgrounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 990b1c00711744b4dbc3464a16ad25e2, type: 3}
+    - target: {fileID: 2717811930810827539, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: centerDoors.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8d33d658ec8af034fb166a231ae77959, type: 3}
+    - target: {fileID: 2717811930810827539, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: centerDoors.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 56aee23237a2ee341be6b94ab8a0d6f8, type: 3}
+    - target: {fileID: 2717811930810827539, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: centerDoors.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8d33d658ec8af034fb166a231ae77959, type: 3}
+    - target: {fileID: 2717811930810827539, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: maps.Array.data[0].backgroundIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717811930810827539, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: maps.Array.data[1].backgroundIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717811930810827539, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: maps.Array.data[2].backgroundIndex
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3579799116014739666, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -286,14 +351,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8262205066894445854, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: tutorial
+    - target: {fileID: 6371338747705314022, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2093090610}
-    - target: {fileID: 9092216153350063270, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: tutorial
-      value: 
-      objectReference: {fileID: 2093090610}
+      objectReference: {fileID: 21300000, guid: 0ab3ad1c908bae34c8f161c7f9d7e4c0, type: 3}
+    - target: {fileID: 7378911766405193838, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 144
+      objectReference: {fileID: 0}
+    - target: {fileID: 8871994412090896819, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_margin.w
+      value: 41.768494
+      objectReference: {fileID: 0}
+    - target: {fileID: 8871994412090896819, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_margin.x
+      value: 13.922798
+      objectReference: {fileID: 0}
+    - target: {fileID: 8871994412090896819, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_margin.y
+      value: 44.37903
+      objectReference: {fileID: 0}
+    - target: {fileID: 8871994412090896819, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_margin.z
+      value: 15.663193
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -71,6 +71,7 @@ public class SpecialEncounterTutorial : MonoBehaviour
                 shieldCover.gameObject.SetActive(true);
                 shieldCover.fillAmount = 1;
                 enemy.img.sprite = enemy.attack;
+                enemy.spriteTimerCurrent = enemy.attackLength;
                 for (int i = 0; i < attackButtons.Length; i++)
                 {
                     attackButtons[i].interactable = false;
@@ -122,7 +123,7 @@ public class SpecialEncounterTutorial : MonoBehaviour
             switch (currentStep)
             {
                 case step.Attack:
-                    if (enemy.HP < enemy.MaxHP)
+                    if (enemy.HP < enemy.MaxHP && enemy.img.sprite == enemy.idle)
                         GoToStep(step.Heal);
                     break;
                 case step.Heal:
