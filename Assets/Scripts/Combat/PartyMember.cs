@@ -90,6 +90,8 @@ public class PartyMember : MonoBehaviour
 
     public bool alive;
 
+    public GameObject border;
+
     private void Start()
     {
         startPos = transform.position;
@@ -142,6 +144,7 @@ public class PartyMember : MonoBehaviour
         sprite.sprite = idle;
         AwakenButtons();
         if (HP <= 0) BecomeDead();
+        HideBorder();
     }
 
     // Update is called once per frame
@@ -282,6 +285,17 @@ public class PartyMember : MonoBehaviour
         attack2Cover.gameObject.SetActive(false);
     }
 
+    //Show/Hide targetting border
+    public void ShowBorder()
+    {
+        border.SetActive(true);
+    }
+
+    public void HideBorder()
+    {
+        border.SetActive(false);
+    }
+
     //Party member is on cooldown or dead.
     public void shutDownButtons()
     {
@@ -323,6 +337,7 @@ public class PartyMember : MonoBehaviour
                     //Tells Combat Manager what type of target the player should be targeting
                     combatManager.attackTargetType = attack1Target;
                     combatManager.selectedButton = attack1Button;
+                    combatManager.ShowTargets(attack1Target);
                 }
                 break;
             case 2:
@@ -341,6 +356,7 @@ public class PartyMember : MonoBehaviour
                     //Tells Combat Manager what type of target the player should be targeting
                     combatManager.attackTargetType = attack2Target;
                     combatManager.selectedButton = attack2Button;
+                    combatManager.ShowTargets(attack2Target);
                 }
                 break;
         }

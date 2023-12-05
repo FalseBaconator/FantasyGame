@@ -38,10 +38,6 @@ public class CombatManager : MonoBehaviour
     public bool playing;
 
     public Shield shield;
-    //Shield Data
-    //public int shields;
-    //public GameObject shieldSprite;
-    //public TextMeshProUGUI shieldText;
 
     public GameManager gameManager;
     public bool IsInBoss;
@@ -111,11 +107,32 @@ public class CombatManager : MonoBehaviour
         }
     }
 
-    //Gives XP to gameManger upon defeating enemy
-    //public void GainXP(int xp)
-    //{
-    //    gameManager.XP += xp;
-    //}
+    public void ShowTargets(PartyMember.Target target)
+    {
+        switch (target)
+        {
+            case PartyMember.Target.enemies:
+                foreach(Enemy enemy in enemies)
+                {
+                    if (enemy.alive) enemy.ShowBorder();
+                }
+                foreach (PartyMember partyMember in partyMembers)
+                {
+                    partyMember.HideBorder();
+                }
+                break;
+            case PartyMember.Target.party:
+                foreach(PartyMember partyMember in partyMembers)
+                {
+                    partyMember.ShowBorder();
+                }
+                foreach (Enemy enemy in enemies)
+                {
+                    enemy.HideBorder();
+                }
+                break;
+        }
+    }
 
     //Preps party members for a new dungeon. Upon entering Map through Upgrades
     public void StartPartyMembers()
@@ -200,6 +217,14 @@ public class CombatManager : MonoBehaviour
         attackSelected = false;
         attackTarget = null;
         selectedButton = null;
+        foreach (PartyMember partyMember in partyMembers)
+        {
+            partyMember.HideBorder();
+        }
+        foreach (Enemy enemy in enemies)
+        {
+            enemy.HideBorder();
+        }
     }
 
     //Upon win

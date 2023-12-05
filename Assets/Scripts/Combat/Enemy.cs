@@ -53,6 +53,8 @@ public class Enemy : MonoBehaviour
 
     public GameObject XPDisplay;
 
+    public GameObject border;
+
     [Header("For Bosses")]
     public bool isBoss;
     public float deadLength;
@@ -72,6 +74,7 @@ public class Enemy : MonoBehaviour
         alive = true;
         Button button = GetComponent<Button>();
         button.onClick.AddListener(BecomeTarget);
+        HideBorder();
     }
 
     // Update is called once per frame
@@ -141,6 +144,18 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+
+    //Show/Hide targetting border
+    public void ShowBorder()
+    {
+        border.SetActive(true);
+    }
+
+    public void HideBorder()
+    {
+        border.SetActive(false);
+    }
+
 
     //Stuns because of Ice
     public void Freeze(float time)
