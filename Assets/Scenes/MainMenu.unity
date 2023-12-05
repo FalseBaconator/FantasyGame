@@ -227,6 +227,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 821119400339762653, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6ceddd77d3dec994995af7a947a17641, type: 3}
+    - target: {fileID: 884197645951711783, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 09aef489d5703ce41a719fcc7a0cb6c6, type: 3}
+    - target: {fileID: 1148025087773075507, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: open
+      value: 
+      objectReference: {fileID: 21300000, guid: 09aef489d5703ce41a719fcc7a0cb6c6, type: 3}
+    - target: {fileID: 1148025087773075507, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: close
+      value: 
+      objectReference: {fileID: 21300000, guid: 6ceddd77d3dec994995af7a947a17641, type: 3}
+    - target: {fileID: 1708326066500972480, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3048024244643183280, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: backgrounds.Array.size
       value: 3
@@ -285,11 +305,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5614387877241159302, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9120847898522619200, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
