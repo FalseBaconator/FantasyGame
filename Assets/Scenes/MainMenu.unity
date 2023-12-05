@@ -223,29 +223,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 71682974105087173, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_text
-      value: 'Level 2: Undead Catacombs'
-      objectReference: {fileID: 0}
-    - target: {fileID: 71682974105087173, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_fontSize
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 71682974105087173, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 730076717170939195, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 1708326066500972480, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3397444023427749972, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_text
-      value: 'Level 1: Goblin Caverns'
       objectReference: {fileID: 0}
     - target: {fileID: 3579799116014739666, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -286,10 +266,6 @@ PrefabInstance:
     - target: {fileID: 3579799116014739666, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6772179215478886286, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
