@@ -25,6 +25,9 @@ public class UpgradeButton : MonoBehaviour
     public Sprite close;
     Image img;
 
+    public float baseScale;
+    public float hoverScale;
+
     private void Start()
     {
         gManager = FindFirstObjectByType<GameManager>();
@@ -60,6 +63,7 @@ public class UpgradeButton : MonoBehaviour
     //Show Description
     public void MouseOver()
     {
+        transform.localScale = new Vector3(hoverScale, hoverScale, hoverScale);
         if(stage < maxStage)
             uManager.ShowDesc(descriptions[stage], title, costs[stage], stage - 1);
         else
@@ -69,6 +73,7 @@ public class UpgradeButton : MonoBehaviour
     //Hide Description
     public void MouseExit()
     {
+        transform.localScale = new Vector3(baseScale, baseScale, baseScale);
         uManager.HideDesc();
     }
 

@@ -172,6 +172,8 @@ MonoBehaviour:
   upgradeIndex: 4
   open: {fileID: 21300000, guid: 3138a91e3df7ece4586ac8fc40fd61d9, type: 3}
   close: {fileID: 21300000, guid: 14eb70312855ef44ab5d7f1190b7389e, type: 3}
+  baseScale: 1
+  hoverScale: 1.1
 --- !u!114 &2843889346779043625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,6 +712,8 @@ MonoBehaviour:
   upgradeIndex: 0
   open: {fileID: 21300000, guid: 8c1b113e96835574fabd926744ca9ec6, type: 3}
   close: {fileID: 21300000, guid: f9bc2bb31285ac44cb8522eea53af14f, type: 3}
+  baseScale: 1
+  hoverScale: 1.1
 --- !u!114 &7610490975463633681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1736,6 +1740,8 @@ MonoBehaviour:
   upgradeIndex: 7
   open: {fileID: 21300000, guid: 82cfa08c12ec95849bf907aaa53f7976, type: 3}
   close: {fileID: 21300000, guid: c35815c741baaa24b846173de8ce6244, type: 3}
+  baseScale: 1
+  hoverScale: 1.1
 --- !u!114 &518471228288153392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4379,7 +4385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &865771663186871740
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5817,7 +5823,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ab16520e598c99e418b8d631a78991f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 09aef489d5703ce41a719fcc7a0cb6c6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6289,6 +6295,8 @@ MonoBehaviour:
   upgradeIndex: 11
   open: {fileID: 21300000, guid: 21757dd657e8c274eacbd69e110e8aff, type: 3}
   close: {fileID: 21300000, guid: cb8b6ca6dd488094ca05d717fd85b6a2, type: 3}
+  baseScale: 1
+  hoverScale: 1.1
 --- !u!114 &3232226354902513324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7346,6 +7354,8 @@ MonoBehaviour:
   upgradeIndex: 10
   open: {fileID: 21300000, guid: a48a2bd11db3b464cb8b6e0ca0014058, type: 3}
   close: {fileID: 21300000, guid: 0406453f2bf59e74d8da4e36b596da23, type: 3}
+  baseScale: 1
+  hoverScale: 1.1
 --- !u!114 &2336631107547105516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9467,6 +9477,8 @@ MonoBehaviour:
   upgradeIndex: 5
   open: {fileID: 21300000, guid: 98ccc1944acb266499102183e6cf81d6, type: 3}
   close: {fileID: 21300000, guid: bb4f93abc437ab848b7f21c1ec3fd756, type: 3}
+  baseScale: 1
+  hoverScale: 1.1
 --- !u!114 &4324789386738648325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14617,6 +14629,8 @@ MonoBehaviour:
   upgradeIndex: 9
   open: {fileID: 21300000, guid: 86ae726693f926d49ab2b1e331631250, type: 3}
   close: {fileID: 21300000, guid: c0314dcd6f484c84682625c452609e0b, type: 3}
+  baseScale: 1
+  hoverScale: 1.1
 --- !u!114 &7137641727557369030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15999,6 +16013,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3d319406f8f154c469e567f5f0914c69, type: 3}
   background: {fileID: 266513537848630617}
   backgrounds:
+  - {fileID: 21300000, guid: 22169e5a529536c4ba464f1160cfbd76, type: 3}
   - {fileID: 21300000, guid: 06156aa094e3f8441a938adf2576511a, type: 3}
   - {fileID: 21300000, guid: 990b1c00711744b4dbc3464a16ad25e2, type: 3}
   selectedButton: {fileID: 0}
@@ -20842,6 +20857,8 @@ MonoBehaviour:
   upgradeIndex: 6
   open: {fileID: 21300000, guid: a996287a13661bc46910d75b52d4cfa2, type: 3}
   close: {fileID: 21300000, guid: afdd57b28bf64da4f93ff3c30673ede8, type: 3}
+  baseScale: 1
+  hoverScale: 1.1
 --- !u!114 &8894060059920810597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21135,6 +21152,8 @@ MonoBehaviour:
   upgradeIndex: 1
   open: {fileID: 21300000, guid: b8ded7299552a34438d3220449061664, type: 3}
   close: {fileID: 21300000, guid: 6a33431f4297f8e40a834c2ae5c21608, type: 3}
+  baseScale: 1
+  hoverScale: 1.1
 --- !u!114 &8599372917687365322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21503,6 +21522,8 @@ MonoBehaviour:
   upgradeIndex: 2
   open: {fileID: 21300000, guid: e2ef9bb6350b8724cbf629c9feae29ed, type: 3}
   close: {fileID: 21300000, guid: d6ffb22d49e9614428936c0f39e34424, type: 3}
+  baseScale: 1
+  hoverScale: 1.1
 --- !u!114 &1355671727328093230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23744,6 +23765,8 @@ MonoBehaviour:
   upgradeIndex: 8
   open: {fileID: 21300000, guid: 8de3800504a5a55479392d7de0b8185a, type: 3}
   close: {fileID: 21300000, guid: 583e22b7e16cd1f4199514fcb15ba387, type: 3}
+  baseScale: 1
+  hoverScale: 1.1
 --- !u!114 &6671346467715191799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25088,7 +25111,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bd695b9deb1cad14481465ed740d34b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ceddd77d3dec994995af7a947a17641, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -25116,7 +25139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1960527190458206101
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25376,8 +25399,10 @@ MonoBehaviour:
   - Increases the Cleric's Healing to 20.
   - The Cleric's Healing is 20.
   upgradeIndex: 3
-  open: {fileID: 21300000, guid: ab16520e598c99e418b8d631a78991f7, type: 3}
-  close: {fileID: 21300000, guid: bd695b9deb1cad14481465ed740d34b6, type: 3}
+  open: {fileID: 21300000, guid: 09aef489d5703ce41a719fcc7a0cb6c6, type: 3}
+  close: {fileID: 21300000, guid: 6ceddd77d3dec994995af7a947a17641, type: 3}
+  baseScale: 1
+  hoverScale: 1.1
 --- !u!114 &8731570912679947788
 MonoBehaviour:
   m_ObjectHideFlags: 0
