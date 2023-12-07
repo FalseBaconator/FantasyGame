@@ -223,9 +223,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 74109552049539581, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: baseScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 74109552049539581, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: hoverScale
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 730076717170939195, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1102170001948315562, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: baseScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1102170001948315562, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: hoverScale
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 3579799116014739666, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -266,6 +282,38 @@ PrefabInstance:
     - target: {fileID: 3579799116014739666, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665834808815313492, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: baseScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665834808815313492, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: hoverScale
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615904028864913482, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: baseScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615904028864913482, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: hoverScale
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7762491568721904873, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: baseScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7762491568721904873, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: hoverScale
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8267377213409773564, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: baseScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8267377213409773564, guid: b184aaa489ff7524f9a186b244cc60c8, type: 3}
+      propertyPath: hoverScale
+      value: 1.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
